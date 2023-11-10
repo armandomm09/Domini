@@ -5,7 +5,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #000000;
+            background-color: #ffffff;
             text-align: center;
         }
         
@@ -15,12 +15,14 @@
         }
         
         form {
-            background-color: #e50d0d;
+            background-color: #c61212;
             padding: 30px;
             border-radius: 5px;
             box-shadow: 0 0 200px rgba(188, 32, 32, 0.9);
             max-width: 500px;
             margin: 0 auto;
+            max-height: 700px;
+            overflow: scroll;
         }
         
         label {
@@ -29,6 +31,11 @@
             font-weight: bold;
         }
         
+        input[type="radio"],
+        input[type="checkbox"] {
+            cursor: pointer;
+        }
+
         input[type="text"],
         input[type="number"],
         textarea {
@@ -55,10 +62,35 @@
             font-size: 18px;
             cursor: pointer;
             text-transform: uppercase;
+            box-shadow: 
+		-6px -6px 26px rgba(255,255,255,.83),
+		5px 10px 15px rgba(0,0,0,.05),
+		15px 20px 35px rgba(0,0,0,.1),
+		inset -2px -2px 2px rgba(0,0,0,.1),
+		inset -1px -1px 3px rgba(255,255,255,.6),
+		inset 2px 2px 8px rgba(255,255,255,.2),
+		inset 1px 1px 8px rgba(255,255,255,.2),
+		-6px -6px 26px rgba(255,255,255,.8);
+    transition: 300ms ease-out;
         }
         
         input[type="submit"]:hover {
             background-color: #ff1a00;
+            box-shadow: 
+			4px 4px 6px rgba(0,0,0,.2), 
+			5px 10px 35px rgba(0,0,0,.1),
+			8px 10px 25px rgba(0,0,0,.1),
+			inset -1px -1px 9px rgba(0,0,0,.2),
+			inset -1px -1px 3px rgba(255,255,255,.6),
+			inset 1px 1px 8px rgba(255,255,255,1),
+			inset 4px 4px 24px rgba(0,0,0,.15),
+			-5px -5px 15px rgba(255,255,255,.9);
+  transform: scale(.98);
+        }
+
+        input[type="submit"]:active {
+            background-color: #4a0606;
+            box-shadow: inset 2px 2px 16px rgba(255,255,255,.9), inset 8px 8px 9px rgba(0,0,0,.2), 5px 10px 5px rgba(0,0,0,.03), -5px -5px 25px rgba(255,255,255,.1), -2px -2px 9px rgba(100,100,100,.1), inset -2px -2px 9px rgba(255,255,255,1);
         }
 
         /* Estilo para los elementos radio */
@@ -76,6 +108,23 @@
             text-align: left;
         }
 
+        .game-pieces label {
+            display: inline-block;
+            padding-bottom: 15px;
+            
+        }
+
+        .grid-level label {
+            display: inline-block;
+            padding-right: 20px;
+        }
+
+        .initial-position embed {
+            width: 500px;
+            border-radius: 20px;
+            box-shadow: black;
+
+        }
     </style>
 </head>
 <body>
@@ -98,6 +147,9 @@
 
             <input type="radio" id="python" name="programming-language">
             <label for="python">Python</label>
+
+            <input type="radio" id="labview" name="programming-language">
+            <label for="labview">Lab View</label>
         </div>
 
         <div class="mobility">
@@ -110,8 +162,34 @@
             <label for="no">No</label>
         </div>
 
-        <div class="Game pieces">
+        <div class="game-pieces">
+            <h3>Game pieces</h3>
             
+            <input type="checkbox" name="cone">
+            <label for="cone">Cone</label>
+
+            <input type="checkbox" name="cube">
+            <label for="cube">Cube</label>
+        </div>
+
+        <div class="grid-level">
+            <h3>Grid level</h3>
+
+            <input type="checkbox" name="lower">
+            <label for="lower">Lower</label>
+
+            <input type="checkbox" name="mid">
+            <label for="mid">Mid</label>
+
+            <input type="checkbox" name="upper">
+            <label for="upper">Upper</label>
+
+        </div>
+
+        <div class="initial-position">
+            <h3>Initial position preference</h3>
+            <embed src="./initial-position.png">
+
         </div>
         
         <label for="mecanismo_destacado">Mecanismo Destacado:</label>
