@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #ffffff;
+    background-color: #eeeeee;
     text-align: center;
 }
 
@@ -119,4 +119,13 @@ input[type="submit"]:active {
     border-radius: 20px;
     box-shadow: black;
 
+}
+
+.logo {
+    width: 200px;
+    display: block;
+    align-content: start;
+    margin-left: 40px;
+    margin-top: 20px;
+    margin-bottom: 0px;
 }
