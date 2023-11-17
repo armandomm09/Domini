@@ -2,50 +2,45 @@ body {
     font-family: Arial, sans-serif;
     background-color: #5e1616;
     text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
 h1 {
     color: #ff5733;
     text-transform: uppercase;
+    margin-bottom: 10px;
 }
 
 form {
     background-color: #c61212;
     padding: 30px;
-    border-radius: 5px;
-    box-shadow: 0 0 200px rgba(188, 32, 32, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(188, 32, 32, 0.9);
     max-width: 500px;
-    margin: 0 auto;
+    margin: 20px auto;
     max-height: 700px;
     overflow: scroll;
 }
 
 label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     font-weight: bold;
-}
-
-input[type="radio"],
-input[type="checkbox"] {
-    cursor: pointer;
+    color: #fff; /* Ajustar el color de las etiquetas */
 }
 
 input[type="text"],
 input[type="number"],
-textarea {
+textarea,
+input[type="file"] {
     width: 100%;
     padding: 12px;
-    padding-right: 0px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     border: 1px solid #17a92d;
     border-radius: 5px;
     font-size: 16px;
-}
-
-input[type="file"] {
-    width: 100%;
-    margin-bottom: 20px;
+    box-sizing: border-box;
 }
 
 input[type="submit"] {
@@ -57,68 +52,34 @@ input[type="submit"] {
     font-size: 18px;
     cursor: pointer;
     text-transform: uppercase;
-    box-shadow: 
--6px -6px 26px rgba(255,255,255,.83),
-5px 10px 15px rgba(0,0,0,.05),
-15px 20px 35px rgba(0,0,0,.1),
-inset -2px -2px 2px rgba(0,0,0,.1),
-inset -1px -1px 3px rgba(255,255,255,.6),
-inset 2px 2px 8px rgba(255,255,255,.2),
-inset 1px 1px 8px rgba(255,255,255,.2),
--6px -6px 26px rgba(255,255,255,.8);
-transition: 300ms ease-out;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    transition: background-color 300ms ease-out, transform 300ms ease-out;
 }
 
 input[type="submit"]:hover {
     background-color: #ff1a00;
-    box-shadow: 
-    4px 4px 6px rgba(0,0,0,.2), 
-    5px 10px 35px rgba(0,0,0,.1),
-    8px 10px 25px rgba(0,0,0,.1),
-    inset -1px -1px 9px rgba(0,0,0,.2),
-    inset -1px -1px 3px rgba(255,255,255,.6),
-    inset 1px 1px 8px rgba(255,255,255,1),
-    inset 4px 4px 24px rgba(0,0,0,.15),
-    -5px -5px 15px rgba(255,255,255,.9);
-transform: scale(.98);
+    transform: scale(0.98);
 }
 
 input[type="submit"]:active {
     background-color: #4a0606;
-    box-shadow: inset 2px 2px 16px rgba(255,255,255,.9), inset 8px 8px 9px rgba(0,0,0,.2), 5px 10px 5px rgba(0,0,0,.03), -5px -5px 25px rgba(255,255,255,.1), -2px -2px 9px rgba(100,100,100,.1), inset -2px -2px 9px rgba(255,255,255,1);
 }
 
-/* Estilo para los elementos radio */
-.radio-group {
-    margin-bottom: 20px;
-}
+/* Otros estilos */
 
-.radio-group label {
-    display: inline-block;
-}
-
-.mobility label{
-    display: inline-block;
-    padding: 20px;
-    text-align: left;
-}
-
-.game-pieces label {
-    display: inline-block;
-    padding-bottom: 15px;
-    
-}
-
+.radio-group label,
+.mobility label,
+.game-pieces label,
 .grid-level label {
     display: inline-block;
-    padding-right: 20px;
+    margin-right: 10px; /* Espaciado entre elementos de formulario */
 }
 
 .initial-position embed {
-    width: 500px;
+    width: 100%;
+    max-width: 500px;
     border-radius: 20px;
-    box-shadow: black;
-
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
 .logo {
