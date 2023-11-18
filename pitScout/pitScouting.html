@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Pit Scouting - Equipo de FRC</title>
+    <title>Pit Scouting - Imperator 5887</title>
     <link rel="stylesheet" href="/pitScout/pitScout.css">
     <script src="/pitScout/pitScout.js"></script>
+    <link rel="icon" type="image/x-icon" href="/globalResources/Engrane.png">
 </head>
 <body>
     <header>
@@ -12,7 +13,7 @@
         </a>
     
     </header>
-    <h1>Pit Scouting - Equipo de FRC</h1>
+    <h1>Pit Scouting</h1>
     <p>Por favor, proporciona la siguiente información sobre el equipo de FRC en el pit.</p>
     <form action="guardar_datos.php" method="post" class="pitForm">
 
@@ -23,20 +24,62 @@
         <p id="teamNumberError" ></p>
         <input type="number" id="numero_equipo" name="numero_equipo" required>
 
-        
-        <div class="radio-group">
-            <h3>AUTONOMO</h3>
-            <input type="radio" id="java" name="programming-language">
-            <label for="java">Java</label>
+    <div class="preguntas-radio">
 
-            <input type="radio" id="cpp" name="programming-language">
-            <label for="cpp">C++</label>
+        <div class="radio-group ">
 
-            <input type="radio" id="python" name="programming-language">
-            <label for="python">Python</label>
+                <h3>Lenguaje</h3>
+            <div class="radio-language-options">
+                <input type="radio" id="java" name="programming-language" class="programming-language-input">
+                <label for="java"><img src="/pitScout/resources/logos/java-logo.png" class="programming-language-label" height="50px" width="auto" class="java"></label>
+       
+                <input type="radio" id="cpp" name="programming-language" class="programming-language-input">
+                <label for="cpp"><img src="/pitScout/resources/logos/c++-logo.png" class="programming-language-label" height="45px" width="auto" class="cpp"/></label>
 
-            <input type="radio" id="labview" name="programming-language">
-            <label for="labview">Lab View</label>
+                <input type="radio" id="python" name="programming-language" class="programming-language-input">
+                <label for="python"><img src="/pitScout/resources/logos/python-logo.png" class="programming-language-label" height="45px" width="auto" class="python"/></label>
+
+                <input type="radio" id="labview" name="programming-language" class="programming-language-input">
+                <label for="labview"><img src="/pitScout/resources/logos/labview-logo.png" class="programming-language-label" height="45px" width="auto" class="labview"></label>
+            </div>
+        </div>
+
+        <div class="tipo-chasis">
+            <label class="radio-group" for="tipo-de-chasis">Chassis type</label>
+            <select type="select"  id="tipo-de-chasis" required>
+
+                <option >Select Chassis</option>
+                <option value="tanque">Tanque</option>
+                <option value="swerve">Swerve</option>
+                <option value="mecanum">Mecanum</option>
+
+            </select>
+            
+        </div>
+
+        <br>
+    
+
+        <div class="wheel-type-dropdown">
+            <label class="radio-group" for="wheel-type">Wheel type</label>
+            <select type="select"  id="wheel-type" required>
+
+                <option >Select Wheel</option>
+                <option value="omni">Omni</option>
+                <option value="colson">Colson</option>
+                <option value="kop">Kop</option>
+                <option value="plaction">Plaction</option>
+                <option value="pneumatic">Pneumatic</option>
+                <option value="mecanum">Mecanum</option>
+                <option value="other">Other:</option>
+            
+            </select>
+            <br>
+            <br>
+
+            <label for="wheel-type-other">Specify*: </label>
+            <input type="text" id="wheel-type-other">
+            
         </div>
 
         <div class="mobility">
@@ -72,6 +115,8 @@
             <label for="upper">Upper</label>
 
         </div>
+
+    </div>
 
         <div class="initial-position">
             <h3>Initial position preference</h3>

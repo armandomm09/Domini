@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #5e1616;
+    background-color: #000000;
     text-align: center;
     margin: 0;
     padding: 0;
@@ -14,10 +14,10 @@ h1 {
 
 form {
     background-color: #c61212;
+    max-width: 1000px;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(188, 32, 32, 0.9);
-    max-width: 500px;
     margin: 20px auto;
     max-height: 700px;
     overflow: scroll;
@@ -68,6 +68,7 @@ input[type="submit"]:active {
 /* Otros estilos */
 
 .radio-group label,
+.preguntas-radio h3,
 .mobility label,
 .game-pieces label,
 .grid-level label {
@@ -83,10 +84,86 @@ input[type="submit"]:active {
 }
 
 .logo {
-    width: 200px;
+    width: 250px;
     display: block;
     align-content: start;
     margin-left: 40px;
     margin-top: 20px;
     margin-bottom: 0px;
 }
+
+.radio-group {  
+    display: inline-flex;
+    margin: 20px;
+}
+
+#tipo-de-chasis {
+    background-color: rgb(117, 13, 13);
+    color: #fff;
+    border: 2px solid #dd1212;
+    border-radius: 10px;
+    width: 200px;
+    height: 35px;
+    font-size: 16px;
+}
+
+#tipo-de-chasis:hover {
+    background-color: rgb(212, 47, 47);
+    color: #0c0909;
+    border: 2px solid #dd1212;
+    border-radius: 10px;
+    width: 200px;
+    height: 35px;
+    font-size: 16px;
+}
+
+#wheel-type {
+    background-color: rgb(117, 13, 13);
+    color: #fff;
+    border: 2px solid #dd1212;
+    border-radius: 10px;
+    width: 200px;
+    height: 35px;
+    font-size: 16px;
+}
+
+#wheel-type:hover {
+    background-color: rgb(212, 47, 47);
+    color: #0c0909;
+    border: 2px solid #dd1212;
+    border-radius: 10px;
+    width: 200px;
+    height: 35px;
+    font-size: 16px;
+}
+
+#java {
+    border-radius: 50px;
+    width: 20px;
+  }
+
+.programming-language-input {
+    display: none;
+    filter: grayscale(100%);
+}
+
+.programming-language-label {
+    filter: grayscale(100%);
+}
+
+.programming-language-label:hover {
+    filter: grayscale(0%);
+}
+
+
+
+.radio-language-options {
+    display: block;
+    align-self: center;
+    background-color: #000000;
+    width: 300px;
+    border-radius: 50px;
+    position: static;
+    margin: auto;
+}
+

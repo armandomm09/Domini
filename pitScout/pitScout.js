@@ -1,21 +1,83 @@
 document.addEventListener("DOMContentLoaded", function () {
+
     const form = document.getElementsByClassName("pitForm");
     let teamNumberInput = document.getElementById("numero_equipo");
     const teamNumberError = document.getElementById("teamNumberError");
+
+    const wheelType = document.getElementById("wheel-type")
+    
+    const enableAndRequire = (field, label) => {
+        field.setAttribute("required", "")
+        label.classList.add("required")
+        field.style.display = "block"
+        label.style.display = "block"
+
+    }
+
+    const disableAndOptional =(field, label) => {
+        field.removeAttribute("required")
+        label.classList.remove("required")
+        field.style.display = "none"
+        label.style.display = "none"
+
+
+    }
+
 
     teamNumberInput.addEventListener("input", function () {
         const teamNumber = teamNumberInput.value;
 
         if (teamNumber.length < 1 || teamNumber.length > 4) {
-            teamNumberError.innerHTML = "El equipo debe tener entre 1 y 4 dígitos";
+           alert("El equipo debe tener entre 1 y 4 dígitos")
+            // teamNumberError.innerHTML = "El equipo debe tener entre 1 y 4 dígitos";
         } else {
             teamNumberError.innerHTML = "";
         }
     });
 
-    form.addEventListener("submit", function() {
-        alert("Datos enviados!!")
+
+
+
+    const showOtherWheelOption = (value) => {
+
+    const wheelTypeOther = document.getElementById("wheel-type-other")
+    const labelWheelTypeOther = document.querySelector("label[for=wheel-type-other]")
+    const otherWheelRequiredIcon = document.getElementById("other-wheel-required-icon")
+    
+    value === "other" ?  enableAndRequire(wheelTypeOther, labelWheelTypeOther) : disableAndOptional(wheelTypeOther, labelWheelTypeOther)
+
+}
+
+    const validateWheelOption = () => {
+    showOtherWheelOption(wheelType.value)
+    wheelType.addEventListener("change", () => {
+        showOtherWheelOption(wheelType.value)
+    })}
+
+    const subvalidateProgrammingLanguage = (input, img) =>{
+
+        if(input.checked === true) {
+            img.style.cssText = "filter: grayscale(0%)"
+        } else {
+            img.style.cssText = "filter: grayscale(100%)"
+        }
+    
+    }
+
+const validateProgrammingLanguage = (languageID) => {
+
+    const languageInput = document.getElementById(languageID)
+    const imgElement = document.getElementsByClassName(languageID)
+    subvalidateProgrammingLanguage(languageInput, imgElement)
+
+    languageInput.addEventListener("change",  () => {
+        subvalidateProgrammingLanguage(languageInput, imgElement)
     })
+}
+
+
+
+validateWheelOption();
 
 });
 
