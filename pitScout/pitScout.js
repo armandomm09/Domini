@@ -54,26 +54,39 @@ document.addEventListener("DOMContentLoaded", function () {
         showOtherWheelOption(wheelType.value)
     })}
 
-    const subvalidateProgrammingLanguage = (input, img) =>{
+    const subvalidateProgrammingLanguage = (input, img, languageID) =>{
+
+    input.addEventListener("change",  () => {
+
 
         if(input.checked === true) {
-            img.style.cssText = "filter: grayscale(0%)"
+            img.style.filter = "grayscale(0%)"
+            console.log(languageID+" entro a true")
         } else {
-            img.style.cssText = "filter: grayscale(100%)"
+            console.log(languageID+" entro false")
+            img.style.filter = "grayscale(100%)";
         }
-    
+    })
     }
 
 const validateProgrammingLanguage = (languageID) => {
 
-    const languageInput = document.getElementById(languageID)
-    const imgElement = document.getElementsByClassName(languageID)
-    subvalidateProgrammingLanguage(languageInput, imgElement)
+    const languageInput = document.getElementById(languageID+"-input")
+    const imgElement = document.getElementById(languageID+"-logo")
+    subvalidateProgrammingLanguage(languageInput, imgElement, languageID)
 
-    languageInput.addEventListener("change",  () => {
-        subvalidateProgrammingLanguage(languageInput, imgElement)
-    })
-}
+        subvalidateProgrammingLanguage(languageInput, imgElement, languageID)
+
+    }
+
+
+
+validateProgrammingLanguage("java")
+validateProgrammingLanguage("cpp")
+validateProgrammingLanguage("python")
+validateProgrammingLanguage("labview")
+
+
 
 
 
