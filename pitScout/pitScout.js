@@ -49,48 +49,52 @@ document.addEventListener("DOMContentLoaded", function () {
 }
 
     const validateWheelOption = () => {
+
     showOtherWheelOption(wheelType.value)
+
     wheelType.addEventListener("change", () => {
         showOtherWheelOption(wheelType.value)
+
     })}
 
-    const subvalidateProgrammingLanguage = (input, img, languageID) =>{
+    const inputsAll = document.querySelectorAll(".programming-language-input")
 
-    input.addEventListener("change",  () => {
+    const subvalidateProgrammingLanguage = (input, img) =>{
 
-
-        if(input.checked === true) {
-            img.style.filter = "grayscale(0%)"
-            console.log(languageID+" entro a true")
-        } else {
-            console.log(languageID+" entro false")
-            img.style.filter = "grayscale(100%)";
+    
+            if(input.checked === true || input.matches(":hover")) {
+                img.style.filter = "grayscale(0%)"
+    
+            }else if(input.matches(":active")) {
+                img.style.filter = "grayscale(100%)";
+    
+            } else {
+                img.style.filter = "grayscale(100%)";
+    
+            }
         }
+
+    const validateProgrammingLanguage = (inputs) => {
+        
+        inputs.forEach(function(radio){
+            let languageID = radio.id
+            console.log(languageID)
+            const languageInput = document.getElementById(languageID)
+            const imgElement = document.getElementById(languageID+"-logo")
+            console.log(languageInput.id)
+
+                subvalidateProgrammingLanguage(languageInput, imgElement)
+            })
+        }
+
+
+        const radioGroup = document.getElementsByClassName("preguntas-radio")[0]
+        radioGroup.addEventListener("mouseover", () => {
+
+        validateProgrammingLanguage(inputsAll)
     })
-    }
 
-const validateProgrammingLanguage = (languageID) => {
+    validateWheelOption();
+        
 
-    const languageInput = document.getElementById(languageID+"-input")
-    const imgElement = document.getElementById(languageID+"-logo")
-    subvalidateProgrammingLanguage(languageInput, imgElement, languageID)
-
-        subvalidateProgrammingLanguage(languageInput, imgElement, languageID)
-
-    }
-
-
-
-validateProgrammingLanguage("java")
-validateProgrammingLanguage("cpp")
-validateProgrammingLanguage("python")
-validateProgrammingLanguage("labview")
-
-
-
-
-
-validateWheelOption();
-
-});
-
+})
