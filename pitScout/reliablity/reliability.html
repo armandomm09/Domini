@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pit Scouting - Imperator 5887</title>
+    <link rel="stylesheet" href="/pitScout/reliablity/reliability.css">
+    <link rel="icon" type="image/x-icon" href="/globalResources/Engrane.png">
+</head>
+<body>
+    <header>
+        <a href="/index.html">
+        <img src="/globalResources/logo_oficial_conNombre.png" class="logo"/>
+        </a>
+    
+    </header>
+    <h1>Pit Scouting: Reliability</h1>
+    <p>Please provide the next info of the team based on their reliability</p>
+    <form class="pitForm">
+
+
+            <label for="robot-reliability-text">Does the robot seem reliable?</label>
+            <input type="text" id="robot-reliability-text" name="robot-reliability" required>
+        
+           
+            <label for="robot-robust-text">Are mechanisms robust enough?</label>
+            <input type="text" id="robot-robust-text" name="robot-robust" required>
+        
+            <label for="robot-sophisticated-text">Do they look sophisticated?</label>
+            <input type="text" id="robot-sophisticated-text" name="robot-sophisticated" required>
+        
+            <label for="robot-sophisticated-text">Do they look sophisticated?</label>
+            <input type="text" id="robot-sophisticated-text" name="robot-sophisticated" required>
+
+            <label for="robot-reparability-text">Are mechanisms "easy" to repare?</label>
+            <input type="text" id="robot-reparability-text" name="robot-reparability" required>
+
+            <label for="robot-spare-text">Does the team have enough spare parts?</label>
+            <input type="text" id="robot-spare-text" name="robot-spare" required>
+
+            <div class="overall-reliability">
+
+                <label for="overall-reliability-select">Overall, the robot looks:</label>
+                <select type="select"  id="overall-reliability-select" required>
+    
+                    <option >Select reliability</option>
+                    <option value="reliable">Reliable</option>
+                    <option value="semi-robust">Semi-robust</option>
+                    <option value="fragile">Fragile</option>
+                    <option value="other">Other:</option>
+    
+    
+                </select>
+                
+                <label for="reliability-other">Specify*: </label>
+                <input type="text" id="reliability-other">
+
+            </div>
+
+
+    </form>
+    
+    <a href="/pitScout/drivers/drivers.html"><button id="back-button">Back: Auto</button></a>
+    <a><button id="next-button">Submit</button></a>
+
+</body>
+</html>

@@ -78,10 +78,8 @@ document.addEventListener("DOMContentLoaded", function () {
         
         inputs.forEach(function(radio){
             let languageID = radio.id
-            console.log(languageID)
             const languageInput = document.getElementById(languageID)
             const imgElement = document.getElementById(languageID+"-logo")
-            console.log(languageInput.id)
 
                 subvalidateProgrammingLanguage(languageInput, imgElement)
             })
