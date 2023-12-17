@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="/pitScout/pitScout.css">
     <script src="/pitScout/pitScout.js"></script>
     <link rel="icon" type="image/x-icon" href="/globalResources/Engrane.png">
+    <script src="/pitScout/sendPitScoutForm.js"></script>
 </head>
 <body>
     <header>
@@ -15,38 +16,44 @@
     </header>
     <h1>Pit Scouting</h1>
     <p>Por favor, proporciona la siguiente información sobre el equipo de FRC en el pit.</p>
-    <form class="pitForm">
+    
+    <form id="formularioPit">
 
-        <label for="nombre_equipo">Nombre del Equipo:</label>
-        <input type="text" id="nombre_equipo" name="nombre_equipo" required>
-        
-        <label for="numero_equipo">Número del Equipo:</label>
-        <p id="teamNumberError" ></p>
-        <input type="number" id="numero_equipo" name="numero_equipo" required>
+            <label for="nombre_equipo">Nombre del Equipo:</label>
+            <input type="text" id="nombre_equipo" name="nombre_equipo" >
+            
+            <br>
 
-    <div class="preguntas-radio">
+            <label for="numero_equipo">Número del Equipo:</label>
+            <p id="teamNumberError" ></p>
+            <input type="number" id="numero_equipo" name="numero_equipo" >
+            <br>
+
+
+
+   <div class="preguntas-radio">
 
         <div class="radio-group">
 
             <h3>Lenguaje</h3>
             <div class="radio-language-options">
-                <input type="radio" id="java" name="progInput" class="programming-language-input">
+                <input type="radio" id="java" name="progInput" class="programming-language-input" value="java">
                 <label for="java"><img src="/pitScout/resources/logos/java-logo.png" class="programming-language-label" id="java-logo"></label>
        
-                <input type="radio" id="cpp" name="progInput" class="programming-language-input">
+                <input type="radio" id="cpp" name="progInput" class="programming-language-input" value="c++">
                 <label for="cpp"><img src="/pitScout/resources/logos/c++-logo.png" class="programming-language-label" height="45px" width="auto" id="cpp-logo"/></label>
 
-                <input type="radio" id="python" name="progInput" class="programming-language-input">
+                <input type="radio" id="python" name="progInput" class="programming-language-input" value="python">
                 <label for="python"><img src="/pitScout/resources/logos/python-logo.png" class="programming-language-label" height="45px" width="auto" id="python-logo"/></label>
 
-                <input type="radio" id="labview" name="progInput" class="programming-language-input">
+                <input type="radio" id="labview" name="progInput" class="programming-language-input" value="labview">
                 <label for="labview"><img src="/pitScout/resources/logos/labview-logo.png" class="programming-language-label" height="45px" width="auto" id="labview-logo" ></label>
             </div>
         </div>
 
         <div class="tipo-chasis">
             <label class="radio-group" for="tipo-de-chasis">Chassis type</label>
-            <select type="select"  id="tipo-de-chasis" required>
+            <select type="select"  id="tipo-de-chasis" name="tipoDeChasis" >
 
                 <option >Select Chassis</option>
                 <option value="tanque">Tanque</option>
@@ -62,7 +69,7 @@
 
         <div class="wheel-type-dropdown">
             <label class="radio-group" for="wheel-type">Wheel type</label>
-            <select type="select"  id="wheel-type" required>
+            <select type="select"  id="wheel-type" name="tipoDeLlanta" >
 
                 <option >Select Wheel</option>
                 <option value="omni">Omni</option>
@@ -85,24 +92,18 @@
 
     </div>
 
-        <div class="initial-position">
-            <h3>Initial position preference</h3>
-            <embed src="/pitScout/resources/initial-position.png">
-
-        </div>
-       
+    
      
         <label for="imagenes_equipo">Imágenes del Equipo:</label>
-        <input type="file" id="imagenes_equipo" name="imagenes_equipo" multiple>
+        <input type="file" id="imagenes_equipo" name="imagenes_equipo" accept="image/*" >
         
-        
+        <input type="submit" id="submit" name="submitButton">
 
         
     </form>
-
+    
     <a href="/pitScout/autonomous/auto.html">
         <button id="next-button">Next: Auto</button>
         </a>
-
 </body>
 </html>
