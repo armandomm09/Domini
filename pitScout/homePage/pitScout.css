@@ -21,6 +21,7 @@ form {
     margin: 20px auto;
     max-height: 700px;
     overflow: scroll;
+    border-color: #000000;
 }
 
 label {

@@ -2,10 +2,11 @@
 <html>
 <head>
     <title>Pit Scouting - Imperator 5887</title>
-    <link rel="stylesheet" href="/pitScout/pitScout.css">
-    <script src="/pitScout/pitScout.js"></script>
+    <link rel="stylesheet" href="/pitScout/homePage/pitScout.css">
+    <script src="/pitScout/homePage/js/manipulateInputs.js"></script>
     <link rel="icon" type="image/x-icon" href="/globalResources/Engrane.png">
-    <script src="/pitScout/sendPitScoutForm.js"></script>
+    <script src="/pitScout/homePage/js/sendPitScoutForm.js"></script>
+    <script defer src="/pitScout/homePage/js/getTeamName.js"></script>
 </head>
 <body>
     <header>
@@ -19,15 +20,17 @@
     
     <form id="formularioPit">
 
-            <label for="nombre_equipo">Nombre del Equipo:</label>
-            <input type="text" id="nombre_equipo" name="nombre_equipo" >
-            
-            <br>
-
             <label for="numero_equipo">Número del Equipo:</label>
             <p id="teamNumberError" ></p>
             <input type="number" id="numero_equipo" name="numero_equipo" >
             <br>
+            
+            <label for="nombre_equipo">Nombre del Equipo:</label>
+            <input type="text" id="nombre_equipo" name="nombre_equipo" >
+            <p id="teamNameP">Equipo</p>
+            <br>
+
+            
 
 
 
@@ -99,11 +102,12 @@
         
         <input type="submit" id="submit" name="submitButton">
 
+        <a href="/pitScout/autonomous/auto.html">
+            <button id="next-button">Next: Auto</button>
+            </a>
         
     </form>
     
-    <a href="/pitScout/autonomous/auto.html">
-        <button id="next-button">Next: Auto</button>
-        </a>
+    
 </body>
 </html>
