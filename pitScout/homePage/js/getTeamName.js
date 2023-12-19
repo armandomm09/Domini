@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   var teamNumberElement = document.getElementById('numero_equipo');
   var teamNameP = document.getElementById("teamNameP");
+  
 
   teamNumberElement.addEventListener("input", async () => {
     var teamNumber = teamNumberElement.value;
@@ -8,34 +9,37 @@ document.addEventListener("DOMContentLoaded", function () {
 
     var url = 'https://www.thebluealliance.com/api/v3/team/frc' + teamNumber;
 
+  try {
+
     if (teamNumber.length >= 1 && teamNumber.length <= 4) {
-      try {
         var response = await fetch(url, {
           headers: {
             'X-TBA-Auth-Key': apiKey
           }
         });
-
+      
         if (response.ok) {
           var data = await response.json();
-          
+
           // Checa si la respuesta tiene formato JSON
           if (data && data.nickname) {
-            var teamName = data.nickname; 
+            var teamName = data.nickname;
             teamNameP.innerText = teamName;
           } else {
             teamNameP.innerText = "Team not found";
           }
         } else {
-          teamNameP.innerText = "Team not found";
-          console.clear()
+          teamNameP.innerText = "This team does not exists";
+          
         }
-      } catch (error) {
-        // console.error('Error en la solicitud:', error);
-        teamNameP.innerText = "Something went wrong";
+        
+      } else {
+        teamNameP.innerText = "Insert a valid team (1-4 digits)";
       }
-    } else {
-      teamNameP.innerText = "Insert a valid team (1-4 digits)";
-    }  
-  });
+    } catch (error) {
+      teamNameP.innerText = "Something went wrong, please refresh the page";
+      
+      // No se hace nada si el error está relacionado con el código de respuesta 404
+    }   
+    });
 });
