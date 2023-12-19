@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const teamNumber = teamNumberInput.value;
 
         if (teamNumber.length < 1 || teamNumber.length > 4) {
-           alert("El equipo debe tener entre 1 y 4 dígitos")
+            teamNumberError.innerText = "El equipo debe tener entre 1 y 4 dígitos";
             // teamNumberError.innerHTML = "El equipo debe tener entre 1 y 4 dígitos";
         } else {
             teamNumberError.innerHTML = "";
