@@ -1,14 +1,14 @@
 document.addEventListener("DOMContentLoaded", function () {
-  var teamNumberElement = document.getElementById('numero_equipo')
-  var teamNameP = document.getElementById("teamNameP")
+  var teamNumberElement = document.getElementById('numero_equipo');
+  var teamNameP = document.getElementById("teamNameP");
 
   teamNumberElement.addEventListener("input", async () => {
     var teamNumber = teamNumberElement.value;
     var apiKey = 'w3OVF9CiWwY1nDnbQyRHvlcDGAjvm4KvKVgKNlFbB1zCTqCn6qp0PVCqS09eCS8N';
 
     var url = 'https://www.thebluealliance.com/api/v3/team/frc' + teamNumber;
-    
-    if(teamNumber != ""){
+
+    if (teamNumber.length >= 1 && teamNumber.length <= 4) {
       try {
         var response = await fetch(url, {
           headers: {
@@ -18,21 +18,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (response.ok) {
           var data = await response.json();
-          var teamName = data.nickname; // Or the property you want to use
-
-          teamNameP.innerText = teamName;
+          
+          // Checa si la respuesta tiene formato JSON
+          if (data && data.nickname) {
+            var teamName = data.nickname; 
+            teamNameP.innerText = teamName;
+          } else {
+            teamNameP.innerText = "Team not found";
+          }
         } else {
-          teamNameP.innerText = "Insert a valid team"
+          teamNameP.innerText = "Team not found";
+          console.clear()
         }
       } catch (error) {
-        //console.error('Error in the request:', error);
-        teamNameP.innerText = "Something went wrong"
-        
+        // console.error('Error en la solicitud:', error);
+        teamNameP.innerText = "Something went wrong";
       }
     } else {
-      teamNameP.innerText = "Insert a valid team error"
-
+      teamNameP.innerText = "Insert a valid team (1-4 digits)";
     }  
-});
-
+  });
 });
