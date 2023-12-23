@@ -9,9 +9,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const enableAndRequire = (field, label) => {
         field.setAttribute("required", "")
         label.classList.add("required")
-        field.style.display = "block"
-        label.style.display = "block"
-
+        field.style.display = "inline"
+        label.style.display = "inline"
+        wheelType.value = label.value
     }
 
     const disableAndOptional =(field, label) => {
@@ -22,20 +22,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     }
-
-
-    teamNumberInput.addEventListener("input", function () {
-        const teamNumber = teamNumberInput.value;
-
-        if (teamNumber.length < 1 || teamNumber.length > 4) {
-            teamNumberError.innerText = "El equipo debe tener entre 1 y 4 dígitos";
-            // teamNumberError.innerHTML = "El equipo debe tener entre 1 y 4 dígitos";
-        } else {
-            teamNumberError.innerHTML = "";
-        }
-    });
-
-
 
 
     const showOtherWheelOption = (value) => {

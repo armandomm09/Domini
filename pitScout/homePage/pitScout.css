@@ -8,20 +8,25 @@ body {
 }
 
 h1 {
-    color: #ff5733;
+    color: #ff3333;
     text-transform: uppercase;
     margin-bottom: 10px;
 }
 
 form {
     background-color: #000000;
-    max-width: 100%;
+    width: 100%;
     padding: 30px;
     border-radius: 10px;
     margin: 20px auto;
     max-height: 700px;
     overflow: scroll;
     border-color: #000000;
+}
+
+h2 {
+    color: #930606;
+    margin-bottom: 10px;
 }
 
 label {
@@ -41,6 +46,8 @@ input[type="file"] {
     border-radius: 5px;
     font-size: 16px;
     box-sizing: border-box;
+    align-self: center;
+    display: inline;
 }
 
 input[type="text"],
@@ -55,6 +62,11 @@ input[type="number"] {
 input[type="text"]::after {
     border: 1px solid #39a917 !important;
     
+}
+
+#teamNameInput {
+   /*visibility: hidden;*/
+   display: none;
 }
 
 #next-button {
@@ -176,6 +188,7 @@ select:hover {
     border-radius: 50px;
     position: static;
     box-shadow:0 0 30px 4px rgba(0, 0, 0, 0.458);
+    
 }
 
 .radio-language-options:hover {

@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
       formData.append('imagenes_equipo', imagenEquipo);
   
       // Realizar la solicitud fetch
-      fetch("https://script.google.com/macros/s/AKfycbyPdw70vFN5b8lPAi3PP-RTSCsXX4weHD2o1U0cCk4d5INwCDmP-pBXpL5mtznMt4j06g/exec", {
+      fetch("https://script.google.com/macros/s/AKfycbzdGr1A16C_sTQXnMaIv5VvGAE9GzUEu0vnY-54ZMCWRoW-znsWPu1x1ms8yYR-Pbgu8w/exec", {
           method: "POST",
           body: formData
         })
