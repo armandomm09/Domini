@@ -20,6 +20,8 @@ document.addEventListener("DOMContentLoaded", function () {
         .then(res => res.text())
         .then(data => console.log(data))
         .catch(error => console.error('Error:', error));
+
+       window.location.href = "/pitScout/autonomous/auto.html"
     });
   });
   
