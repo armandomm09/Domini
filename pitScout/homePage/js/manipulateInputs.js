@@ -11,7 +11,9 @@ document.addEventListener("DOMContentLoaded", function () {
         label.classList.add("required")
         field.style.display = "inline"
         label.style.display = "inline"
-        wheelType.value = label.value
+        field.addEventListener("change", () => {
+        wheelType.value = field.value
+        })
     }
 
     const disableAndOptional =(field, label) => {
@@ -30,7 +32,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const labelWheelTypeOther = document.querySelector("label[for=wheel-type-other]")
     const otherWheelRequiredIcon = document.getElementById("other-wheel-required-icon")
     
-    value === "other" ?  enableAndRequire(wheelTypeOther, labelWheelTypeOther) : disableAndOptional(wheelTypeOther, labelWheelTypeOther)
+    if(value === "other"){
+        enableAndRequire(wheelTypeOther, labelWheelTypeOther);
+    } else {
+        disableAndOptional(wheelTypeOther, labelWheelTypeOther)
+    }
+
 
 }
 

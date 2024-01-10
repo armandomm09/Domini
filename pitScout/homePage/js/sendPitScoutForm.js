@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     let form = document.getElementById('formularioPit');
-    form.addEventListener('submit', (e) => {
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
       
       // Crear un objeto FormData para manejar el formulario y la imagen
@@ -13,15 +13,17 @@ document.addEventListener("DOMContentLoaded", function () {
       formData.append('imagenes_equipo', imagenEquipo);
   
       // Realizar la solicitud fetch
-      fetch("https://script.google.com/macros/s/AKfycbzdGr1A16C_sTQXnMaIv5VvGAE9GzUEu0vnY-54ZMCWRoW-znsWPu1x1ms8yYR-Pbgu8w/exec", {
+      const response = await fetch("https://script.google.com/macros/s/AKfycbzdGr1A16C_sTQXnMaIv5VvGAE9GzUEu0vnY-54ZMCWRoW-znsWPu1x1ms8yYR-Pbgu8w/exec", {
           method: "POST",
           body: formData
         })
         .then(res => res.text())
-        .then(data => console.log(data))
+        .then(data => data === "Se logro" ? document.getElementById("submitSuccess").classList.remove("visually-hidden") : document.getElementById("submitSuccess").classList.add("visually-hidden"))
+        .then()  
         .catch(error => console.error('Error:', error));
 
-       window.location.href = "/pitScout/autonomous/auto.html"
+
+      window.location.href = "/pitScout/autonomous/auto.html"
     });
   });
   
