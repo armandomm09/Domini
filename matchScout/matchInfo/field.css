@@ -167,17 +167,20 @@ label.radio-group {
 }
 
 .upperBlueZone {
+    background-color: rgb(255, 0, 0) !important;
     grid-row: 3 / 7;
     grid-column: 7 / 11;
 
 }
 
 .midBlueZone {
+    background-color: rgb(0, 255, 26) !important;
     grid-row: 7 / 11;
     grid-column: 7 / 11 ;
 }
 
 .lowBlueZone {
+    background-color: rgb(21, 0, 255) !important;
     grid-row: 11 / 14;
     grid-column: 7 / 11;
 }
