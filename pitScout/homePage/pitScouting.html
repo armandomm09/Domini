@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="/pitScout/homePage/pitScout.css">
     <script src="/pitScout/homePage/js/manipulateInputs.js"></script>
     <link rel="icon" type="image/x-icon" href="/globalResources/Engrane.png">
-    <script src="/pitScout/homePage/js/sendPitScoutForm.js"></script>
+
+   <!-- <script src="/pitScout/homePage/js/sendPitScoutForm.js"></script>-->
+
     <script defer src="/pitScout/homePage/js/getTeamName.js"></script>
 
     
@@ -27,6 +29,7 @@
     
     <form id="formularioPit">
 
+<div id="homePageSection">  
         <input type="text" id="teamNameInput" name="teamNameInput">
         <br>
             <label for="numero_equipo">Número del Equipo:</label>
@@ -101,14 +104,61 @@
      
         <label for="imagenes_equipo">Imágenes del Equipo:</label>
         <input type="file" id="imagenes_equipo" name="imagenes_equipo" accept="image/*" >
+    </div>      
         
+        <button id="back-button">Back</button>
         <input type="submit" id="next-button" value="Next: Auto">
-        
+
         <section class="container visually-hidden" id="submitSuccess">
             <div class="alert alert-success" role="alert">
                 Info Saved
             </div>
            </section>
+
+
+           <!--------------------DRIVERS:--------------------->
+
+      <div id="driversSection" >
+
+        <div class="preference">
+
+            <h3>Drivers</h3> <br>
+
+            <div class="preference-options">
+
+                <label for="preference-driver-select" class="preference-label">Preference</label>
+                <select type="select"  id="preference-driver-select" required>
+
+                    <option >Select Drivers preference</option>
+                    <option value="attack">Attack</option>
+                    <option value="defense">Defense</option>
+                    <option value="feeder">Feeder</option>
+
+                </select>
+
+
+               
+            </div>
+
+        </div>
+
+        <div class="practice-time">
+
+            <label class="radio-group" for="practice-time-select">Practice Time</label>
+            <select type="select"  id="practice-time-select" required>
+
+                <option >Select practice time (hours per week)</option>
+                <option value="0-5">0-5</option>
+                <option value="6-10">6-10</option>
+                <option value="11-15">11-15</option>
+                <option value="16+">16+</option>
+
+
+            </select>
+            
+        </div>
+    </div>  
+
 
     </form>
     

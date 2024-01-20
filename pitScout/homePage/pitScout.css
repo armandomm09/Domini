@@ -34,6 +34,8 @@ label {
     margin-bottom: 10px;
     font-weight: bold;
     color: #fff; /* Ajustar el color de las etiquetas */
+    font-size: 20px;
+
 }
 
 input[type="text"],
@@ -69,7 +71,7 @@ input[type="text"]::after {
    display: none;
 }
 
-#next-button {
+#next-button, #back-button {
     background-color: #ff5733;
     color: #fff;
     padding: 15px 20px;
@@ -97,9 +99,10 @@ input[type="text"]::after {
 .preguntas-radio h3,
 .mobility label,
 .game-pieces label,
-.grid-level label {
-    display: inline-block;
-    margin-right: 10px; /* Espaciado entre elementos de formulario */
+.grid-level label, 
+.preference-options label {
+    display: inline-flex;
+    margin-right: 20px; /* Espaciado entre elementos de formulario */
 }
 
 .initial-position embed {
@@ -199,5 +202,27 @@ select:hover {
 
 label.radio-group {
     color: #ffffff;
-    font-size: 20px;
+}
+
+/*DRIVERSSSS*/
+
+.preference-options {  
+    display: inline-flex;
+    margin: 20px;
+}
+
+.preference-input {
+
+    margin-bottom: 17px;
+    margin-right: 5px;
+    margin-left: 25px;
+
+}
+
+.preferece-label {
+    
+    height: 45px;
+    width: auto;
+    margin-top: 2px;
+
 }
