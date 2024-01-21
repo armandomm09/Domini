@@ -10,6 +10,7 @@
     <link rel="icon" type="image/x-icon" href="/globalResources/Engrane.png">
 
    <!-- <script src="/pitScout/homePage/js/sendPitScoutForm.js"></script>-->
+   <script src="/pitScout/homePage/js/nextStep.js"></script>
 
     <script defer src="/pitScout/homePage/js/getTeamName.js"></script>
 
@@ -106,19 +107,12 @@
         <input type="file" id="imagenes_equipo" name="imagenes_equipo" accept="image/*" >
     </div>      
         
-        <button id="back-button">Back</button>
-        <input type="submit" id="next-button" value="Next: Auto">
-
-        <section class="container visually-hidden" id="submitSuccess">
-            <div class="alert alert-success" role="alert">
-                Info Saved
-            </div>
-           </section>
+        
 
 
            <!--------------------DRIVERS:--------------------->
 
-      <div id="driversSection" >
+      <div id="driversSection" style="display: none;">
 
         <div class="preference">
 
@@ -160,8 +154,18 @@
     </div>  
 
 
+    
+
     </form>
     
+        <button id="back-button" type="button">Back</button>
+        <button id="next-button" type="button">Next</button>
+        
+        <section class="container visually-hidden" id="submitSuccess">
+            <div class="alert alert-success" role="alert">
+                Info Saved
+            </div>
+           </section>
     
     <script src=”https://code.jquery.com/jquery-3.2.1.slim.min.js” integrity=”sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN” crossorigin=”anonymous”></script>
 
