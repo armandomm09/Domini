@@ -19,21 +19,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (response.ok) {
           var data = await response.json();
-          var teamName = data.nickname; // O la propiedad que desees utilizar
+          var teamName = data.nickname; 
 
           teamNameP.innerText = teamName;
-          teamNameInput.value = teamNameP.innerText; // Modifica el valor del input con el nombre del equipo
+          teamNameInput.value = teamNameP.innerText; 
         } else {
           teamNameP.innerText = "Insert a valid team";
-          teamNameInput.value = ""; // Puedes ajustar esto según tu lógica
+          teamNameInput.value = ""; 
         }
       } catch (error) {
         teamNameP.innerText = "Something went wrong";
-        teamNameInput.value = ""; // Puedes ajustar esto según tu lógica
+        teamNameInput.value = ""; 
       }
     } else {
       teamNameP.innerText = "Insert a valid team (1-4 digits)";
-      teamNameInput.value = ""; // Puedes ajustar esto según tu lógica
+      teamNameInput.value = ""; 
     }  
   });
 });
