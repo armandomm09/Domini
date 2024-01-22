@@ -9,10 +9,12 @@
     <script src="/pitScout/homePage/js/manipulateInputs.js"></script>
     <link rel="icon" type="image/x-icon" href="/globalResources/Engrane.png">
 
-   <!-- <script src="/pitScout/homePage/js/sendPitScoutForm.js"></script>-->
+   <script src="/pitScout/homePage/js/sendPitScoutForm.js"></script>
    <script src="/pitScout/homePage/js/nextStep.js"></script>
 
     <script defer src="/pitScout/homePage/js/getTeamName.js"></script>
+
+    <script src="/pitScout/homePage/js/sendRobotImage.js"></script>
 
     
     
@@ -233,13 +235,17 @@
         </div>
     </div>  
 
-
+    <input type="file" accept="image/*" id="imageInput">
+    <img src="" alt="" id="showImage">
     
+    <input type="submit" class="submitButton">
 
     </form>
     
+
         <button id="back-button" type="button">Back</button>
         <button id="next-button" type="button">Next</button>
+        <br>
         
         <section class="container visually-hidden" id="submitSuccess">
             <div class="alert alert-success" role="alert">
