@@ -11,8 +11,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
     console.log(counter)
 
+    const disableButton = (button) => {
+        button.disabled = true;
+        button.style = "background-color: #3b1e17"
+    }
+
+    const enableButton = (button) => {
+        button.disabled = false;
+        button.style = "background-color: #ff5733;"
+    }
     
-    
+    disableButton(backButton);
+
     const checkPage = pageCounter => {
 
         switch(pageCounter){
@@ -20,22 +30,22 @@ document.addEventListener("DOMContentLoaded", function () {
                 homePageSection.style = "display: inline;"
                 driversSection.style = "display: none;"
                 programmingSection.style = "display: none;"
-                backButton.disabled = true;
-                nextButton.disabled = false;
+                disableButton(backButton);
+                enableButton(nextButton)
                 break;
             case 1:
                 homePageSection.style = "display: none;"
                 driversSection.style = "display: none;"
                 programmingSection.style = "display: inline;"
-                backButton.disabled = false;
-                nextButton.disabled = false;
+                enableButton(backButton);
+                enableButton(nextButton)
                 break;
             case 2:
                 homePageSection.style = "display: none;"
                 programmingSection.style = "display: none;"
                 driversSection.style = "display: inline;"
-                backButton.disabled = false;
-                nextButton.disabled = true;
+                disableButton(nextButton);
+                enableButton(backButton)
                 break;
         }
 
