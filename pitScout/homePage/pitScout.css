@@ -27,6 +27,13 @@ form {
 h2 {
     color: #930606;
     margin-bottom: 10px;
+    font-weight: bold;
+}
+
+h3 {
+    color: #930606;
+    margin-bottom: 10px;
+    font-weight: bold;
 }
 
 label {
@@ -52,12 +59,19 @@ input[type="file"] {
     display: inline;
 }
 
-input[type="text"],
-input[type="number"] {
+input[type="text"] {
     background-color:  #870c0c69;
     border: 1px solid #a91717;
     color: #ff0000;
     width: 400px;
+   
+}
+
+input[type="number"] {
+    background-color:  #870c0c69;
+    border: 1px solid #a91717;
+    color: #ff0000;
+    width: 200px;
    
 }
 
@@ -204,6 +218,10 @@ label.radio-group {
     color: #ffffff;
 }
 
+.motorChassisLabel {
+    color: white;
+}
+
 /*DRIVERSSSS*/
 
 .preference-options {  
@@ -227,5 +245,73 @@ label.radio-group {
 
 }
 
+.radioMotorChassisOptions {
+	position: relative;
+	border-radius: 999em;
+	overflow: hidden;
 
+	height: 2.75em;
+	width: 20em;
 
+	display: flex;
+	flex-direction: row-reverse;
+
+	> * {
+		flex: 0 0 33.33%;
+	}
+
+	&:after {
+		content: "";
+
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+
+		border: var(--border-width) solid var(--accent);
+		border-radius: 999em;
+		pointer-events: none;
+	}
+}
+
+.motorsChassisInput {
+	display: none;
+
+	&:checked + .motorChassisLabel {
+		background-color: var(--accent);
+		color: var(--text-active);
+
+		&:before {
+			opacity: 1;
+		}
+		
+		&:last-of-type {
+			background: linear-gradient(90deg, var(--accent) 0%, var(--accent-2) 100%);
+		}
+	}
+}
+
+.motorChassisLabel {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+
+	position: relative;
+	cursor: pointer;
+	transition: all 0.2s ease-out;
+  color: var(--text);
+
+	&:hover {
+		color: var(--text-hover);
+	}
+
+	&:nth-of-type(2) {
+		border-left: var(--border-width) solid var(--accent);
+		border-right: var(--border-width) solid var(--accent);
+	}
+	
+	&:last-of-type {
+		border-left: var(--border-width) solid var(--accent);
+	}
+}

@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const teamNumberError = document.getElementById("teamNumberError");
 
     const wheelType = document.getElementById("wheel-type")
-    
+    /*
     const enableAndRequire = (field, label) => {
         field.setAttribute("required", "")
         label.classList.add("required")
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-}
+} 
 
     const validateWheelOption = () => {
 
@@ -49,6 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
         showOtherWheelOption(wheelType.value)
 
     })}
+*/
 
     const inputsAll = document.querySelectorAll(".programming-language-input")
 
@@ -85,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function () {
         validateProgrammingLanguage(inputsAll)
     })
 
-    validateWheelOption();
+    //validateWheelOption();
         
 
 })

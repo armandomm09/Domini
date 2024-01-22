@@ -30,7 +30,10 @@
     
     <form id="formularioPit">
 
-<div id="homePageSection">  
+<div id="homePageSection"> 
+
+    <h3>Robot</h3>
+
         <input type="text" id="teamNameInput" name="teamNameInput">
         <br>
             <label for="numero_equipo">Número del Equipo:</label>
@@ -38,13 +41,98 @@
 
             
 
+<!--
+   
+-->
+        <div class="tipo-chasis">
+            <label class="radio-group" for="tipo-de-chasis">Chassis type</label>
+            <select type="select"  id="tipo-de-chasis" name="tipoDeChasis" >
+
+                <option >Select Chassis</option>
+                <option value="Tank">Tanque</option>
+                <option value="Swerve">Swerve</option>
+                <option value="Mecanum">Mecanum</option>
+                <option value="Dragonfly">Dragonfly</option>
+
+            </select>
+            
+        </div>
+
+        <div class="chasisMotors">
+            <label for="chasisMotorsSelect" class="radio-group">Motor(s) used on chasis</label>
+                <select type="select" name="motorsChassisSelect" id="motorsChassisSelect" >
+
+                    <option>Select option</option>
+                    <option value="Neo">Neo</option>
+                    <option value="Neo 550">Neo 550</option>
+                    <option value="Neo Vortex">Neo Vortex</option>
+                    <option value="Kraken">Kraken</option>
+                    <option value="Falcon">Falcon</option>
+                    <option value="Cim">Cim</option>
+
+                </select>
+        </div>
+    
+        <div class="robotWeight">
+            <label for="robotWeightSelect" class="radio-group">Robot's weight</label>
+                <select type="select" name="robotWeightSelect" id="robotWeightSelect" >
+
+                    <option>Select option</option>
+                    <option value="X">X</option>
+                    <option value="X">X</option>
+                    <option value="X">X</option>
+
+                </select>
+        </div>
 
 
-   <div class="preguntas-radio">
+        <div class="wheel-type-dropdown">
+            <label class="radio-group" for="wheel-type">Wheel type</label>
+            <select type="select"  id="wheel-type" name="tipoDeLlanta">
 
+                <option >Select Wheel</option>
+                <option value="omni">Omni</option>
+                <option value="colson">Colson</option>
+                <option value="kop">Kop</option>
+                <option value="plaction">Plaction</option>
+                <option value="pneumatic">Pneumatic</option>
+                <option value="mecanum">Mecanum</option>
+                <option value="other">Other:</option>
+            
+            </select>
+    
+        </div>
+
+        <div class="robotMeasure">
+            <label for="robotMeasureSelect" class="radio-group">Robot's weight</label>
+                <select name="robotMeasureSelect" id="robotMeasureSelect">
+
+                    <option>Select option</option>
+                    <option value="X">X</option>
+                    <option value="X">X</option>
+                    <option value="X">X</option>
+
+                </select>
+        </div>
+
+        <br>
+
+
+
+    </div>
+
+    
+           <!--------------------PROGRA:--------------------->
+    
+<div id="programmingSection" style="display: none;">
+
+    <h3>Programming</h3>
+
+      <div class="preguntas-radio">
         <div class="radio-group">
 
-            <h3>Lenguaje</h3>
+            <h4>Language</h4>
+
             <div class="radio-language-options">
                 <input type="radio" id="java" name="progInput" class="programming-language-input" value="java">
                 <label for="java"><img src="/pitScout/resources/logos/java-logo.png" class="programming-language-label" id="java-logo"></label>
@@ -59,55 +147,47 @@
                 <label for="labview"><img src="/pitScout/resources/logos/labview-logo.png" class="programming-language-label" height="45px" width="auto" id="labview-logo" ></label>
             </div>
         </div>
+    </div>  
 
-        <div class="tipo-chasis">
-            <label class="radio-group" for="tipo-de-chasis">Chassis type</label>
-            <select type="select"  id="tipo-de-chasis" name="tipoDeChasis" >
+        <div class="hasVision">
+            <label for="hasVisionSelect" class="radio-group">Do they have vision?</label>
+                <select type="select" name="hasVisionSelect" id="hasVisionSelect" >
 
-                <option >Select Chassis</option>
-                <option value="tanque">Tanque</option>
-                <option value="swerve">Swerve</option>
-                <option value="mecanum">Mecanum</option>
+                    <option>Select option</option>
+                    <option value="The DON'T have vision">No</option>
+                    <option value="They have vision">Yes</option>
 
-            </select>
-            
+                </select>
         </div>
 
-        <br>
-    
+        <div class="visionProcess">
+            <label for="visionProcessSelect" class="radio-group">How do they process their vision</label>
+                <select type="select" name="visionProcessSelect" id="visionProcessSelect" >
 
-        <div class="wheel-type-dropdown">
-            <label class="radio-group" for="wheel-type">Wheel type</label>
-            <select type="select"  id="wheel-type" name="tipoDeLlanta" >
-
-                <option >Select Wheel</option>
-                <option value="omni">Omni</option>
-                <option value="colson">Colson</option>
-                <option value="kop">Kop</option>
-                <option value="plaction">Plaction</option>
-                <option value="pneumatic">Pneumatic</option>
-                <option value="mecanum">Mecanum</option>
-                <option value="other">Other:</option>
-            
-            </select>
-            <br>
-            <br>
-
-            <label for="wheel-type-other">Specify*: </label> 
-            <input type="text" id="wheel-type-other">
-            
+                    <option>Select option</option>
+                    <option value="The DON'T have vision">The don't have vision</option>
+                    <option value="Limelight">Limelight</option>
+                    <option value="Raspberry">Raspberry</option>
+                    <option value="Google Coral">Google Coral</option>
+                    <option value="Orange Pi">Orange Pi</option>
+                    <option value="Webcam alone">Only webcam</option>
+                </select>
         </div>
 
+        <label for="numberOfCamerasInput">Numbers of camera in robot:</label>
+        <input type="number" id="numberOfCamerasInput" name="numberOfCamerasInput">
 
-    </div>
+        <div class="poseEstimationDiv">
+            <label for="poseEstimationSelect" class="radio-group">Do they have pose estimation?</label>
+                <select type="select" name="poseEstimationSelect" id="poseEstimationSelect" >
+                    <option>Select option</option>
+                    <option value="The DON'T have pose estimation">Yes</option>
+                    <option value="They have pose estimation">No</option>
+                </select>
+        </div>
 
-    
-     
-        <label for="imagenes_equipo">Imágenes del Equipo:</label>
-        <input type="file" id="imagenes_equipo" name="imagenes_equipo" accept="image/*" >
-    </div>      
         
-        
+</div>        
 
 
            <!--------------------DRIVERS:--------------------->
