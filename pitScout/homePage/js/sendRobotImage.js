@@ -3,6 +3,8 @@ document.addEventListener("DOMContentLoaded", function () {
     let appsScriptURL = "https://script.google.com/macros/s/AKfycbz3uEWr1ntbx0dusxpS6g8lGJDgPWlMugRyiyMy7PhWsvjYr0eo30oamSErfrMIVkTaaQ/exec"
     let imageInput = document.querySelector("input[type=file]");
     let showImage = document.getElementById("showImage");
+    let form = document.getElementById('formularioPit');
+
 
     imageInput.addEventListener("change", (event) => {
         let fileReader = new FileReader();
@@ -11,12 +13,13 @@ document.addEventListener("DOMContentLoaded", function () {
             let res = fileReader.result;
             showImage.src = res;
             let base64Img = res.split("base64,")[1]
-            //console.log(base64Img);
+            console.log(base64Img);
             let imgObj = {
                 base64: base64Img,
                 type: imageInput.files[0].type,
                 name: imageInput.files[0].name,
             }
+       // form.addEventListener('submit', (e) => {
 
             fetch(appsScriptURL,{
                 method:"POST",
@@ -32,5 +35,6 @@ document.addEventListener("DOMContentLoaded", function () {
         if (event.target.files.length > 0) {
             fileReader.readAsDataURL(event.target.files[0]);
         }
+    //})
     });
 });
