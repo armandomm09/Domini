@@ -113,7 +113,7 @@ input[type="text"]::after {
 .mobility label,
 .game-pieces label,
 .grid-level label, 
-.preference-options label {
+.preference-options label{
     display: inline-flex;
     margin-right: 20px; /* Espaciado entre elementos de formulario */
 }
@@ -141,6 +141,7 @@ input[type="text"]::after {
 
 
 select {
+    display: inline-block;
     background-color: rgb(117, 13, 13);
     color: #fff;
     border: 2px solid #dd1212;
@@ -149,6 +150,7 @@ select {
     height: 35px;
     font-size: 16px;
     box-shadow:0 0 30px 4px rgba(0, 0, 0, 0.652);
+    margin: 10px;
 
 }
 
@@ -228,13 +230,6 @@ label.radio-group {
     margin: 20px;
 }
 
-.preference-input {
-
-    margin-bottom: 17px;
-    margin-right: 5px;
-    margin-left: 25px;
-
-}
 
 .preferece-label {
     
@@ -242,4 +237,10 @@ label.radio-group {
     width: auto;
     margin-top: 2px;
 
+}
+
+/*AUTO SECTION*/
+
+.autoQuestions {
+    display: inline-flex;
 }

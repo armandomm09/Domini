@@ -194,7 +194,7 @@
 
            <!--------------------DRIVERS:--------------------->
 
-      <div id="driversSection" style="display: none;">
+<div id="driversSection" style="display: none;">
 
         <div class="preference">
 
@@ -234,6 +234,403 @@
             
         </div>
     </div>  
+
+<div id="autoSection" style="display: none;">
+
+        <h3>Auto</h3>
+
+            <div class="autoQuestions">
+                
+                <label class="autoQuestion" for="scoringSelect">Scoring</label>
+                    
+                    <select type="select"  id="scoringSelect" required>
+
+                        <option >Select where does the robot scores</option>
+                        <option value="Amp">Amp</option>
+                        <option value="Speaker">Speaker</option>
+                        <option value="Both">Both</option>
+
+                    
+                    </select>
+
+                <label class="autoQuestion" for="intakesFromSelect">Intaking</label>
+                    
+                    <select type="select"  id="intakesFromSelect" required>
+
+                        <option >Select where does the robot intakes from?</option>
+                        <option value="Wing Note">Wing Note</option>
+                        <option value="Central Note">Central Note</option>
+                        <option value="None">None</option>
+
+                    
+                    </select>
+
+                    <label class="autoQuestion" for="leavesSelect">Does the robot leave starting zone?</label>
+                    <select type="select"  id="leavesSelect" required>
+
+                        <option >Select option </option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+
+
+                    </select>
+
+                <label class="autoQuestion" for="centerLineSelect">Do they cross the central line?</label>
+                    
+                    <select type="select"  id="centerLineSelect" required>
+
+                        <option >Select option </option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+
+
+                    </select>
+
+                <label class="autoQuestion" for="tacticalDropSelect">Do they do tactical drop?</label>
+                    
+                    <select type="select"  id="tacticalDropSelect" required>
+
+                        <option >Select option </option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+
+                    
+                    </select>
+
+                <label class="autoQuestion" for="tacticalDropSelect">Does they do tactical drop?</label>
+                    
+                    <select type="select"  id="tacticalDropSelect" required>
+
+                        <option >Select option </option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+
+                    
+                    </select>
+
+                <label class="autoQuestion" for="autoRoutinesSelect">How many routines they have?</label>
+                    
+                    <select type="select"  id="autoRoutinesSelect" required>
+
+                        <option >Select option</option>
+                        <option value="1-3">1-3</option>
+                        <option value="4-6">4-6</option>
+                        <option value="7+">7+</option>
+
+                    
+                    </select>
+                        
+            </div>        
+
+    </div>
+
+<div id="telopSection" style="display: none;">
+
+    <h3>Teleoperated</h3>
+
+        <div class="teleopQuestions">
+
+        <label class="sectionQuestion" for="hpPreferenceSelect">Where does the HP prefers to work?</label>
+                
+            <select type="select" class="sectionQuestion" id="hpPreferenceSelect" required>
+
+                    <option >Select option</option>
+                    <option value="Source">Source</option>
+                    <option value="Amp">Amp</option>
+                
+                </select>
+
+        <label class="sectionQuestion" for="cyclesNumberSelect">How many cycles does the robot do?</label>
+                
+            <select type="select" class="sectionQuestion" id="cyclesNumberSelect" required>
+
+                    <option >Select option</option>
+                    <option value="1-2">1-2</option>
+                    <option value="3-5">3-5</option>
+                    <option value="5+">5+</option>
+                
+                </select>   
+            
+        <label class="sectionQuestion" for="noteSourceSelect">From where does the robot picks up the notes?</label>
+                
+            <select type="select" class="sectionQuestion" id="noteSourceSelect" required>
+
+                    <option >Select option</option>
+                    <option value="Floor">Floor</option>
+                    <option value="Chute">Chute</option>
+                
+                </select> 
+            
+        <label class="sectionQuestion" for="robotOffenseSelect">Where do the robot scores notes?</label>
+                
+            <select type="select" class="sectionQuestion" id="robotOffenseSelect" required>
+
+                    <option >Select option</option>
+                    <option value="Speaker">Speaker</option>
+                    <option value="Amp">Amp</option>
+                
+                </select> 
+             
+        <label class="sectionQuestion" for="defenseSelect">Is the robot capable of deffending?</label>
+                
+                <select type="select" class="sectionQuestion" id="defenseSelect" required>
+
+                    <option >Select option</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+
+                
+                </select> 
+                 
+        <label class="sectionQuestion" for="defenseTypeSelect">If they deffend, how do they deffend?</label>
+                
+                <select type="select" class="sectionQuestion" id="defenseTypeSelect" required>
+
+                    <option >Select option</option>
+                    <option value="Block">Block</option>
+                    <option value="Pin">Pin</option>
+
+                
+                </select>         
+
+        </div>
+
+    </div>
+
+<div id="endgameSection" style="display: none;">
+
+    <h3>Endgame</h3>
+
+        <div class="sectionQuestions">
+
+            <label class="sectionQuestion" for="underTheChainSelect">Is the robot capable to go under the chain?</label>
+                
+                <select type="select" class="sectionQuestion" id="underTheChainSelect" required>
+
+                    <option >Select option</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+
+                
+                </select>
+
+            <label class="sectionQuestion" for="climbingTimeSelect">How much time the robot takes to climb?</label>
+                
+                <select type="select" class="sectionQuestion" id="climbingTimeSelect" required>
+
+                    <option >Select option</option>
+                    <option value="0-5s">0-5s</option>
+                    <option value="6-10s">6-10s</option>
+                    <option value="11-20s">11-20s</option>ç
+                    <option value="No climb">Doesn't climb</option>
+
+                
+                </select>
+
+            <label class="sectionQuestion" for="buddyClimbSelect">Is it capable of climbing another robot?</label>
+                
+                <select type="select" class="sectionQuestion" id="buddyClimbSelect" required>
+
+                    <option >Select option</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+
+                
+                </select>                
+            
+            <label class="sectionQuestion" for="spotlightSelect">Is the HP capable of doing spotlight?</label>
+                
+                <select type="select" class="sectionQuestion" id="spotlightSelect" required>
+
+                    <option >Select option</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+
+                    
+                </select> 
+
+            <label class="sectionQuestion" for="parkSelect">Does the robot parks?</label>
+                
+                <select type="select" class="sectionQuestion" id="parkSelect" required>
+
+                    <option >Select option</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+
+                    
+                </select>
+
+        </div>
+
+    </div>
+
+<div id="driveTeamSection" style="display: none;">
+
+    <h3>Drive Team</h3>
+
+        <label class="sectionQuestion" for="driversPracticeTimeSelect">How many time did the drive team practiced? (Hours per day)</label>
+                
+                <select type="select" class="sectionQuestion" id="driversPracticeTimeSelect" required>
+
+                    <option >Select option</option>
+                    <option value="1-2">1-2</option>
+                    <option value="3-5">3-5</option>
+                    <option value="6+">6+</option>
+                    
+                </select>
+                
+        <label class="sectionQuestion" for="driversFirstSeasonSelect">Is this the driver's first season?</label>
+                
+                <select type="select" class="sectionQuestion" id="driversFirstSeasonSelect" required>
+
+                    <option >Select option</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                    
+                </select>
+
+        <label class="sectionQuestion" for="hpPracticeTimeSelect">How many time did the HP practiced? (Hours per day)</label>
+                
+                <select type="select" class="sectionQuestion" id="hpFirstSeasonSelect" required>
+
+                    <option >Select option</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                    
+                </select>
+
+    </div>
+
+<div id="cualitativeMechanicalSection">
+
+    <h3>Cualitative Mechanical</h3>
+
+        <label class="sectionQuestion" for="sparePartsSelect">Do they have enough spare parts for all of their robot?</label>
+                
+                <select type="select" class="sectionQuestion" id="sparePartsSelect" required>
+
+                    <option >Select option</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                    
+                </select>
+
+        <label class="sectionQuestion" for="easyToRepareSelection">Does the robot looks easy to fix?</label>
+                
+                <select type="select" class="sectionQuestion" id="easyToRepareSelection" required>
+
+                    <option >Select option</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                    
+                </select> 
+                
+        <label class="sectionQuestion" for="robustnessSelect">Does the robot looks robust?</label>
+                
+                <select type="select" class="sectionQuestion" id="robustnessSelect" required>
+
+                    <option >Select option</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                    
+                </select>
+                
+        <label class="sectionQuestion" for="willDefendSelect">Will they defend?</label>
+                
+                <select type="select" class="sectionQuestion" id="willDefendSelect" required>
+
+                    <option >Select option</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                    
+                </select>
+        
+
+    </div>
+
+<div id="cualitativeProgramming">
+
+    <h3>Cualitative Programming</h3>
+
+        <label class="sectionQuestion" for="controlComplexitySelect">How complicated does their control systems are?</label>
+                
+                <select type="select" class="sectionQuestion" id="controlComplexitySelect" required>
+
+                    <option >Select option</option>
+                    <option value="Low">Low</option>
+                    <option value="Medium">Medium</option>
+                    <option value="High">High</option>
+
+                    
+                </select>
+
+        <label class="sectionQuestion" for="routineComplexitySelect">How complicated does their routines are?</label>
+                
+                <select type="select" class="sectionQuestion" id="routineComplexitySelect" required>
+
+                    <option >Select option</option>
+                    <option value="Simple">Simple (leave)</option>
+                    <option value="Average">Average</option>
+                    <option value="Complex">Complex</option>
+
+                    
+                </select>
+
+        <label class="sectionQuestion" for="routinesNumberSelect">How routines do they have?</label>
+                
+                <select type="select" class="sectionQuestion" id="routinesNumberSelect" required>
+
+                    <option >Select option</option>
+                    <option value="0-3">0-3</option>
+                    <option value="Average">Average</option>
+                    <option value="Complex">Complex</option>
+
+                    
+                </select>
+
+    </div>
+
+<div id="cualitativeTeam">
+
+    <h3>Cualitative Team</h3>
+
+        <label class="sectionQuestion" for="expectedOutcomeSelection">What is the expected outcome for the team?</label>
+                
+                <select type="select" class="sectionQuestion" id="expectedOutcomeSelection" required>
+
+                    <option >Select option</option>
+                    <option value="Learn & have fun">Learn & have fun</option>
+                    <option value="Win">Win</option>
+                    <option value="Playoffs">Playoffs</option>
+                    <option value="Not sure">Not sure</option>
+
+                    
+                </select> 
+                
+        <label class="sectionQuestion" for="robotKnowledgeSelect">How well does the team know their robot?</label>
+                
+                <select type="select" class="sectionQuestion" id="robotKnowledgeSelect" required>
+
+                    <option >Select option</option>
+                    <option value="Not quite well">Not quite well</option>
+                    <option value="Sufficient">Sufficient</option>
+                    <option value="Excelente">Excelente</option>
+
+                    
+                </select>
+
+        <label class="sectionQuestion" for="approachableTeamSelect">Are they approachable?</label>
+                
+                <select type="select" class="sectionQuestion" id="approachableTeamSelect" required>
+
+                    <option >Select option</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+
+                    
+                </select>
+    
+    </div>
 
     <input type="file" accept="image/*" id="imageInput">
     <img src="" alt="" id="showImage">
