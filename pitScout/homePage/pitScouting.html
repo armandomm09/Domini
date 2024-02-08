@@ -61,7 +61,7 @@
         </div>
 
         <div class="chasisMotors">
-            <label for="chasisMotorsSelect" class="radio-group">Motor(s) used on chasis</label>
+            <label for="motorsChassisSelect" class="radio-group">Motor(s) used on chasis</label>
                 <select type="select" name="motorsChassisSelect" id="motorsChassisSelect" >
 
                     <option>Select option</option>
@@ -71,6 +71,17 @@
                     <option value="Kraken">Kraken</option>
                     <option value="Falcon">Falcon</option>
                     <option value="Cim">Cim</option>
+
+                </select>
+
+            <label for="booleanTest" class="radio-group">Yes or no?</label>
+                <select type="select" name="booleanTest" id="booleanTest" >
+
+                    <option>Select option</option>
+                    <option value="true">Si</option>
+                    <option value="false">No</option>
+
+                    
 
                 </select>
         </div>
@@ -297,16 +308,7 @@
                     
                     </select>
 
-                <label class="autoQuestion" for="tacticalDropSelect">Does they do tactical drop?</label>
-                    
-                    <select type="select"  id="tacticalDropSelect" required>
-
-                        <option >Select option </option>
-                        <option value="Yes">Yes</option>
-                        <option value="No">No</option>
-
-                    
-                    </select>
+            
 
                 <label class="autoQuestion" for="autoRoutinesSelect">How many routines they have?</label>
                     
@@ -491,7 +493,7 @@
 
         <label class="sectionQuestion" for="hpPracticeTimeSelect">How many time did the HP practiced? (Hours per day)</label>
                 
-                <select type="select" class="sectionQuestion" id="hpFirstSeasonSelect" required>
+                <select type="select" class="sectionQuestion" id="hpPracticeTimeSelect" required>
 
                     <option >Select option</option>
                     <option value="Yes">Yes</option>
