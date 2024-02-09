@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let formData = new FormData(form);
     
 
-    const response = await fetch("https://script.google.com/macros/s/AKfycbxiWO99YwiUYoWlIp7MEqsijEFlTqiOXCmQtvJPDhc-I1Elf7IJLrQ7BFmCSGnE2Rc-/exec", {
+    const response = await fetch("https://script.google.com/macros/s/AKfycbyq2EPDjltEvwNcUDn5JNa-0SSyRdcQUJMmnk450n1OteZWCaoJfAJvVP9jpC7qvS6f3A/exec", {
         method: "POST",
         body: formData
       })
