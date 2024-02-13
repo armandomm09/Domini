@@ -448,6 +448,17 @@
                 
                 </select>
 
+            <label class="sectionQuestion" for="trapSelect">Is the robot capable of doing trap?</label>
+                
+                <select type="select" class="sectionQuestion" name="trapSelect" id="trapSelect" required>
+
+                    <option >Select option</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+
+                
+                </select>
+
             <label class="sectionQuestion" for="buddyClimbSelect">Is it capable of climbing another robot?</label>
                 
                 <select type="select" class="sectionQuestion" name="buddyClimbSelect id="buddyClimbSelect" required>
@@ -515,10 +526,12 @@
                 <select type="select" class="sectionQuestion" name="hpPracticeTimeSelect" id="hpPracticeTimeSelect" required>
 
                     <option >Select option</option>
-                    <option value="Yes">Yes</option>
-                    <option value="No">No</option>
+                    <option value="1-2">1-2</option>
+                    <option value="3-5">3-5</option>
+                    <option value="6+">6+</option>
                     
                 </select>
+        <br>
 
     </div>
 
@@ -565,7 +578,7 @@
                     <option value="No">No</option>
                     
                 </select>
-        
+        <br>
 
     </div>
 
@@ -578,9 +591,9 @@
                 <select type="select" class="sectionQuestion" name="controlComplexitySelect" id="controlComplexitySelect" required>
 
                     <option >Select option</option>
-                    <option value="Low">Low</option>
-                    <option value="Medium">Medium</option>
-                    <option value="High">High</option>
+                    <option value="Simple">Low</option>
+                    <option value="Average">Medium</option>
+                    <option value="Complex">High</option>
 
                     
                 </select>
@@ -603,8 +616,8 @@
 
                     <option >Select option</option>
                     <option value="0-3">0-3</option>
-                    <option value="Average">Average</option>
-                    <option value="Complex">Complex</option>
+                    <option value="3-6">3-6</option>
+                    <option value="6+">6+</option>
 
                     
                 </select>
@@ -651,6 +664,7 @@
                     
                 </select>
     
+        <br>
     </div>
 
     <input type="file" accept="image/*" id="imageInput">
