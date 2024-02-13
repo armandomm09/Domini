@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     
     let formDataObject = {};
       formData.forEach((value, key) => {
+        console.log(value + ": " + key)
       formDataObject[key] = value;
       });
 
@@ -23,7 +24,6 @@ document.addEventListener("DOMContentLoaded", function () {
       console.log(formDataObject)
 
   
-    //window.location.href = "/pitScout/autonomous/auto.html"
   });
 });
 

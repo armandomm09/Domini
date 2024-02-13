@@ -29,19 +29,34 @@
     <h1>Pit Scouting</h1>
     <h2 id="teamNameP"></h2>
     <p>Por favor, proporciona la siguiente información sobre el equipo de FRC en el pit.</p>
-    
+
+    <h3>Scout name</h3>
     <form id="formularioPit">
 
 <div id="homePageSection"> 
 
+    <label for="scoutNameInput">Scout's name</label>
+            <input type="text" id="scoutNameInput" name="scoutName" >
+
     <h3>Robot</h3>
+
+
 
         <input type="text" id="teamNameInput" name="teamNameInput">
         <br>
             <label for="numero_equipo">Número del Equipo:</label>
             <input type="number" id="numero_equipo" name="numero_equipo" >
+        <br>
 
-            
+        
+        <label class="radio-group" for="inspectionPassed">Have they passed inspection?</label>
+            <select type="select"  id="inspectionPassed" name="inspectionPassed" >
+
+                <option >Select Option</option>
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+
+            </select>
 
 <!--
    
@@ -55,6 +70,8 @@
                 <option value="Swerve">Swerve</option>
                 <option value="Mecanum">Mecanum</option>
                 <option value="Dragonfly">Dragonfly</option>
+                <option value="Other">Other</option>
+
 
             </select>
             
@@ -70,20 +87,11 @@
                     <option value="Neo Vortex">Neo Vortex</option>
                     <option value="Kraken">Kraken</option>
                     <option value="Falcon">Falcon</option>
-                    <option value="Cim">Cim</option>
+                    <option value="CIM">Cim</option>
 
                 </select>
 
-            <label for="booleanTest" class="radio-group">Yes or no?</label>
-                <select type="select" name="booleanTest" id="booleanTest" >
-
-                    <option>Select option</option>
-                    <option value="true">Si</option>
-                    <option value="false">No</option>
-
-                    
-
-                </select>
+        
         </div>
     
         <div class="robotWeight">
@@ -104,20 +112,20 @@
             <select type="select"  id="wheel-type" name="tipoDeLlanta">
 
                 <option >Select Wheel</option>
-                <option value="omni">Omni</option>
-                <option value="colson">Colson</option>
-                <option value="kop">Kop</option>
-                <option value="plaction">Plaction</option>
-                <option value="pneumatic">Pneumatic</option>
-                <option value="mecanum">Mecanum</option>
-                <option value="other">Other:</option>
+                <option value="Omni">Omni</option>
+                <option value="Colson">Colson</option>
+                <option value="Kop">Kop</option>
+                <option value="Plaction">Plaction</option>
+                <option value="Pneumatic">Pneumatic</option>
+                <option value="Mecanum">Mecanum</option>
+                <option value="Other">Other:</option>
             
             </select>
     
         </div>
 
         <div class="robotMeasure">
-            <label for="robotMeasureSelect" class="radio-group">Robot's weight</label>
+            <label for="robotMeasureSelect" class="radio-group">Robot's Measurements</label>
                 <select name="robotMeasureSelect" id="robotMeasureSelect">
 
                     <option>Select option</option>
@@ -147,16 +155,16 @@
             <h4>Language</h4>
 
             <div class="radio-language-options">
-                <input type="radio" id="java" name="progInput" class="programming-language-input" value="java">
+                <input type="radio" id="java" name="progInput" class="programming-language-input" value="Java">
                 <label for="java"><img src="/pitScout/resources/logos/java-logo.png" class="programming-language-label" id="java-logo"></label>
        
-                <input type="radio" id="cpp" name="progInput" class="programming-language-input" value="c++">
+                <input type="radio" id="cpp" name="progInput" class="programming-language-input" value="C++">
                 <label for="cpp"><img src="/pitScout/resources/logos/c++-logo.png" class="programming-language-label" height="45px" width="auto" id="cpp-logo"/></label>
 
-                <input type="radio" id="python" name="progInput" class="programming-language-input" value="python">
+                <input type="radio" id="python" name="progInput" class="programming-language-input" value="Python">
                 <label for="python"><img src="/pitScout/resources/logos/python-logo.png" class="programming-language-label" height="45px" width="auto" id="python-logo"/></label>
 
-                <input type="radio" id="labview" name="progInput" class="programming-language-input" value="labview">
+                <input type="radio" id="labview" name="progInput" class="programming-language-input" value="Labview">
                 <label for="labview"><img src="/pitScout/resources/logos/labview-logo.png" class="programming-language-label" height="45px" width="auto" id="labview-logo" ></label>
             </div>
         </div>
@@ -167,8 +175,8 @@
                 <select type="select" name="hasVisionSelect" id="hasVisionSelect" >
 
                     <option>Select option</option>
-                    <option value="The DON'T have vision">No</option>
-                    <option value="They have vision">Yes</option>
+                    <option value="No">No</option>
+                    <option value="Yes">Yes</option>
 
                 </select>
         </div>
@@ -178,7 +186,7 @@
                 <select type="select" name="visionProcessSelect" id="visionProcessSelect" >
 
                     <option>Select option</option>
-                    <option value="The DON'T have vision">The don't have vision</option>
+                    <option value="No vision">The don't have vision</option>
                     <option value="Limelight">Limelight</option>
                     <option value="Raspberry">Raspberry</option>
                     <option value="Google Coral">Google Coral</option>
@@ -188,14 +196,14 @@
         </div>
 
         <label for="numberOfCamerasInput">Numbers of camera in robot:</label>
-        <input type="number" id="numberOfCamerasInput" name="numberOfCamerasInput">
+        <input type="number" name="numberOfCamerasInput" id="numberOfCamerasInput" >
 
         <div class="poseEstimationDiv">
             <label for="poseEstimationSelect" class="radio-group">Do they have pose estimation?</label>
                 <select type="select" name="poseEstimationSelect" id="poseEstimationSelect" >
                     <option>Select option</option>
-                    <option value="The DON'T have pose estimation">Yes</option>
-                    <option value="They have pose estimation">No</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
                 </select>
         </div>
 
@@ -214,7 +222,7 @@
             <div class="preference-options">
 
                 <label for="preference-driver-select" class="preference-label">Preference</label>
-                <select type="select"  id="preference-driver-select" required>
+                <select type="select" name="preference-driver-select" id="preference-driver-select" required>
 
                     <option >Select Drivers preference</option>
                     <option value="attack">Attack</option>
@@ -232,7 +240,7 @@
         <div class="practice-time">
 
             <label class="radio-group" for="practice-time-select">Practice Time</label>
-            <select type="select"  id="practice-time-select" required>
+            <select type="select" name="practice-time-select" id="practice-time-select" required>
 
                 <option >Select practice time (hours per week)</option>
                 <option value="0-5">0-5</option>
@@ -254,7 +262,7 @@
                 
                 <label class="autoQuestion" for="scoringSelect">Scoring</label>
                     
-                    <select type="select"  id="scoringSelect" required>
+                    <select type="select" name="scoringSelect" id="scoringSelect" required>
 
                         <option >Select where does the robot scores</option>
                         <option value="Amp">Amp</option>
@@ -266,7 +274,7 @@
 
                 <label class="autoQuestion" for="intakesFromSelect">Intaking</label>
                     
-                    <select type="select"  id="intakesFromSelect" required>
+                    <select type="select" name="intakesFromSelect" id="intakesFromSelect" required>
 
                         <option >Select where does the robot intakes from?</option>
                         <option value="Wing Note">Wing Note</option>
@@ -277,7 +285,7 @@
                     </select>
 
                     <label class="autoQuestion" for="leavesSelect">Does the robot leave starting zone?</label>
-                    <select type="select"  id="leavesSelect" required>
+                    <select type="select" name="leavesSelect" id="leavesSelect" required>
 
                         <option >Select option </option>
                         <option value="Yes">Yes</option>
@@ -288,7 +296,7 @@
 
                 <label class="autoQuestion" for="centerLineSelect">Do they cross the central line?</label>
                     
-                    <select type="select"  id="centerLineSelect" required>
+                    <select type="select" name="centerLineSelect" id="centerLineSelect" required>
 
                         <option >Select option </option>
                         <option value="Yes">Yes</option>
@@ -299,7 +307,7 @@
 
                 <label class="autoQuestion" for="tacticalDropSelect">Do they do tactical drop?</label>
                     
-                    <select type="select"  id="tacticalDropSelect" required>
+                    <select type="select" name="tacticalDropSelect" id="tacticalDropSelect" required>
 
                         <option >Select option </option>
                         <option value="Yes">Yes</option>
@@ -312,7 +320,7 @@
 
                 <label class="autoQuestion" for="autoRoutinesSelect">How many routines they have?</label>
                     
-                    <select type="select"  id="autoRoutinesSelect" required>
+                    <select type="select" name="autoRoutinesSelect" id="autoRoutinesSelect" required>
 
                         <option >Select option</option>
                         <option value="1-3">1-3</option>
@@ -334,7 +342,7 @@
 
         <label class="sectionQuestion" for="hpPreferenceSelect">Where does the HP prefers to work?</label>
                 
-            <select type="select" class="sectionQuestion" id="hpPreferenceSelect" required>
+            <select type="select" class="sectionQuestion" name="hpPreferenceSelect" id="hpPreferenceSelect" required>
 
                     <option >Select option</option>
                     <option value="Source">Source</option>
@@ -344,7 +352,7 @@
 
         <label class="sectionQuestion" for="cyclesNumberSelect">How many cycles does the robot do?</label>
                 
-            <select type="select" class="sectionQuestion" id="cyclesNumberSelect" required>
+            <select type="select" class="sectionQuestion" name="cyclesNumberSelect id="cyclesNumberSelect" required>
 
                     <option >Select option</option>
                     <option value="1-2">1-2</option>
@@ -355,7 +363,7 @@
             
         <label class="sectionQuestion" for="noteSourceSelect">From where does the robot picks up the notes?</label>
                 
-            <select type="select" class="sectionQuestion" id="noteSourceSelect" required>
+            <select type="select" class="sectionQuestion" name="noteSourceSelect" id="noteSourceSelect" required>
 
                     <option >Select option</option>
                     <option value="Floor">Floor</option>
@@ -365,7 +373,7 @@
             
         <label class="sectionQuestion" for="robotOffenseSelect">Where do the robot scores notes?</label>
                 
-            <select type="select" class="sectionQuestion" id="robotOffenseSelect" required>
+            <select type="select" class="sectionQuestion" name="robotOffenseSelect" id="robotOffenseSelect" required>
 
                     <option >Select option</option>
                     <option value="Speaker">Speaker</option>
@@ -375,7 +383,7 @@
              
         <label class="sectionQuestion" for="defenseSelect">Is the robot capable of deffending?</label>
                 
-                <select type="select" class="sectionQuestion" id="defenseSelect" required>
+                <select type="select" class="sectionQuestion" name="defenseSelect id="defenseSelect" required>
 
                     <option >Select option</option>
                     <option value="Yes">Yes</option>
@@ -386,7 +394,7 @@
                  
         <label class="sectionQuestion" for="defenseTypeSelect">If they deffend, how do they deffend?</label>
                 
-                <select type="select" class="sectionQuestion" id="defenseTypeSelect" required>
+                <select type="select" class="sectionQuestion" id="defenseTypeSelect" id="defenseTypeSelect" required>
 
                     <option >Select option</option>
                     <option value="Block">Block</option>
@@ -407,7 +415,7 @@
 
             <label class="sectionQuestion" for="underTheChainSelect">Is the robot capable to go under the chain?</label>
                 
-                <select type="select" class="sectionQuestion" id="underTheChainSelect" required>
+                <select type="select" class="sectionQuestion" name="underTheChainSelect" id="underTheChainSelect" required>
 
                     <option >Select option</option>
                     <option value="Yes">Yes</option>
@@ -418,7 +426,7 @@
 
             <label class="sectionQuestion" for="climbingTimeSelect">How much time the robot takes to climb?</label>
                 
-                <select type="select" class="sectionQuestion" id="climbingTimeSelect" required>
+                <select type="select" class="sectionQuestion" name="climbingTimeSelect" id="climbingTimeSelect" required>
 
                     <option >Select option</option>
                     <option value="0-5s">0-5s</option>
@@ -431,7 +439,7 @@
 
             <label class="sectionQuestion" for="buddyClimbSelect">Is it capable of climbing another robot?</label>
                 
-                <select type="select" class="sectionQuestion" id="buddyClimbSelect" required>
+                <select type="select" class="sectionQuestion" name="buddyClimbSelect id="buddyClimbSelect" required>
 
                     <option >Select option</option>
                     <option value="Yes">Yes</option>
@@ -442,7 +450,7 @@
             
             <label class="sectionQuestion" for="spotlightSelect">Is the HP capable of doing spotlight?</label>
                 
-                <select type="select" class="sectionQuestion" id="spotlightSelect" required>
+                <select type="select" class="sectionQuestion" name="spotlightSelect" id="spotlightSelect" required>
 
                     <option >Select option</option>
                     <option value="Yes">Yes</option>
@@ -453,7 +461,7 @@
 
             <label class="sectionQuestion" for="parkSelect">Does the robot parks?</label>
                 
-                <select type="select" class="sectionQuestion" id="parkSelect" required>
+                <select type="select" class="sectionQuestion" name="parkSelect" id="parkSelect" required>
 
                     <option >Select option</option>
                     <option value="Yes">Yes</option>
@@ -472,7 +480,7 @@
 
         <label class="sectionQuestion" for="driversPracticeTimeSelect">How many time did the drive team practiced? (Hours per day)</label>
                 
-                <select type="select" class="sectionQuestion" id="driversPracticeTimeSelect" required>
+                <select type="select" class="sectionQuestion" name="driversPracticeTimeSelect" id="driversPracticeTimeSelect" required>
 
                     <option >Select option</option>
                     <option value="1-2">1-2</option>
@@ -483,7 +491,7 @@
                 
         <label class="sectionQuestion" for="driversFirstSeasonSelect">Is this the driver's first season?</label>
                 
-                <select type="select" class="sectionQuestion" id="driversFirstSeasonSelect" required>
+                <select type="select" class="sectionQuestion" name="driversFirstSeasonSelect" id="driversFirstSeasonSelect" required>
 
                     <option >Select option</option>
                     <option value="Yes">Yes</option>
@@ -493,7 +501,7 @@
 
         <label class="sectionQuestion" for="hpPracticeTimeSelect">How many time did the HP practiced? (Hours per day)</label>
                 
-                <select type="select" class="sectionQuestion" id="hpPracticeTimeSelect" required>
+                <select type="select" class="sectionQuestion" name="hpPracticeTimeSelect" id="hpPracticeTimeSelect" required>
 
                     <option >Select option</option>
                     <option value="Yes">Yes</option>
@@ -509,7 +517,7 @@
 
         <label class="sectionQuestion" for="sparePartsSelect">Do they have enough spare parts for all of their robot?</label>
                 
-                <select type="select" class="sectionQuestion" id="sparePartsSelect" required>
+                <select type="select" class="sectionQuestion" name="sparePartsSelect" id="sparePartsSelect" required>
 
                     <option >Select option</option>
                     <option value="Yes">Yes</option>
@@ -519,7 +527,7 @@
 
         <label class="sectionQuestion" for="easyToRepareSelection">Does the robot looks easy to fix?</label>
                 
-                <select type="select" class="sectionQuestion" id="easyToRepareSelection" required>
+                <select type="select" class="sectionQuestion" name="easyToRepareSelection" id="easyToRepareSelection" required>
 
                     <option >Select option</option>
                     <option value="Yes">Yes</option>
@@ -529,7 +537,7 @@
                 
         <label class="sectionQuestion" for="robustnessSelect">Does the robot looks robust?</label>
                 
-                <select type="select" class="sectionQuestion" id="robustnessSelect" required>
+                <select type="select" class="sectionQuestion" name="robustnessSelect" id="robustnessSelect" required>
 
                     <option >Select option</option>
                     <option value="Yes">Yes</option>
@@ -539,7 +547,7 @@
                 
         <label class="sectionQuestion" for="willDefendSelect">Will they defend?</label>
                 
-                <select type="select" class="sectionQuestion" id="willDefendSelect" required>
+                <select type="select" class="sectionQuestion" name="willDefendSelect" id="willDefendSelect" required>
 
                     <option >Select option</option>
                     <option value="Yes">Yes</option>
@@ -556,7 +564,7 @@
 
         <label class="sectionQuestion" for="controlComplexitySelect">How complicated does their control systems are?</label>
                 
-                <select type="select" class="sectionQuestion" id="controlComplexitySelect" required>
+                <select type="select" class="sectionQuestion" name="controlComplexitySelect" id="controlComplexitySelect" required>
 
                     <option >Select option</option>
                     <option value="Low">Low</option>
@@ -568,7 +576,7 @@
 
         <label class="sectionQuestion" for="routineComplexitySelect">How complicated does their routines are?</label>
                 
-                <select type="select" class="sectionQuestion" id="routineComplexitySelect" required>
+                <select type="select" class="sectionQuestion" name="routineComplexitySelect" id="routineComplexitySelect" required>
 
                     <option >Select option</option>
                     <option value="Simple">Simple (leave)</option>
@@ -580,7 +588,7 @@
 
         <label class="sectionQuestion" for="routinesNumberSelect">How routines do they have?</label>
                 
-                <select type="select" class="sectionQuestion" id="routinesNumberSelect" required>
+                <select type="select" class="sectionQuestion" name="routinesNumberSelect" id="routinesNumberSelect" required>
 
                     <option >Select option</option>
                     <option value="0-3">0-3</option>
@@ -598,7 +606,7 @@
 
         <label class="sectionQuestion" for="expectedOutcomeSelection">What is the expected outcome for the team?</label>
                 
-                <select type="select" class="sectionQuestion" id="expectedOutcomeSelection" required>
+                <select type="select" class="sectionQuestion" name="expectedOutcomeSelection" id="expectedOutcomeSelection" required>
 
                     <option >Select option</option>
                     <option value="Learn & have fun">Learn & have fun</option>
@@ -611,7 +619,7 @@
                 
         <label class="sectionQuestion" for="robotKnowledgeSelect">How well does the team know their robot?</label>
                 
-                <select type="select" class="sectionQuestion" id="robotKnowledgeSelect" required>
+                <select type="select" class="sectionQuestion" name="robotKnowledgeSelect" id="robotKnowledgeSelect" required>
 
                     <option >Select option</option>
                     <option value="Not quite well">Not quite well</option>
@@ -623,7 +631,7 @@
 
         <label class="sectionQuestion" for="approachableTeamSelect">Are they approachable?</label>
                 
-                <select type="select" class="sectionQuestion" id="approachableTeamSelect" required>
+                <select type="select" class="sectionQuestion" name="approachableTeamSelect" id="approachableTeamSelect" required>
 
                     <option >Select option</option>
                     <option value="Yes">Yes</option>
