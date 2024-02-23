@@ -96,18 +96,17 @@
 
     </div>
 
-    <div id="auto">
+    <div id="auto" style="display: none;">
 
         <label class="sectionQuestion" for="leavesSelect">Do they leave starting zone?</label>
             <select type="select" class="sectionQuestion" name="leavesSelect" id="leavesSelect" required>
 
                     <option >Select option</option>
-                    <option value="Yes">Yes</option>
-                    <option value="No">No</option>
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
                 
                 </select>
 
-        <div id="autoSpeakerScoring">
 
             <label for="autoNotesScoredOnSpeaker">Notes scored on speaker:</label>   
                 <button type="button" class="restButton" id="restButton1" >-</button>
@@ -129,22 +128,108 @@
                     <input type="number" id="autoNotesFailedOnAmp" name="autoNotesFailedOnAmp" min="0" value="0">
                 <button type="button" class="sumButton">+</button>
 
-            <div id="autoSpeakerMissed">
+            <label class="sectionQuestion" for="autoIntakesFromSelect">Where do they intake from:</label>
+                <select type="select" class="sectionQuestion" name="autoIntakesFromSelect" id="autoIntakesFromSelect" required>
+
+                        <option >Select option</option>
+                        <option value="PODIUM">Podium</option>
+                        <option value="CENTER">Center</option>
+                        <option value="BOTH">Both</option>
+                        <option value="Didn't intake">Didn't intake</option>
+
+                    
+                    </select>
+
+            <label class="sectionQuestion" for="autoCrossesCenterLineSelect">Where do they intake from:</label>
+                <select type="select" class="sectionQuestion" name="autoCrossesCenterLineSelect" id="autoCrossesCenterLineSelect" required>
+
+                        <option >Select option</option>
+                        <option value="0">No</option>
+                        <option value="1">Yes</option>
+
+                    
+                    </select>
+            
+            <label class="sectionQuestion" for="foulsOnAutoSelect">Did they make fouls?</label>
+                <select type="select" class="sectionQuestion" name="foulsOnAutoSelect" id="foulsOnAutoSelect" required>
+
+                        <option >Select option</option>
+                        <option value="0">No</option>
+                        <option value="1">Yes</option>
+
+                    
+                    </select>
 
             </div>
 
+        <div id="teleop">
+
+            <label class="sectionQuestion" for="coopertitionBonusSelect">Did they make the coopertition bonus?</label>
+                <select type="select" class="sectionQuestion" name="coopertitionBonusSelect" id="coopertitionBonusSelect" required>
+
+                        <option >Select option</option>
+                        <option value="0">No</option>
+                        <option value="1">Yes</option>
+
+                    
+                    </select>
+
+                <label for="teleopNotesScoredOnSpeaker">Notes scored on speaker:</label>   
+                    <button type="button" class="restButton" id="restButton1" >-</button>
+                        <input type="number" id="teleopNotesScoredOnSpeaker" name="teleopNotesScoredOnSpeaker" min="0" value="0" >
+                    <button type="button" class="sumButton">+</button>
+    
+                <label for="teleopNotesFailedOnSpeaker">Notes failed on speaker:</label>   
+                    <button type="button" class="restButton">-</button>
+                        <input type="number" id="teleopNotesFailedOnSpeaker" name="teleopNotesFailedOnSpeaker" min="0" value="0">
+                    <button type="button" class="sumButton">+</button>
+    
+                <label for="teleopNotesScoredOnAmp">Notes scored on amp:</label>   
+                    <button type="button" class="restButton">-</button>
+                        <input type="number" id="teleopNotesScoredOnAmp" name="teleopNotesScoredOnAmp" min="0" value="0">
+                    <button type="button" class="sumButton">+</button>
+    
+                <label for="teleopNotesFailedOnAmp">Notes failed on amp:</label>   
+                    <button type="button" class="restButton">-</button>
+                        <input type="number" id="teleopNotesFailedOnAmp" name="teleopNotesFailedOnAmp" min="0" value="0">
+                    <button type="button" class="sumButton">+</button>
+            
+            <label class="sectionQuestion" for="teleopIntakesFromSelect">Where do they intake from?</label>
+                <select type="select" class="sectionQuestion" name="teleopIntakesFromSelect" id="teleopIntakesFromSelect" required>
+
+                        <option >Select option</option>
+                        <option value="AMP">Amp</option>
+                        <option value="FLOOR">Floor</option>
+                        <option value="CHUTE">Chute</option>
+                        <option value="NONE">Floor</option>
+
+                    </select>
+
+                <label for="intakesFailedTeleop">Notes failed to intake:</label>   
+                    <button type="button" class="restButton">-</button>
+                        <input type="number" id="intakesFailedTeleop" name="intakesFailedTeleop" min="0" value="0">
+                    <button type="button" class="sumButton">+</button>
+
+                <label for="timesAmplified">How many times did they amplify:</label>   
+                    <button type="button" class="restButton">-</button>
+                        <input type="number" id="timesAmplified" name="timesAmplified" min="0" value="0">
+                    <button type="button" class="sumButton">+</button>
+                
+                <label for="notesScoredOnAmplfy">How many notes did they scored while amplified:</label>   
+                    <button type="button" class="restButton">-</button>
+                        <input type="number" id="timesAmplified" name="timesAmplified" min="0" value="0">
+                    <button type="button" class="sumButton">+</button>
         </div>
 
-    </div>
         
-            
+    <button id="back-button" type="button">Back</button>
+    <button id="next-button" type="button">Next</button>     
     <input type="submit" class="submitButton">
 
 </form>
     
 
-        <button id="back-button" type="button">Back</button>
-        <button id="next-button" type="button">Next</button>
+        
         <br>
         
         <section class="container visually-hidden" id="submitSuccess">
