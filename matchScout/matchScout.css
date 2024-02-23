@@ -26,6 +26,13 @@ form {
 h2 {
     color: #930606;
     margin-bottom: 10px;
+    font-weight: bold;
+}
+
+h3 {
+    color: #930606;
+    margin-bottom: 10px;
+    font-weight: bold;
 }
 
 label {
@@ -33,6 +40,8 @@ label {
     margin-bottom: 10px;
     font-weight: bold;
     color: #fff; /* Ajustar el color de las etiquetas */
+    font-size: 20px;
+
 }
 
 input[type="text"],
@@ -49,12 +58,19 @@ input[type="file"] {
     display: inline;
 }
 
-input[type="text"],
-input[type="number"] {
+input[type="text"] {
     background-color:  #870c0c69;
     border: 1px solid #a91717;
     color: #ff0000;
     width: 400px;
+   
+}
+
+input[type="number"] {
+    background-color:  #870c0c69;
+    border: 1px solid #a91717;
+    color: #ff0000;
+    width: 200px;
    
 }
 
@@ -68,7 +84,7 @@ input[type="text"]::after {
    display: none;
 }
 
-#next-button {
+#next-button, #back-button {
     background-color: #ff5733;
     color: #fff;
     padding: 15px 20px;
@@ -81,7 +97,7 @@ input[type="text"]::after {
     transition: background-color 300ms ease-out, transform 300ms ease-out;
 }
 
-#next-button:hover {
+#next-button:hover, #back-button:hover {
     background-color: #ff1a00;
     transform: scale(0.98);
 }
@@ -90,17 +106,8 @@ input[type="text"]::after {
     background-color: #4a0606;
 }
 
-.logo {
-    width: 250px;
-    display: block;
-    align-content: start;
-    margin-left: 40px;
-    margin-top: 20px;
-    margin-bottom: 0px;
-}
-
-
 select {
+    display: inline-block;
     background-color: rgb(117, 13, 13);
     color: #fff;
     border: 2px solid #dd1212;
@@ -109,6 +116,7 @@ select {
     height: 35px;
     font-size: 16px;
     box-shadow:0 0 30px 4px rgba(0, 0, 0, 0.652);
+    margin: 10px;
 
 }
 
@@ -122,74 +130,30 @@ select:hover {
     margin-bottom: 10px;
 }
 
+.logo {
+    width: 250px;
+    display: block;
+    align-content: start;
+    margin-left: 40px;
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
 
-label.radio-group {
-    color: #ffffff;
-    font-size: 20px;
+/* Otros estilos */
+
+
+.restButton, .sumButton {
+    
+    background-color: #ff5733;
+    color: #fff;
+    padding: 5px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 30px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 300ms ease-out, transform 300ms ease-out;
+
 }
 
 
-/*FIELD*/
-
-.container {
-    display: grid;
-    grid-template-rows: repeat(20, 50px);
-    grid-template-columns: repeat(20, 50px);
-}
-
-.container div {
-    background-color: blue;
-    border: #000000;
-    border-radius: 10px;
-}
-
-#matchForm {
-    background: url("/matchScout/matchInfo/resources/fieldImage.PNG");
-    background-size: cover;
-}
-
-#fieldImage {
-    width: auto;
-    height: 800px;
-}
-
-.blueAmpRest {
-    grid-row: 2 ;
-    grid-column: 3;
-    color: #ff5733;
-    border: #000000;
-    font: bold;
-}
-
-.blueAmpSum {
-    grid-column: 7;
-    grid-row: 2
-}
-
-.upperBlueZone {
-    background-color: rgb(255, 0, 0) !important;
-    grid-row: 3 / 7;
-    grid-column: 7 / 11;
-
-}
-
-.midBlueZone {
-    background-color: rgb(0, 255, 26) !important;
-    grid-row: 7 / 11;
-    grid-column: 7 / 11 ;
-}
-
-.lowBlueZone {
-    background-color: rgb(21, 0, 255) !important;
-    grid-row: 11 / 14;
-    grid-column: 7 / 11;
-}
-.blueSpeakerSum {
-    grid-row: 5;
-    grid-column: 2;
-}
-
-.blueSpeakerRest {
-    grid-row: 7;
-    grid-column: 2;
-}

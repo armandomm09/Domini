@@ -1,68 +1,64 @@
 document.addEventListener("DOMContentLoaded", function () {
+    const sections = [
+        document.getElementById("homePageSection"),
+        document.getElementById("programmingSection"),
+        document.getElementById("autoSection"),
+        document.getElementById("telopSection"),
+        document.getElementById("endgameSection"),
+        document.getElementById("driveTeamSection"),
+        document.getElementById("cualitativeMechanicalSection"),
+        document.getElementById("cualitativeProgramming"),
+        document.getElementById("cualitativeTeam")
+    ];
 
+    const backButton = document.getElementById("back-button");
+    const nextButton = document.getElementById("next-button");
 
-    let homePageSection = document.getElementById("homePageSection");
-    let programmingSection = document.getElementById("programmingSection");
-    let driversSection = document.getElementById("driversSection");
-    let backButton = document.getElementById("back-button")
-    let nextButton = document.getElementById("next-button");
-
-    var counter = 0;
-
-    console.log(counter)
+    let counter = 0;
 
     const disableButton = (button) => {
         button.disabled = true;
-        button.style = "background-color: #3b1e17"
-    }
+        button.style.backgroundColor = "#3b1e17";
+    };
 
     const enableButton = (button) => {
         button.disabled = false;
-        button.style = "background-color: #ff5733;"
-    }
-    
-    disableButton(backButton);
+        button.style.backgroundColor = "#ff5733";
+    };
 
-    const checkPage = pageCounter => {
+    const enableSection = (index) => {
+        sections.forEach((section, i) => {
+            section.style.display = i === index ? "inline" : "none";
+        });
+    };
 
-        switch(pageCounter){
-            case 0:
-                homePageSection.style = "display: inline;"
-                driversSection.style = "display: none;"
-                programmingSection.style = "display: none;"
-                disableButton(backButton);
-                enableButton(nextButton)
-                break;
-            case 1:
-                homePageSection.style = "display: none;"
-                driversSection.style = "display: none;"
-                programmingSection.style = "display: inline;"
-                enableButton(backButton);
-                enableButton(nextButton)
-                break;
-            case 2:
-                homePageSection.style = "display: none;"
-                programmingSection.style = "display: none;"
-                driversSection.style = "display: inline;"
-                disableButton(nextButton);
-                enableButton(backButton)
-                break;
+    const checkPage = (pageCounter) => {
+        enableSection(pageCounter);
+
+        if (pageCounter === 0) {
+            disableButton(backButton);
+            enableButton(nextButton);
+        } else if (pageCounter === sections.length - 1) {
+            enableButton(backButton);
+            disableButton(nextButton);
+        } else {
+            enableButton(backButton);
+            enableButton(nextButton);
         }
+    };
 
-    }
-    
     backButton.addEventListener("click", () => {
-        counter -= 1;
-        checkPage(counter)
-        console.log(counter)
-
-    })
+        counter = Math.max(0, counter - 1);
+        checkPage(counter);
+        console.log(counter);
+    });
 
     nextButton.addEventListener("click", () => {
-        counter += 1;
-        checkPage(counter)
-        console.log(counter)
+        counter = Math.min(sections.length - 1, counter + 1);
+        checkPage(counter);
+        console.log(counter);
+    });
 
-    })
-
-})
+    // Inicializar la página
+    checkPage(counter);
+});

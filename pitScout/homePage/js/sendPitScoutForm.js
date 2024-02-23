@@ -1,22 +1,44 @@
 document.addEventListener("DOMContentLoaded", function () {
-    let form = document.getElementById('formularioPit');
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
+  let form = document.getElementById('formularioPit');
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    let formData = new FormData(form);
+    
+    let formDataObject = {};
+      formData.forEach((value, key) => {
+        console.log(value + ": " + key)
+      formDataObject[key] = value;
+      });
+
+    const response = await fetch("https://script.google.com/macros/s/AKfycbyFqUgv03_zmcm0YUGnjpJf-yMhXkyCxNEqtQ28C_-JBBVgg4Gcr8lfUQlO0R7o1ommcA/exec", {
+        method: "POST",
+        body: JSON.stringify(formDataObject)
+      })
+      .then(res => res.text())
+      .then(data => data === "Se logro" ? document.getElementById("submitSuccess").classList.remove("visually-hidden") : document.getElementById("submitSuccess").classList.add("visually-hidden"))
+      .catch(error => console.error('Error:', error));
+
       
-      let formData = new FormData(form);
-      
+
+      console.log(formDataObject)
+
   
-      const response = await fetch("https://script.google.com/macros/s/AKfycbyLtsbbK-pjGzq3Dgy3WmbjAuw7nJN8FWOchWSVcXwXYCI39znd7bYQW9arfwHvI3iLKg/exec", {
-          method: "POST",
-          body: formData
-        })
-        .then(res => res.text())
-        .then(data => data === "Se logró" ? document.getElementById("submitSuccess").classList.remove("visually-hidden") : document.getElementById("submitSuccess").classList.add("visually-hidden"))
-        .then()  
-        .catch(error => console.error('Error:', error));
-
-
-      //window.location.href = "/pitScout/autonomous/auto.html"
-    });
   });
-  
+});
+
+
+/*
+  {"teamNameInput":"The Green Machine",
+  "numero_equipo":"352",
+  "tipoDeChasis":"Swerve",
+  "motorsChassisSelect":"Neo 550",
+  "booleanTest":"true",
+  "robotWeightSelect":"X",
+  "tipoDeLlanta":"omni",
+  "robotMeasureSelect":"X",
+  "hasVisionSelect":"Select option",
+  "visionProcessSelect":"Select option",
+  "numberOfCamerasInput":"","
+  poseEstimationSelect":"Select option"}
+*/
