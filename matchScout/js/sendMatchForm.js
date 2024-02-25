@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
         formDataObject[key] = value;
         });
   
-      const response = await fetch("https://script.google.com/macros/s/AKfycbxZXtcISi5Qllhix7OWlWNl0ash-hXxDewOa3PgcjafuamTQQCRqUOFTZYKx6dmSN_vsw/exec", {
+      const response = await fetch("https://script.google.com/macros/s/AKfycbw_YAREG05SfAlxuosqthEhYu24u9IhB0RLt0fvEz18uA4ch-4sG6QbhzBR8jVo2Bh05Q/exec", {
           method: "POST",
           body: JSON.stringify(formDataObject)
         })

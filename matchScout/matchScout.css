@@ -70,7 +70,7 @@ input[type="number"] {
     background-color:  #870c0c69;
     border: 1px solid #a91717;
     color: #ff0000;
-    width: 70px;
+    width: 75px;
     font-size: 30px;
    
 }
@@ -160,6 +160,10 @@ select:hover {
 #initialPositionReference {
 
     height: 200px;
+}
+
+#numero_equipo {
+    width: 150px !important;
 }
 
 /*
