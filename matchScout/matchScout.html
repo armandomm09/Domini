@@ -12,7 +12,10 @@
     <script defer src="/pitScout/homePage/js/getTeamName.js"></script>
 
     <script defer src="/matchScout/js/sumButtons.js"></script>
+
+    <script defer src="/matchScout/js/matchNextStep.js"></script>
     
+    <script defer src="/matchScout/js/sendMatchForm.js"></script>
     
 </head>
 <body>
@@ -27,7 +30,7 @@
     <p>Por favor, proporciona la siguiente información sobre el equipo de FRC en el pit.</p>
 
     <h3>Scout name</h3>
-<form id="formularioPit">
+<form id="matchForm">
 
     <div id="homePageSection" style="display: none;"> 
 
@@ -65,7 +68,7 @@
             <br>
     </div>
 
-    <div id="prematch" style="display: none;">
+    <div id="prematchSection" style="display: none;">
 
         <label class="sectionQuestion" for="hpPositionSelect">Position of their HP:</label>
             <select type="select" class="sectionQuestion" name="hpPositionSelect" id="hpPositionSelect" required>
@@ -80,8 +83,8 @@
             <select type="select" class="sectionQuestion" name="presentSelect" id="presentSelect" required>
 
                     <option >Select option</option>
-                    <option value="Yes">Yes</option>
-                    <option value="No">No</option>
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
                 
                 </select>
 
@@ -89,14 +92,41 @@
                 <select type="select" class="sectionQuestion" name="preloadedNote" id="preloadedNote" required>
     
                         <option >Select option</option>
-                        <option value="Yes">Yes</option>
-                        <option value="No">No</option>
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
                     
                     </select>
 
+        <div id="initialPositionTooltip">
+            <label class="sectionQuestion" for="initialPosition" id="initialPositionLabel">Initial Position</label>
+
+        
+
+            <select type="select" class="sectionQuestion" name="initialPosition" id="initialPosition" required>
+
+                    <option >Select option</option>
+                    <option value="Subwoofer Left">Subwoofer Left</option>
+                    <option value="Subwoofer Right">Subwoofer Right</option>
+                    <option value="Subwoofer Center">Subwoofer Center</option>
+                    <option value="Deadzone Right">Deadzone Right</option>
+                    <option value="Deadzone Left">Deadzone Left</option>
+
+
+
+                
+                </select>
+                <br>
+                <br>
+            <img id="initialPositionReference" src="/matchScout/matchResources/initialPositionReference.png">
+
+        </div>
+        
+        <br>
+         
+                <br>
     </div>
 
-    <div id="auto" style="display: none;">
+    <div id="autoSection" style="display: none;">
 
         <label class="sectionQuestion" for="leavesSelect">Do they leave starting zone?</label>
             <select type="select" class="sectionQuestion" name="leavesSelect" id="leavesSelect" required>
@@ -162,7 +192,7 @@
 
             </div>
 
-        <div id="teleop">
+        <div id="teleopSection" style="display: none;">
 
             <label class="sectionQuestion" for="coopertitionBonusSelect">Did they make the coopertition bonus?</label>
                 <select type="select" class="sectionQuestion" name="coopertitionBonusSelect" id="coopertitionBonusSelect" required>
@@ -174,6 +204,8 @@
                     
                     </select>
 
+            <div id="teleopOnSpeaker">
+                
                 <label for="teleopNotesScoredOnSpeaker">Notes scored on speaker:</label>   
                     <button type="button" class="restButton" id="restButton1" >-</button>
                         <input type="number" id="teleopNotesScoredOnSpeaker" name="teleopNotesScoredOnSpeaker" min="0" value="0" >
@@ -183,7 +215,9 @@
                     <button type="button" class="restButton">-</button>
                         <input type="number" id="teleopNotesFailedOnSpeaker" name="teleopNotesFailedOnSpeaker" min="0" value="0">
                     <button type="button" class="sumButton">+</button>
-    
+            
+            </div>
+
                 <label for="teleopNotesScoredOnAmp">Notes scored on amp:</label>   
                     <button type="button" class="restButton">-</button>
                         <input type="number" id="teleopNotesScoredOnAmp" name="teleopNotesScoredOnAmp" min="0" value="0">
@@ -198,9 +232,9 @@
                 <select type="select" class="sectionQuestion" name="teleopIntakesFromSelect" id="teleopIntakesFromSelect" required>
 
                         <option >Select option</option>
-                        <option value="AMP">Amp</option>
+                        <option value="SOURCE">Amp</option>
                         <option value="FLOOR">Floor</option>
-                        <option value="CHUTE">Chute</option>
+                        <option value="BOTHE">Chute</option>
                         <option value="NONE">Floor</option>
 
                     </select>
@@ -217,9 +251,201 @@
                 
                 <label for="notesScoredOnAmplfy">How many notes did they scored while amplified:</label>   
                     <button type="button" class="restButton">-</button>
-                        <input type="number" id="timesAmplified" name="timesAmplified" min="0" value="0">
+                        <input type="number" id="notesScoredOnAmplfy" name="notesScoredOnAmplfy" min="0" value="0">
+                    <button type="button" class="sumButton">+</button>
+
+                <label for="notesFailedOnAmplfy">How many notes did they failed while amplified:</label>   
+                    <button type="button" class="restButton">-</button>
+                        <input type="number" id="notesFailedOnAmplfy" name="notesFailedOnAmplfy" min="0" value="0">
+                    <button type="button" class="sumButton">+</button>
+
+                <label class="sectionQuestion" for="scoredWhileMovingSelect">Can they score while moving?</label>
+                    <select type="select" class="sectionQuestion" name="scoredWhileMovingSelect" id="scoredWhileMovingSelect" required>
+    
+                            <option >Select option</option>
+                            <option value="0">No</option>
+                            <option value="1">Yes</option>
+    
+                        </select>
+
+                <label class="sectionQuestion" for="tacticalDropSelect">Did they do tactical drop?</label>
+                    <select type="select" class="sectionQuestion" name="tacticalDropSelect" id="tacticalDropSelect" required>
+    
+                            <option >Select option</option>
+                            <option value="0">No</option>
+                            <option value="1">Yes</option>
+    
+                        </select>
+
+                <label for="foulsTeleop">How many fouls did they do?:</label>   
+                    <button type="button" class="restButton">-</button>
+                        <input type="number" id="foulsTeleop" name="foulsTeleop" min="0" value="0">
                     <button type="button" class="sumButton">+</button>
         </div>
+
+           <!-- ENDGAME SECTION --> 
+    <div id="endgameSection" style="display: none;">
+
+        <h2>Endgame</h2>
+
+        <label class="sectionQuestion" for="offenseQuality">Offense quality?</label>
+            <select type="select" class="sectionQuestion" name="offenseQuality" id="offenseQuality" required>
+
+                    <option >Select option</option>
+                    <option value="NONE">None</option>
+                    <option value="EFFECTIVE">Effective</option>
+                    <option value="BAD">Bad</option>
+                    <option value="NS">No Show</option>
+                
+                </select>
+
+        <label class="sectionQuestion" for="deffenseQuality">Deffense quality?</label>
+            <select type="select" class="sectionQuestion" name="deffenseQuality" id="deffenseQuality" required>
+
+                    <option >Select option</option>
+                    <option value="Game piece">Game piece</option>
+                    <option value="Block">Block</option>
+                    <option value="Pinning">Pinning</option>
+                    <option value="Zoning">Zoning</option>
+                    <option value="Defense Blocking">Defense Blocking</option>
+                    <option value="NS">No Show</option>
+                
+                </select>
+
+        <label class="sectionQuestion" for="stageSpeed">Climbing speed?</label>
+                <select type="select" class="sectionQuestion" name="stageSpeed" id="stageSpeed" required>
+    
+                    <option >Select option</option>
+                    <option value="Slow">Slow</option>
+                    <option value="Fast">Fast</option>
+                    <option value="NS">No Show</option>
+                    
+                </select>
+
+        <label class="sectionQuestion" for="successfulClimbing">Successful climbing?</label>
+                <select type="select" class="sectionQuestion" name="successfulClimbing" id="successfulClimbing" required>
+        
+                        <option >Select option</option>
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                        
+                </select>
+
+        <label class="sectionQuestion" for="spotlitScored">Spotlit Scored?</label>
+                <select type="select" class="sectionQuestion" name="spotlitScored" id="spotlitScored" required>
+        
+                        <option >Select option</option>
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                        
+                </select>
+
+        <label class="sectionQuestion" for="attemptedDefense">Attempted Defense?</label>
+                <select type="select" class="sectionQuestion" name="attemptedDefense" id="attemptedDefense" required>
+        
+                        <option >Select option</option>
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                        
+                </select>
+        
+        <label for="numberFouls">Number of fouls:</label>   
+                <button type="button" class="restButton" id="restButton1" >-</button>
+                    <input type="number" id="numberFouls" name="numberFouls" min="0" value="0">
+                <button type="button" class="sumButton">+</button>
+        
+
+    </div> <!-- ENDGAME SECTION ENDS -->
+
+    <!-- POST-MATCH SECTION --> 
+    <div id="postMatchSection" style="display: none;">
+
+        <label class="sectionQuestion" for="agility">Agility?</label>
+            <select type="select" class="sectionQuestion" name="agility" id="agility" required>
+                <option >Select option</option>
+                <option value="Slow">Slow</option>
+                <option value="Fast">Fast</option>
+                <option value="Average">Average</option>
+                <option value="NS">No Show</option>
+                
+            </select>
+
+        <label class="sectionQuestion" for="deffenseSkills">Deffense skills?</label>
+            <select type="select" class="sectionQuestion" name="deffenseSkills" id="deffenseSkills" required>
+
+                <option >Select option</option>
+                <option value="Good">Good</option>
+                <option value="Bad">Bad</option>
+                <option value="Excellent">Excellent</option>
+                <option value="NS">No Show</option>
+                
+            </select>
+
+        <label class="sectionQuestion" for="died">Died?</label>
+            <select type="select" class="sectionQuestion" name="died" id="died" required>
+        
+                    <option >Select option</option>
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                        
+            </select>
+
+        <label class="sectionQuestion" for="tiltedOver">Tilted Over?</label>
+            <select type="select" class="sectionQuestion" name="tiltedOver" id="tiltedOver" required>
+        
+                        <option >Select option</option>
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                        
+            </select>
+
+        <label class="sectionQuestion" for="cardRecived">Received a card?</label>
+            <select type="select" class="sectionQuestion" name="cardRecived" id="cardRecived" required>
+
+                <option >Select option</option>
+                <option value="RED">Red</option>
+                <option value="YELLOW">Yellow</option>
+                <option value="NONE">None</option>
+                <option value="NS">No Show</option>
+                
+            </select>
+
+        <label class="sectionQuestion" for="hpSkills">HP skills?</label>
+            <select type="select" class="sectionQuestion" name="hpSkills" id="hpSkills" required>
+
+                <option >Select option</option>
+                <option value="AWARE">Aware</option>
+                <option value="UNAWARE">Unaware</option>
+                <option value="NS">No Show</option>
+                
+            </select>
+        
+        <label for="finalScores">Final Score</label>   
+        <label for="finalAutoScore">Auto:</label>   
+                <button type="button" class="restButton" id="restButton1" >-</button>
+                    <input type="number" id="finalAutoScore" name="finalAutoScore" min="0" value="0">
+                <button type="button" class="sumButton">+</button>
+
+        <label for="finalTeleopScore">Teleop:</label>   
+                <button type="button" class="restButton" id="restButton1" >-</button>
+                    <input type="number" id="finalTeleopScore" name="finalTeleopScore" min="0" value="0">
+                <button type="button" class="sumButton">+</button>
+
+        <label for="finalScore">Final:</label>   
+                <button type="button" class="restButton" id="restButton1" >-</button>
+                    <input type="number" id="finalScore" name="finalScore" min="0" value="0">
+                <button type="button" class="sumButton">+</button>
+
+        <label for="foulPoint">Fouls:</label>   
+                <button type="button" class="restButton" id="restButton1" >-</button>
+                    <input type="number" id="foulPoint" name="foulPoint" min="0" value="0">
+                <button type="button" class="sumButton">+</button>
+
+        <label for="finalComments">Comments:</label>
+            <textarea id="finalComments" name="finalComments" rows="4" cols="50"></textarea>
+
+    </div> <!-- POST-MATCH SECTION ENDS --> 
+            
 
         
     <button id="back-button" type="button">Back</button>

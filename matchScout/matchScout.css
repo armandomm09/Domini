@@ -70,7 +70,8 @@ input[type="number"] {
     background-color:  #870c0c69;
     border: 1px solid #a91717;
     color: #ff0000;
-    width: 200px;
+    width: 70px;
+    font-size: 30px;
    
 }
 
@@ -149,11 +150,32 @@ select:hover {
     padding: 5px 20px;
     border: none;
     border-radius: 5px;
-    font-size: 30px;
+    font-size: 50px;
     cursor: pointer;
     text-transform: uppercase;
     transition: background-color 300ms ease-out, transform 300ms ease-out;
 
 }
 
+#initialPositionReference {
 
+    height: 200px;
+}
+
+/*
+#initialPositionReference {
+    height: 125px;
+    position: absolute;
+    transform: translateX(-145%);
+    top: -57%;
+    opacity: 0;  
+    transition: opacity 0.3s ease;  
+}
+
+#initialPositionLabel:hover + #initialPositionReference {
+    cursor: pointer;
+    top: 57%;
+    opacity: 1;  
+}
+
+*/
