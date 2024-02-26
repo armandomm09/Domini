@@ -79,6 +79,11 @@ input[type="text"]::after {
     
 }
 
+input[type="submit"]{
+    width: 10rem;
+    margin: auto;
+}
+
 #teamNameInput {
    /*visibility: hidden;*/
    display: none;
@@ -257,5 +262,13 @@ label.radio-group {
     flex-direction: column;
     flex-wrap: wrap;
     margin: auto;
+    margin-top: 3rem;
     
+}
+
+div.alert {
+    width: 10rem;
+    margin: auto;
+    margin-top: 3rem;
+
 }
