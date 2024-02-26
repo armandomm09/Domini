@@ -100,6 +100,9 @@ input[type="submit"]{
     text-transform: uppercase;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     transition: background-color 300ms ease-out, transform 300ms ease-out;
+
+    z-index: auto;
+    position: relative;
 }
 
 #next-button:hover, #back-button:hover {
@@ -109,6 +112,10 @@ input[type="submit"]{
 
 #next-button:active {
     background-color: #4a0606;
+}
+
+.next-back{
+    margin-top: 10rem;
 }
 
 /* Otros estilos */
