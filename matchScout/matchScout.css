@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap');
+
+@font-face {
+    font-family: Industry;
+    src: url(/matchScout/resources/Industry-BoldItalic.ttf);
+}
+
+
 body {
     font-family: Arial, sans-serif;
     color: #fff;
@@ -11,6 +19,7 @@ h1 {
     color: #ff3333;
     text-transform: uppercase;
     margin-bottom: 10px;
+    font-family: 'Industry';
 }
 
 form {
@@ -26,21 +35,27 @@ form {
 h2 {
     color: #930606;
     margin-bottom: 10px;
-    font-weight: bold;
+    font-weight: 400;
+    font-family: 'Industry';
+    text-transform: uppercase;
 }
 
 h3 {
     color: #930606;
     margin-bottom: 10px;
     font-weight: bold;
+    font-family: 'Industry';
+    text-transform: uppercase;
+
 }
 
 label {
     display: block;
     margin-bottom: 10px;
-    font-weight: bold;
+    font-weight: 400;
     color: #fff; /* Ajustar el color de las etiquetas */
     font-size: 20px;
+    font-family: 'Inter', sans-serif;
 
 }
 
@@ -56,6 +71,7 @@ input[type="file"] {
     box-sizing: border-box;
     align-self: center;
     display: inline;
+    font-family: 'Inter', sans-serif;
 }
 
 input[type="text"] {
@@ -63,6 +79,7 @@ input[type="text"] {
     border: 1px solid #a91717;
     color: #ff0000;
     width: 400px;
+    font-family: 'Inter', sans-serif;
    
 }
 
@@ -70,13 +87,14 @@ input[type="number"] {
     background-color:  #870c0c69;
     border: 1px solid #a91717;
     color: #ff0000;
-    width: 75px;
-    font-size: 30px;
+    width: 200px;
+    font-family: 'Inter', sans-serif;
    
 }
 
 input[type="text"]::after {
     border: 1px solid #39a917 !important;
+    font-family: 'Inter', sans-serif;
     
 }
 
@@ -96,6 +114,10 @@ input[type="text"]::after {
     text-transform: uppercase;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     transition: background-color 300ms ease-out, transform 300ms ease-out;
+    margin-top: 3rem;
+    font-family: 'Industry';
+    margin: 15px;
+    width: 10rem;
 }
 
 #next-button:hover, #back-button:hover {
@@ -105,6 +127,10 @@ input[type="text"]::after {
 
 #next-button:active {
     background-color: #4a0606;
+}
+
+.next-back{
+    margin-top: 1rem;
 }
 
 select {
@@ -150,7 +176,7 @@ select:hover {
     padding: 5px 20px;
     border: none;
     border-radius: 5px;
-    font-size: 50px;
+    font-size: 30px;
     cursor: pointer;
     text-transform: uppercase;
     transition: background-color 300ms ease-out, transform 300ms ease-out;
@@ -166,20 +192,4 @@ select:hover {
     width: 150px !important;
 }
 
-/*
-#initialPositionReference {
-    height: 125px;
-    position: absolute;
-    transform: translateX(-145%);
-    top: -57%;
-    opacity: 0;  
-    transition: opacity 0.3s ease;  
-}
 
-#initialPositionLabel:hover + #initialPositionReference {
-    cursor: pointer;
-    top: 57%;
-    opacity: 1;  
-}
-
-*/
