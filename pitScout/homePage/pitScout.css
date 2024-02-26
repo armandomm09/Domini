@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap');
+
+@font-face {
+    font-family: Industry;
+    src: url(/globalResources/Industry-BoldItalic.ttf);
+}
+
 body {
     font-family: Arial, sans-serif;
     color: #fff;
@@ -11,6 +18,7 @@ h1 {
     color: #ff3333;
     text-transform: uppercase;
     margin-bottom: 10px;
+    font-family: 'Industry';
 }
 
 form {
@@ -27,20 +35,25 @@ h2 {
     color: #930606;
     margin-bottom: 10px;
     font-weight: bold;
+    font-family: 'Industry';
+    text-transform: uppercase;
 }
 
 h3 {
     color: #930606;
     margin-bottom: 10px;
     font-weight: bold;
+    font-family: 'Industry';
+    text-transform: uppercase;
 }
 
 label {
     display: block;
     margin-bottom: 10px;
-    font-weight: bold;
+    font-weight:400;
     color: #fff; /* Ajustar el color de las etiquetas */
     font-size: 20px;
+   font-family: 'Inter', sans-serif;
 
 }
 
@@ -56,6 +69,7 @@ input[type="file"] {
     box-sizing: border-box;
     align-self: center;
     display: inline;
+    font-family: 'Inter', sans-serif;
 }
 
 input[type="text"] {
@@ -63,6 +77,7 @@ input[type="text"] {
     border: 1px solid #a91717;
     color: #ff0000;
     width: 400px;
+    font-family: 'Inter', sans-serif;;
    
 }
 
@@ -71,6 +86,7 @@ input[type="number"] {
     border: 1px solid #a91717;
     color: #ff0000;
     width: 200px;
+    font-family: 'Inter', sans-serif;;
    
 }
 
@@ -100,9 +116,14 @@ input[type="submit"]{
     text-transform: uppercase;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     transition: background-color 300ms ease-out, transform 300ms ease-out;
+    width: 10rem;
 
     z-index: auto;
     position: relative;
+
+    margin: 15px;
+
+    font-family: 'Industry';
 }
 
 #next-button:hover, #back-button:hover {
@@ -111,11 +132,13 @@ input[type="submit"]{
 }
 
 #next-button:active {
-    background-color: #4a0606;
+    background-color: rgb(160, 9, 9);
 }
 
 .next-back{
     margin-top: 10rem;
+    padding-top: 3rem;
+    justify-content: space-around;
 }
 
 /* Otros estilos */
@@ -163,6 +186,7 @@ select {
     font-size: 16px;
     box-shadow:0 0 30px 4px rgba(0, 0, 0, 0.652);
     margin: 10px;
+    font-family: 'Inter', sans-serif;;
 
 }
 
@@ -270,6 +294,7 @@ label.radio-group {
     flex-wrap: wrap;
     margin: auto;
     margin-top: 3rem;
+    font-family: 'Inter', sans-serif;;
     
 }
 
