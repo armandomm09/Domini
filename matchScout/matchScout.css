@@ -159,7 +159,7 @@ select:hover {
 }
 
 .logo {
-    width: 250px;
+    width: 150px;
     display: block;
     align-content: start;
     margin-left: 40px;
@@ -181,6 +181,26 @@ select:hover {
     cursor: pointer;
     text-transform: uppercase;
     transition: background-color 300ms ease-out, transform 300ms ease-out;
+
+}
+
+.counters {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 30%;
+    text-align: center;
+    margin: auto;
+}
+
+.final-score {
+    margin: auto;
+    justify-content: center;
+
+}
+form .counters .container-field {
+    display: block;
 
 }
 

@@ -18,7 +18,7 @@
 <body>
     <header>
         <a href="/index.html">
-        <img src="/globalResources/logo_oficial_conNombre.png" class="logo"/>
+        <img src="/globalResources/5887_trans.png" class="logo"/>
         </a>
     
     </header>
@@ -275,29 +275,44 @@
                 
             </select>
         
-        
-        <label for="finalScores">Final Score</label>   
-        <label for="finalAutoScore">Auto:</label>   
-                <button type="button" class="restButton" id="restButton1" >-</button>
-                    <input type="number" id="finalAutoScore" name="finalAutoScore" min="0" value="0">
-                <button type="button" class="sumButton">+</button>
+        <div class="counters">
+            
+            <div class="container-field">
+                <div class="final-score">
+                    <label for="finalScores" class="final-score">Final Score</label>   
+                </div>
+                <label for="finalAutoScore">Auto:</label>   
+                    <button type="button" class="restButton" id="restButton1" >-</button>
+                        <input type="number" id="finalAutoScore" name="finalAutoScore" min="0" value="0">
+                    <button type="button" class="sumButton">+</button>
 
-        <label for="finalTeleopScore">Teleop:</label>   
-                <button type="button" class="restButton" id="restButton1" >-</button>
-                    <input type="number" id="finalTeleopScore" name="finalTeleopScore" min="0" value="0">
-                <button type="button" class="sumButton">+</button>
+            </div>
+            
+            <div class="container-field">
+                <label for="finalTeleopScore">Teleop:</label>   
+                    <button type="button" class="restButton" id="restButton1" >-</button>
+                        <input type="number" id="finalTeleopScore" name="finalTeleopScore" min="0" value="0">
+                    <button type="button" class="sumButton">+</button>
+            </div>
+            
+            <div class="container-field">
+                <label for="finalScore">Final:</label>   
+                    <button type="button" class="restButton" id="restButton1" >-</button>
+                        <input type="number" id="finalScore" name="finalScore" min="0" value="0">
+                    <button type="button" class="sumButton">+</button>
+            </div>
+            
+            <div class="container-field">
+                <label for="foulPoint">Fouls:</label>   
+                    <button type="button" class="restButton" id="restButton1" >-</button>
+                        <input type="number" id="foulPoint" name="foulPoint" min="0" value="0">
+                    <button type="button" class="sumButton">+</button>
+            </div>
+            
+        </div>
+           
 
-        <label for="finalScore">Final:</label>   
-                <button type="button" class="restButton" id="restButton1" >-</button>
-                    <input type="number" id="finalScore" name="finalScore" min="0" value="0">
-                <button type="button" class="sumButton">+</button>
-
-        <label for="foulPoint">Fouls:</label>   
-                <button type="button" class="restButton" id="restButton1" >-</button>
-                    <input type="number" id="foulPoint" name="foulPoint" min="0" value="0">
-                <button type="button" class="sumButton">+</button>
-
-        <label for="finalComments">Comments:</label>
+            <label for="finalComments">Comments:</label>
             <textarea id="finalComments" name="finalComments" rows="4" cols="50"></textarea>
 
     </div> <!-- POST-MATCH SECTION ENDS --> 
