@@ -22,7 +22,7 @@
 <body>
     <header>
         <a href="/index.html">
-        <img src="/globalResources/logo_oficial_conNombre.png" class="logo"/>
+        <img src="/globalResources/5887_trans.png" class="logo"/>
         </a>
     
     </header>
@@ -99,9 +99,9 @@
                 <select type="select" name="robotWeightSelect" id="robotWeightSelect" >
 
                     <option>Select option</option>
-                    <option value="X">X</option>
-                    <option value="X">X</option>
-                    <option value="X">X</option>
+                    <option value="<=80"><= 80 </option>
+                    <option value="90-100">90-100</option>
+                    <option value="100-120">100-120</option>
 
                 </select>
         </div>
@@ -122,16 +122,16 @@
             
             </select>
     
-        </div>
+</div>
 
         <div class="robotMeasure">
             <label for="robotMeasureSelect" class="radio-group">Robot's Measurements</label>
                 <select name="robotMeasureSelect" id="robotMeasureSelect">
 
                     <option>Select option</option>
-                    <option value="X">X</option>
-                    <option value="X">X</option>
-                    <option value="X">X</option>
+                    <option value="30x30">30x30</option>
+                    <option value="20x20">20x20</option>
+                    <option value="30x20">30x20</option>
 
                 </select>
         </div>
@@ -567,7 +567,8 @@
                     
                 </select>
 
-        <label class="sectionQuestion" for="routinesNumberSelect">How routines do they have?</label>
+        <div class="container-field">
+            <label class="sectionQuestion" for="routinesNumberSelect">How routines do they have?</label>
                 
                 <select type="select" class="sectionQuestion" name="routinesNumberSelect" id="routinesNumberSelect" required>
 
@@ -579,7 +580,9 @@
                     
                 </select>
 
-    </div>
+        </div>
+        
+</div>
 
 <div id="cualitativeTeam">
 
@@ -624,24 +627,24 @@
         <br>
     </div>
 
-    <div class="submit-buttons">
+    
         <input type="file" accept="image/*" id="imageInput">
         <img src="" alt="" id="showImage">
-        <input type="submit" class="submitButton">
-
-    </div>
-   
     
+   
+        <div class="next-back">
+            <button id="back-button" type="button">Back</button>
+            <button id="next-button" type="button">Next</button>     
+        </div>
+    
+        <input type="submit" class="submitButton">
+            <br>
+            
 
     </form>
     
 
-    <div class="next-back">
-        <button id="back-button" type="button">Back</button>
-        <button id="next-button" type="button">Next</button>     
-    </div>
-        <br>
-        
+   
         <section class="container visually-hidden" id="submitSuccess">
             <div class="alert alert-success" role="alert">
                 Info Saved

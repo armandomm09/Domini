@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: 'Industry', Arial, sans-serif;
+    font-family: Arial, sans-serif;
     color: #fff;
     background-color: #000000;
     text-align: center;
@@ -22,13 +22,14 @@ h1 {
 }
 
 form {
-    background-color: #000000;
+    /*background-color: #00000000;*/
+    height: 100%;
     width: 100%;
     padding: 30px;
     border-radius: 10px;
     margin: 20px auto;
     max-height: 700px;
-    border-color: #000000;
+    /*border-color: #000000;*/
 }
 
 h2 {
@@ -71,6 +72,11 @@ input[type="file"] {
     justify-content: center;
     display: inline;
     font-family: 'Inter', sans-serif;
+
+}
+
+input[type="file"]{
+    margin-left: 10%;
 }
 
 input[type="text"] {
@@ -118,6 +124,7 @@ input[type="submit"]{
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     transition: background-color 300ms ease-out, transform 300ms ease-out;
     width: 10rem;
+    margin-top: 5rem;
 
     z-index: auto;
     position: relative;
@@ -133,15 +140,26 @@ input[type="submit"]{
 }
 
 #next-button:active {
-    background-color: rgb(160, 9, 9);
+    background-color: #4a0606;
+}
+
+.homePageSection {
+    justify-content: center;
+    margin:auto;
 }
 
 .next-back{
-    margin-top: 10rem;
     padding-top: 5rem;
-    justify-content: space-around;
 }
 
+.submit-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    margin: auto !important;
+    margin-left: 5rem;
+}
 /* Otros estilos */
 
 .radio-group label,
@@ -162,7 +180,7 @@ input[type="submit"]{
 }
 
 .logo {
-    width: 250px;
+    width: 10%;
     display: block;
     align-content: start;
     margin-left: 40px;
@@ -278,34 +296,60 @@ label.radio-group {
 
 /*AUTO SECTION*/
 
-.autoQuestions {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
 
+input[type="submit"]{
+    background-color: black;
+    /*box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset, white 0px 0px 0px 1px;*/
+    box-shadow: white 0px 2px 4px 0px, whitesmoke 0px 2px 16px 0px;
+    margin-top: 3rem;
+    color: #fff;
+    padding: 5px 20px;
+    border: white;
+    border-radius: 5px;
+    font-size: 30px;
+    font-family: 'Industry';
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 300ms ease-out, transform 300ms ease-out;
 }
 
-.submit-buttons {
-    display: flex;
-    width: 5%;
-    align-self: center;
-    align-content: center;
-    flex-direction: column;
-    justify-content: center !important;
-    flex-wrap: wrap;
-    margin: auto;
-    font-family: 'Inter', sans-serif;;
-    
+
+body {
+    background-image: url("/home/resources/2.png");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat:  no-repeat;
 }
 
-div.alert {
-    width: 10rem;
-    margin: auto;
-    margin-top: 10rem;
+@media only screen and (max-width: 500px) {
 
+body {
+    font-family: Arial, sans-serif;
+    font-size: 14px; /* Adjust font size */
+    color: #fff;
+    background-color: #000000;
+    text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
-.next-back{
-    margin-top: 5rem;
+/* Heading styles */
+h1, h2, h3 {
+    font-size: 30px; /* Adjust heading font size */
+}
+
+/* Form styles */
+form {
+    padding: 10px; /* Adjust padding */
+}
+
+/* Input styles */
+input[type="text"],
+input[type="number"],
+textarea,
+input[type="file"] {
+    width: 100%; /* Make inputs full width */
+}
+
+
 }

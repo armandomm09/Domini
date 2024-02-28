@@ -21,7 +21,7 @@
 <body>
     <header>
         <a href="/index.html">
-        <img src="/globalResources/logo_oficial_conNombre.png" class="logo"/>
+        <img src="/globalResources/5887_trans.png" class="logo"/>
         </a>
     
     </header>
@@ -140,25 +140,39 @@
                 </select>
 
 
-            <label for="autoNotesScoredOnSpeaker">Notes scored on speaker:</label>   
-                <button type="button" class="restButton" id="restButton1" >-</button>
-                    <input type="number" id="autoNotesScoredOnSpeaker" name="autoNotesScoredOnSpeaker" min="0" value="0" >
-                <button type="button" class="sumButton">+</button>
+                <div class="auto-container">
 
-            <label for="autoNotesFailedOnSpeaker">Notes failed on speaker:</label>   
-                <button type="button" class="restButton">-</button>
-                    <input type="number" id="autoNotesFailedOnSpeaker" name="autoNotesFailedOnSpeaker" min="0" value="0">
-                <button type="button" class="sumButton">+</button>
-
-            <label for="autoNotesScoredOnAmp">Notes scored on amp:</label>   
-                <button type="button" class="restButton">-</button>
-                    <input type="number" id="autoNotesScoredOnAmp" name="autoNotesScoredOnAmp" min="0" value="0">
-                <button type="button" class="sumButton">+</button>
-
-            <label for="autoNotesFailedOnAmp">Notes failed on amp:</label>   
-                <button type="button" class="restButton">-</button>
-                    <input type="number" id="autoNotesFailedOnAmp" name="autoNotesFailedOnAmp" min="0" value="0">
-                <button type="button" class="sumButton">+</button>
+                    <div class="container-field">
+                        <label for="autoNotesScoredOnSpeaker">Notes scored on speaker:</label>   
+                        <button type="button" class="restButton" id="restButton1" >-</button>
+                            <input type="number" id="autoNotesScoredOnSpeaker" name="autoNotesScoredOnSpeaker" min="0" value="0" >
+                        <button type="button" class="sumButton">+</button>
+                    </div>
+    
+                    
+                    <div class="container-field">
+                        <label for="autoNotesFailedOnSpeaker">Notes failed on speaker:</label>   
+                        <button type="button" class="restButton">-</button>
+                            <input type="number" id="autoNotesFailedOnSpeaker" name="autoNotesFailedOnSpeaker" min="0" value="0">
+                        <button type="button" class="sumButton">+</button>
+                    </div>
+    
+                    <div class="container-field">
+                        <label for="autoNotesScoredOnAmp">Notes scored on amp:</label>   
+                        <button type="button" class="restButton">-</button>
+                            <input type="number" id="autoNotesScoredOnAmp" name="autoNotesScoredOnAmp" min="0" value="0">
+                        <button type="button" class="sumButton">+</button>
+    
+                    </div>
+                    <div class="container-field">
+                        <label for="autoNotesFailedOnAmp">Notes failed on amp:</label>   
+                        <button type="button" class="restButton">-</button>
+                            <input type="number" id="autoNotesFailedOnAmp" name="autoNotesFailedOnAmp" min="0" value="0">
+                        <button type="button" class="sumButton">+</button>
+                    </div> 
+                    
+                </div>
+    
 
             <label class="sectionQuestion" for="autoIntakesFromSelect">Where do they intake from:</label>
                 <select type="select" class="sectionQuestion" name="autoIntakesFromSelect" id="autoIntakesFromSelect" required>
@@ -208,30 +222,39 @@
                     
                     </select>
 
-            <div id="teleopOnSpeaker">
-                
-                <label for="teleopNotesScoredOnSpeaker">Notes scored on speaker:</label>   
-                    <button type="button" class="restButton" id="restButton1" >-</button>
-                        <input type="number" id="teleopNotesScoredOnSpeaker" name="teleopNotesScoredOnSpeaker" min="0" value="0" >
-                    <button type="button" class="sumButton">+</button>
-    
-                <label for="teleopNotesFailedOnSpeaker">Notes failed on speaker:</label>   
-                    <button type="button" class="restButton">-</button>
-                        <input type="number" id="teleopNotesFailedOnSpeaker" name="teleopNotesFailedOnSpeaker" min="0" value="0">
-                    <button type="button" class="sumButton">+</button>
-            
-            </div>
+                    <div id="teleopOnSpeaker">
 
-                <label for="teleopNotesScoredOnAmp">Notes scored on amp:</label>   
-                    <button type="button" class="restButton">-</button>
-                        <input type="number" id="teleopNotesScoredOnAmp" name="teleopNotesScoredOnAmp" min="0" value="0">
-                    <button type="button" class="sumButton">+</button>
-    
-                <label for="teleopNotesFailedOnAmp">Notes failed on amp:</label>   
-                    <button type="button" class="restButton">-</button>
-                        <input type="number" id="teleopNotesFailedOnAmp" name="teleopNotesFailedOnAmp" min="0" value="0">
-                    <button type="button" class="sumButton">+</button>
-            
+                        <div class="container-field">
+                             <label for="teleopNotesScoredOnSpeaker">Notes scored on speaker:</label>   
+                             <button type="button" class="restButton" id="restButton1" >-</button>
+                             <input type="number" id="teleopNotesScoredOnSpeaker" name="teleopNotesScoredOnSpeaker" min="0" value="0" >
+                             <button type="button" class="sumButton">+</button>
+                        </div>
+                         
+                        <div class="container-field">
+                             <label for="teleopNotesFailedOnSpeaker">Notes failed on speaker:</label>   
+                             <button type="button" class="restButton">-</button>
+                                 <input type="number" id="teleopNotesFailedOnSpeaker" name="teleopNotesFailedOnSpeaker" min="0" value="0">
+                             <button type="button" class="sumButton">+</button>
+                 
+                        </div>
+         
+                        <div class="container-field">
+                             <label for="teleopNotesScoredOnAmp">Notes scored on amp:</label>   
+                             <button type="button" class="restButton">-</button>
+                                 <input type="number" id="teleopNotesScoredOnAmp" name="teleopNotesScoredOnAmp" min="0" value="0">
+                             <button type="button" class="sumButton">+</button>
+                         </div>
+         
+                         <div class="container-field">
+                             <label for="teleopNotesFailedOnAmp">Notes failed on amp:</label>   
+                             <button type="button" class="restButton">-</button>
+                                 <input type="number" id="teleopNotesFailedOnAmp" name="teleopNotesFailedOnAmp" min="0" value="0">
+                             <button type="button" class="sumButton">+</button>
+                     
+                         </div>
+                     
+                     </div>
             <label class="sectionQuestion" for="teleopIntakesFromSelect">Where do they intake from?</label>
                 <select type="select" class="sectionQuestion" name="teleopIntakesFromSelect" id="teleopIntakesFromSelect" required>
 
@@ -243,26 +266,40 @@
 
                     </select>
 
-                <label for="intakesFailedTeleop">Notes failed to intake:</label>   
-                    <button type="button" class="restButton">-</button>
-                        <input type="number" id="intakesFailedTeleop" name="intakesFailedTeleop" min="0" value="0">
-                    <button type="button" class="sumButton">+</button>
-
-                <label for="timesAmplified">How many times did they amplify:</label>   
-                    <button type="button" class="restButton">-</button>
-                        <input type="number" id="timesAmplified" name="timesAmplified" min="0" value="0">
-                    <button type="button" class="sumButton">+</button>
+                    <div class="note-container">
+                        <div class="container-field">
+                            <label for="intakesFailedTeleop">Notes failed to intake:</label>   
+                            <button type="button" class="restButton">-</button>
+                                <input type="number" id="intakesFailedTeleop" name="intakesFailedTeleop" min="0" value="0">
+                            <button type="button" class="sumButton">+</button>
+                        </div>  
+                        
+                        <div class="container-field">
+                            <div class="text-wrap">
+                                <label for="timesAmplified">How many times did they amplify:</label>   
+                            </div>
+        
+                        
+                            <button type="button" class="restButton">-</button>
+                                <input type="number" id="timesAmplified" name="timesAmplified" min="0" value="0">
+                            <button type="button" class="sumButton">+</button>
+                        </div>
                 
-                <label for="notesScoredOnAmplfy">How many notes did they scored while amplified:</label>   
-                    <button type="button" class="restButton">-</button>
-                        <input type="number" id="notesScoredOnAmplfy" name="notesScoredOnAmplfy" min="0" value="0">
-                    <button type="button" class="sumButton">+</button>
-
-                <label for="notesFailedOnAmplfy">How many notes did they failed while amplified:</label>   
-                    <button type="button" class="restButton">-</button>
-                        <input type="number" id="notesFailedOnAmplfy" name="notesFailedOnAmplfy" min="0" value="0">
-                    <button type="button" class="sumButton">+</button>
-
+                        <div class="container-field">
+                            <label for="notesScoredOnAmplfy">How many notes did they scored while amplified:</label>   
+                            <button type="button" class="restButton">-</button>
+                                <input type="number" id="notesScoredOnAmplfy" name="notesScoredOnAmplfy" min="0" value="0">
+                            <button type="button" class="sumButton">+</button>
+        
+                        </div>
+                        <div class="container-field">
+                            <label for="notesFailedOnAmplfy">How many notes did they failed while amplified:</label>   
+                            <button type="button" class="restButton">-</button>
+                                <input type="number" id="notesFailedOnAmplfy" name="notesFailedOnAmplfy" min="0" value="0">
+                            <button type="button" class="sumButton">+</button>
+        
+                        </div>
+                    </div>
                 <label class="sectionQuestion" for="scoredWhileMovingSelect">Can they score while moving?</label>
                     <select type="select" class="sectionQuestion" name="scoredWhileMovingSelect" id="scoredWhileMovingSelect" required>
     
@@ -424,27 +461,43 @@
                 
             </select>
         
-        <label for="finalScores">Final Score</label>   
-        <label for="finalAutoScore">Auto:</label>   
-                <button type="button" class="restButton" id="restButton1" >-</button>
-                    <input type="number" id="finalAutoScore" name="finalAutoScore" min="0" value="0">
-                <button type="button" class="sumButton">+</button>
-
-        <label for="finalTeleopScore">Teleop:</label>   
-                <button type="button" class="restButton" id="restButton1" >-</button>
-                    <input type="number" id="finalTeleopScore" name="finalTeleopScore" min="0" value="0">
-                <button type="button" class="sumButton">+</button>
-
-        <label for="finalScore">Final:</label>   
-                <button type="button" class="restButton" id="restButton1" >-</button>
-                    <input type="number" id="finalScore" name="finalScore" min="0" value="0">
-                <button type="button" class="sumButton">+</button>
-
-        <label for="foulPoint">Fouls:</label>   
-                <button type="button" class="restButton" id="restButton1" >-</button>
-                    <input type="number" id="foulPoint" name="foulPoint" min="0" value="0">
-                <button type="button" class="sumButton">+</button>
-
+            <div class="counters">
+                
+                <div class="container-field">
+                    
+                    <div class="final-score" > 
+                        <label for="finalScores" class="final-score">Final Score</label>  
+                    </div>
+                    
+                    <label for="finalAutoScore">Auto:</label>   
+                        <button type="button" class="restButton" id="restButton1" >-</button>
+                            <input type="number" id="finalAutoScore" name="finalAutoScore" min="0" value="0">
+                        <button type="button" class="sumButton">+</button>
+    
+                </div>
+                
+                <div class="container-field">
+                    <label for="finalTeleopScore">Teleop:</label>   
+                        <button type="button" class="restButton" id="restButton1" >-</button>
+                            <input type="number" id="finalTeleopScore" name="finalTeleopScore" min="0" value="0">
+                        <button type="button" class="sumButton">+</button>
+                </div>
+                
+                <div class="container-field">
+                    <label for="finalScore">Final:</label>   
+                        <button type="button" class="restButton" id="restButton1" >-</button>
+                            <input type="number" id="finalScore" name="finalScore" min="0" value="0">
+                        <button type="button" class="sumButton">+</button>
+                </div>
+                
+                <div class="container-field">
+                    <label for="foulPoint">Fouls:</label>   
+                        <button type="button" class="restButton" id="restButton1" >-</button>
+                            <input type="number" id="foulPoint" name="foulPoint" min="0" value="0">
+                        <button type="button" class="sumButton">+</button>
+                </div>
+                
+            </div>
         <label for="finalComments">Comments:</label>
             <textarea id="finalComments" name="finalComments" rows="4" cols="50"></textarea>
 
