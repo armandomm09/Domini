@@ -6,6 +6,14 @@
 }
 
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap');
+
+@font-face {
+    font-family: Industry;
+    src: url(/matchScout/resources/Industry-BoldItalic.ttf);
+}
+
+
 body {
     font-family: Arial, sans-serif;
     color: #fff;
@@ -129,11 +137,6 @@ input[type="text"]::after {
     background-color: #4a0606;
 }
 
-.next-back{
-    margin-top: 32rem;
-    padding-top: 3rem;
-}
-
 select {
     display: inline-block;
     background-color: rgb(117, 13, 13);
@@ -202,6 +205,15 @@ select:hover {
 form .counters .container-field {
     display: block;
 
+}
+
+#initialPositionReference {
+
+    height: 200px;
+}
+
+#numero_equipo {
+    width: 150px !important;
 }
 
 

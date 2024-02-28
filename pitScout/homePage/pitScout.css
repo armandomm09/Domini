@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: Industry;
-    src: url(/globalResources/Industry-BoldItalic.ttf);
+    src: url(/matchScout/resources/Industry-BoldItalic.ttf);
 }
 
 body {
@@ -68,6 +68,7 @@ input[type="file"] {
     font-size: 16px;
     box-sizing: border-box;
     align-self: center;
+    justify-content: center;
     display: inline;
     font-family: 'Inter', sans-serif;
 }
@@ -132,13 +133,7 @@ input[type="submit"]{
 }
 
 #next-button:active {
-    background-color: rgb(160, 9, 9);
-}
-
-.next-back{
-    margin-top: 10rem;
-    padding-top: 3rem;
-    justify-content: space-around;
+    background-color: #4a0606;
 }
 
 /* Otros estilos */
@@ -278,29 +273,5 @@ label.radio-group {
 /*AUTO SECTION*/
 
 .autoQuestions {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
-
-}
-
-.submit-buttons {
-    display: flex;
-    width: 5%;
-    align-self: center;
-    align-content: center;
-    flex-direction: column;
-    flex-wrap: wrap;
-    margin: auto;
-    margin-top: 3rem;
-    font-family: 'Inter', sans-serif;;
-    
-}
-
-div.alert {
-    width: 10rem;
-    margin: auto;
-    margin-top: 3rem;
-
+    display: inline-flex;
 }

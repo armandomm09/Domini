@@ -28,17 +28,3 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-/*
-  {"teamNameInput":"The Green Machine",
-  "numero_equipo":"352",
-  "tipoDeChasis":"Swerve",
-  "motorsChassisSelect":"Neo 550",
-  "booleanTest":"true",
-  "robotWeightSelect":"X",
-  "tipoDeLlanta":"omni",
-  "robotMeasureSelect":"X",
-  "hasVisionSelect":"Select option",
-  "visionProcessSelect":"Select option",
-  "numberOfCamerasInput":"","
-  poseEstimationSelect":"Select option"}
-*/
