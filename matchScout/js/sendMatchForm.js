@@ -7,21 +7,22 @@ document.addEventListener("DOMContentLoaded", function () {
       
       let formDataObject = {};
         formData.forEach((value, key) => {
-          console.log(value + ": " + key)
+          //console.log(value + ": " + key)
         formDataObject[key] = value;
         });
   
-      const response = await fetch("https://script.google.com/macros/s/AKfycbw15eOsUhRvlQAiJkKTxbBbBg_G5J5SeksaWiuN2Dgjsue1RR6alH3v18SEvdJce3_eLw/exec", {
+      const response = await fetch("https://script.google.com/macros/s/AKfycbyNbG3t3yBXPuCqWkzgj9HKpYK8u-Texnp_sLmKyGwxk3pSKiiae8m3D7cxLlVPr_7c/exec", {
           method: "POST",
           body: JSON.stringify(formDataObject)
         })
         .then(res => res.text())
         .then(data => data === "Se logro" ? document.getElementById("submitSuccess").classList.remove("visually-hidden") : document.getElementById("submitSuccess").classList.add("visually-hidden"))
+        .then (data =>  console.log(data))
         .catch(error => console.error('Error:', error));
   
         
   
-        console.log(formDataObject)
+        //console.log(formDataObject)
   
     
     });
