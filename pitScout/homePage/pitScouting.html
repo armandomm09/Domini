@@ -215,9 +215,11 @@
 
         <h3>Auto</h3>
 
+
             <div class="autoQuestions">
                 
-                <label class="autoQuestion" for="scoringSelect">Scoring</label>
+                <div class="container-field">
+                    <label class="autoQuestion" for="scoringSelect">Scoring</label>
                     
                     <select type="select" name="scoringSelect" id="scoringSelect" required>
 
@@ -228,8 +230,11 @@
 
                     
                     </select>
+                </div>
 
-                <label class="autoQuestion" for="intakesFromSelect">Intaking</label>
+                
+                <div class="container-field">
+                    <label class="autoQuestion" for="intakesFromSelect">Intaking</label>
                     
                     <select type="select" name="intakesFromSelect" id="intakesFromSelect" required>
 
@@ -241,7 +246,9 @@
 
                     
                     </select>
-
+                </div>
+                
+                <div class="container-field">
                     <label class="autoQuestion" for="leavesSelect">Does the robot leave starting zone?</label>
                     <select type="select" name="leavesSelect" id="leavesSelect" required>
 
@@ -251,8 +258,10 @@
 
 
                     </select>
-
-                <label class="autoQuestion" for="centerLineSelect">Do they cross the central line?</label>
+                </div>
+                    
+                <div class="container-field">
+                    <label class="autoQuestion" for="centerLineSelect">Do they cross the central line?</label>
                     
                     <select type="select" name="centerLineSelect" id="centerLineSelect" required>
 
@@ -263,7 +272,10 @@
 
                     </select>
 
-                <label class="autoQuestion" for="tacticalDropSelect">Do they do tactical drop?</label>
+                </div>
+               
+                <div class="container-field">
+                    <label class="autoQuestion" for="tacticalDropSelect">Do they do tactical drop?</label>
                     
                     <select type="select" name="tacticalDropSelect" id="tacticalDropSelect" required>
 
@@ -272,11 +284,12 @@
                         <option value="No">No</option>
 
                     
-                    </select>
+                    </select>     
+                </div>
 
             
-
-                <label class="autoQuestion" for="autoRoutinesSelect">How many routines they have?</label>
+                <div class="container-field">
+                    <label class="autoQuestion" for="autoRoutinesSelect">How many routines they have?</label>
                     
                     <select type="select" name="autoRoutinesSelect" id="autoRoutinesSelect" required>
 
@@ -287,6 +300,8 @@
 
                     
                     </select>
+                </div>
+            
                         
             </div>        
 
@@ -624,12 +639,7 @@
         <br>
     </div>
 
-    <div class="submit-buttons">
-        <input type="file" accept="image/*" id="imageInput">
-        <img src="" alt="" id="showImage">
-        <input type="submit" class="submitButton">
 
-    </div>
    
     
     

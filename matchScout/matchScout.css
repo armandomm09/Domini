@@ -27,6 +27,7 @@ h1 {
     text-transform: uppercase;
     margin-bottom: 10px;
     font-family: 'Industry';
+    font-size: 5rem;
 }
 
 form {
@@ -45,6 +46,7 @@ h2 {
     font-weight: 400;
     font-family: 'Industry';
     text-transform: uppercase;
+    font-size: 3rem;
 }
 
 h3 {
@@ -53,16 +55,17 @@ h3 {
     font-weight: bold;
     font-family: 'Industry';
     text-transform: uppercase;
+    font-size: 2.5rem;
 
 }
 
 label {
     display: block;
     text-wrap: wrap;
-    width: 300px;
+    width: 20rem;
     font-weight: 400;
     color: #fff; /* Ajustar el color de las etiquetas */
-    font-size: 20px;
+    font-size: 1.5rem;
     font-family: 'Inter', sans-serif;
     margin: auto;
 
@@ -73,10 +76,10 @@ input[type="number"],
 textarea,
 input[type="file"] {
     width: 50%;
-    padding: 12px;
-    margin-bottom: 15px;
-    border-radius: 5px;
-    font-size: 16px;
+    padding: 0.7rem;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
     box-sizing: border-box;
     align-self: center;
     display: inline;
@@ -87,7 +90,7 @@ input[type="text"] {
     background-color:  #870c0c69;
     border: 1px solid #a91717;
     color: #ff0000;
-    width: 400px;
+    width: 20rem;
     font-family: 'Inter', sans-serif;
    
 }
@@ -96,7 +99,7 @@ input[type="number"] {
     background-color:  #870c0c69;
     border: 1px solid #a91717;
     color: #ff0000;
-    width: 200px;
+    width: 15rem;
     font-family: 'Inter', sans-serif;
    
 }
@@ -118,14 +121,14 @@ input[type="text"]::after {
     padding: 15px 20px;
     border: none;
     border-radius: 5px;
-    font-size: 18px;
+    font-size: 1.5rem;
     cursor: pointer;
     text-transform: uppercase;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     transition: background-color 300ms ease-out, transform 300ms ease-out;
     margin-top: 3rem;
     font-family: 'Industry';
-    margin: 15px;
+    margin: 1rem;
     width: 10rem;
 }
 
@@ -149,11 +152,11 @@ select {
     color: #fff;
     border: 2px solid #dd1212;
     border-radius: 10px;
-    width: 200px;
-    height: 35px;
+    width: 15em;
+    height: 3rem;
     font-size: 16px;
     box-shadow:0 0 30px 4px rgba(0, 0, 0, 0.652);
-    margin: 10px;
+    margin: 1.5rem;
 
 }
 
@@ -161,18 +164,18 @@ select:hover {
     background-color: rgb(212, 47, 47);
     color: #0c0909;
     border-radius: 10px;
-    width: 200px;
-    height: 40px;
+    width: 10rem;
+    height: 3rem;
     font-size: 16px;
     margin-bottom: 10px;
 }
 
 .logo {
-    width: 150px;
+    width: 8rem;
     display: block;
     align-content: start;
-    margin-left: 40px;
-    margin-top: 20px;
+    margin-left: 3rem;
+    margin-top: 3rem;
     margin-bottom: 0px;
 }
 
@@ -187,7 +190,7 @@ select:hover {
     padding: 5px 20px;
     border: none;
     border-radius: 5px;
-    font-size: 30px;
+    font-size: 3rem;
     cursor: pointer;
     text-transform: uppercase;
     transition: background-color 300ms ease-out, transform 300ms ease-out;
@@ -200,10 +203,10 @@ input[type="submit"]{
     box-shadow: white 0px 2px 4px 0px, whitesmoke 0px 2px 16px 0px;
     margin-top: 3rem;
     color: #fff;
-    padding: 5px 20px;
+    padding: 1rem 5rem;
     border: white;
     border-radius: 5px;
-    font-size: 30px;
+    font-size: 3rem;
     font-family: 'Industry';
     cursor: pointer;
     text-transform: uppercase;
@@ -214,7 +217,7 @@ input[type="submit"]{
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    max-width: 750px;
+    max-width: 45rem;
     text-align: center;
     margin: auto;
 }
@@ -234,7 +237,7 @@ form .counters .container-field {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 750px;
+    max-width: 45rem;
     flex-wrap: wrap;
     width: auto;
     height: auto;
@@ -250,7 +253,7 @@ form .counters .container-field {
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    max-width: 750px;
+    max-width: 45rem;
     text-align: center;
     margin: auto;
     margin-bottom: 3rem;
@@ -262,7 +265,7 @@ form .counters .container-field {
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    max-width: 750px;
+    max-width: 45rem;
     text-align: center;
     margin: auto;
     margin-bottom: 3rem;
@@ -282,6 +285,8 @@ form .note-container .container-field {
 }
 
 @media screen and (max-width: 950px) and (min-width: 600px){
+
+
     input[type="number"]:not(#numero_equipo, #matchNumberInput){
         width:100px;
     }
