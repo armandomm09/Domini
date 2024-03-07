@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap');
+
+@font-face {
+    font-family: Industry;
+    src: url(/resources/Industry-BoldItalic.ttf);
+}
+/*font-family: 'Inter', sans-serif;*/
+
+/* BASE CASES */
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth; /* keep?*/
+
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+/* responsive */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+p {
+    color:black;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10rem;
+    margin: auto;
+    background-color: black;
+
+}
+
+.nav {
+    height: 10rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    vertical-align: middle;
+
+}
+
+.nav__menu {
+    margin: auto;
+}
+
+.nav__img {
+    width: 5rem; /* cambiar */
+    margin-right: 50rem;
+    position: absolute;
+    left: 1rem;
+    margin: 1rem 1rem !important;
+    top: 1rem;
+}
+
+.nav__logo {
+    color: white;
+    font-size: var(--h1-font-size);
+    font-family: 'Industry';
+    text-transform: uppercase;
+    font-weight: 600;
+    position: absolute;
+    right: 50px;
+}
+
+.nav__list,
+.nav__link {
+    display: flex;
+}
+
+.nav__link {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 0.25rem;
+    color: white;
+    transition: 0.3s;
+    font-weight: 400;
+}
+
+
+.nav__list {
+    justify-content: space-around;
+    column-gap: 3rem;
+}
+
+.nav__name {
+    font-size: var(--petite-font-size);
+}
+
+.nav__icon {
+    font-size: 1.5rem;
+}
+
+
+/* ==================== CONTAINERS ====================== */
+
+.section {
+    padding: 4.5rem 0 2rem;
+}
+
+.section__title {
+    font-size: 4rem;
+    font-family: 'Industry';
+    text-transform: uppercase;
+    color: var(--title-col);
+    text-align: center;
+    margin-bottom: 1.5rem;
+    margin-top: 8rem;
+
+}
+
+
+.section__height {
+    height: 100vh; /** nomás pq se vea así*/
+}
+
+
+/* ========= LAYOUT ========== */
+.container {
+    max-width: 968px; /* medium size */
+    margin-left: 1rem;
+    margin-right: 1rem; /* checar*/
+    margin: auto;
+
+}
+
+/* ======================================================================= */
+:root {
+    --header-height: 10rem;
+
+    /* color */
+    --hue: 174;
+    --saturation: 63%;
+
+    --first-col: hsl(var(--hue), var(--saturation), 40%);
+    --first-col-alt: hsl(var(--hue), var(--saturation), 36%);
+    --title-col: #ee2737;
+    --text-col: white;
+    --body-col: white;
+    --container-col: black;
+
+    /* fonts */
+    --body-font: 'Inter', sans-serif;
+    --title-font: 'Industry';
+
+    --h1-font-size: 4rem;
+    --text-font-size: 1rem;
+    --petite-font-size: 0.75rem;
+
+    /* z index and others */
+    --z-tooltip: ;
+    --z-fixed: ;
+}
