@@ -287,6 +287,17 @@ form .counters .container-field {
     margin-top: 3rem;
 }
 
+div#teleopOnAmp {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 750px;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+}
 .note-container {
     display: flex;
     align-items: center;

@@ -153,6 +153,7 @@
 
             </header>
 
+            <!--
             <label class="sectionQuestion" for="hpPositionSelect">Position of their HP:</label>
                 <select type="select" class="sectionQuestion" name="hpPositionSelect" id="hpPositionSelect" required>
 
@@ -161,7 +162,8 @@
                         <option value="SOURCE">Source</option>
                     
                     </select>
-
+            -->
+            <!--
             <label class="sectionQuestion" for="presentSelect">Did they show to their match?</label>
                 <select type="select" class="sectionQuestion" name="presentSelect" id="presentSelect" required>
 
@@ -169,8 +171,8 @@
                         <option value="1">Yes</option>
                         <option value="0">No</option>
                     
-                    </select>
-
+                    </select>  
+            -->
             <label class="sectionQuestion" for="preloadedNote">Did they pre-load a note?</label>
                     <select type="select" class="sectionQuestion" name="preloadedNote" id="preloadedNote" required>
         
@@ -235,14 +237,15 @@
                         <button type="button" class="sumButton">+</button>
                     </div>
 
-                    
+                    <!--
                     <div class="container-field">
                         <label for="autoNotesFailedOnSpeaker">Notes failed on speaker:</label>   
                         <button type="button" class="restButton">-</button>
                             <input type="number" id="autoNotesFailedOnSpeaker" name="autoNotesFailedOnSpeaker" min="0" value="0">
                         <button type="button" class="sumButton">+</button>
                     </div>
-
+                    -->
+                    <!--
                     <div class="container-field">
                         <label for="autoNotesScoredOnAmp">Notes scored on amp:</label>   
                         <button type="button" class="restButton">-</button>
@@ -256,9 +259,21 @@
                             <input type="number" id="autoNotesFailedOnAmp" name="autoNotesFailedOnAmp" min="0" value="0">
                         <button type="button" class="sumButton">+</button>
                     </div> 
-                    
+                -->
                 </div>  
+                
+                <label class="sectionQuestion" for="autoIntakesFromSelect">Note scoring accuracy:</label>
+                    <select type="select" class="sectionQuestion" name="autoIntakesFromSelect" id="autoIntakesFromSelect" required>
 
+                            <option >Select option</option>
+                            <option value="1">Perfect</option>
+                            <option value="0.5">Average</option>
+                            <option value="0">Null</option>
+                        
+
+                        
+                        </select>
+                <!--
                 <label class="sectionQuestion" for="autoIntakesFromSelect">Where do they intake from:</label>
                     <select type="select" class="sectionQuestion" name="autoIntakesFromSelect" id="autoIntakesFromSelect" required>
 
@@ -270,7 +285,8 @@
 
                         
                         </select>
-
+                -->
+                <!--
                 <label class="sectionQuestion" for="autoCrossesCenterLineSelect">Do they cross the center line?</label>
                     <select type="select" class="sectionQuestion" name="autoCrossesCenterLineSelect" id="autoCrossesCenterLineSelect" required>
 
@@ -280,6 +296,7 @@
 
                         
                         </select>
+                -->
                 
                 <label class="sectionQuestion" for="foulsOnAutoSelect">Did they make fouls?</label>
                     <select type="select" class="sectionQuestion" name="foulsOnAutoSelect" id="foulsOnAutoSelect" required>
@@ -315,13 +332,16 @@
 
             <div id="teleopOnSpeaker">
 
+               
+
                <div class="container-field">
+                <h3> Scoring </h3>
                     <label for="teleopNotesScoredOnSpeaker">Notes scored on speaker:</label>   
                     <button type="button" class="restButton" id="restButton1" >-</button>
                     <input type="number" id="teleopNotesScoredOnSpeaker" name="teleopNotesScoredOnSpeaker" min="0" value="0" >
                     <button type="button" class="sumButton">+</button>
                </div>
-                
+                <!--
                <div class="container-field">
                     <label for="teleopNotesFailedOnSpeaker">Notes failed on speaker:</label>   
                     <button type="button" class="restButton">-</button>
@@ -329,7 +349,7 @@
                     <button type="button" class="sumButton">+</button>
         
                </div>
-
+               -->
                <div class="container-field">
                     <label for="teleopNotesScoredOnAmp">Notes scored on amp:</label>   
                     <button type="button" class="restButton">-</button>
@@ -337,6 +357,7 @@
                     <button type="button" class="sumButton">+</button>
                 </div>
 
+                <!--
                 <div class="container-field">
                     <label for="teleopNotesFailedOnAmp">Notes failed on amp:</label>   
                     <button type="button" class="restButton">-</button>
@@ -344,10 +365,34 @@
                     <button type="button" class="sumButton">+</button>
             
                 </div>
-            
+                -->
             </div>
-                
-                
+            <!-- ======================================= ADDITION: SCORING ACCURACY ===============================================-->
+            <h3> Accuracy </h3>
+            <label class="sectionQuestion" for="autoIntakesFromSelect"><span style="font-weight: bold;">Speaker</span> scoring accuracy:</label>
+                    <select type="select" class="sectionQuestion" name="autoIntakesFromSelect" id="autoIntakesFromSelect" required>
+
+                            <option >Select option</option>
+                            <option value="1">Perfect</option>
+                            <option value="0.5">Average</option>
+                            <option value="0">Null</option>
+                        
+
+                        
+                    </select>
+            
+            <label class="sectionQuestion" for="autoIntakesFromSelect"><span style="font-weight: bold;">Amp</span> scoring accuracy:</label>
+                    <select type="select" class="sectionQuestion" name="autoIntakesFromSelect" id="autoIntakesFromSelect" required>
+
+                            <option >Select option</option>
+                            <option value="1">Perfect</option>
+                            <option value="0.5">Average</option>
+                            <option value="0">Null</option>
+                        
+
+                        
+                    </select>
+            <!--
             <label class="sectionQuestion" for="teleopIntakesFromSelect">Where do they intake from?</label>
                 <select type="select" class="sectionQuestion" name="teleopIntakesFromSelect" id="teleopIntakesFromSelect" required>
 
@@ -358,7 +403,8 @@
                         <option value="NONE">Floor</option>
 
                     </select>
-            
+            -->
+            <!--
             <div class="note-container">
                 <div class="container-field">
                     <label for="intakesFailedTeleop">Notes failed to intake:</label>   
@@ -366,10 +412,14 @@
                         <input type="number" id="intakesFailedTeleop" name="intakesFailedTeleop" min="0" value="0">
                     <button type="button" class="sumButton">+</button>
                 </div>  
-                
+            -->
+           
+
+            <div class="teleopOnSpeaker" style="margin: 3rem 0">
+                <h3> Amp </h3>
                 <div class="container-field">
                     <div class="text-wrap">
-                        <label for="timesAmplified">How many times did they amplify:</label>   
+                        <label for="timesAmplified">Times Amplified:</label>   
                     </div>
 
                 
@@ -379,12 +429,14 @@
                 </div>
         
                 <div class="container-field">
-                    <label for="notesScoredOnAmplfy">How many notes did they scored while amplified:</label>   
+                    <label for="notesScoredOnAmplfy">Speaker scored while amplified:</label>   
                     <button type="button" class="restButton">-</button>
                         <input type="number" id="notesScoredOnAmplfy" name="notesScoredOnAmplfy" min="0" value="0">
                     <button type="button" class="sumButton">+</button>
 
                 </div>
+
+                <!--
                 <div class="container-field">
                     <label for="notesFailedOnAmplfy">How many notes did they failed while amplified:</label>   
                     <button type="button" class="restButton">-</button>
@@ -392,8 +444,10 @@
                     <button type="button" class="sumButton">+</button>
 
                 </div>
+                -->
             </div>
                 
+            <!--
                 <label class="sectionQuestion" for="scoredWhileMovingSelect">Can they score while moving?</label>
                     <select type="select" class="sectionQuestion" name="scoredWhileMovingSelect" id="scoredWhileMovingSelect" required>
     
@@ -402,7 +456,7 @@
                             <option value="1">Yes</option>
     
                         </select>
-           
+            -->
 
                 
 
@@ -414,11 +468,14 @@
                             <option value="1">Yes</option>
     
                         </select>
-
+                
+                <!--
                 <label style="margin-top: 3rem" for="foulsTeleop">How many fouls did they do?:</label>   
                     <button type="button" class="restButton">-</button>
                         <input type="number" id="foulsTeleop" name="foulsTeleop" min="0" value="0">
                     <button type="button" class="sumButton">+</button>
+
+                -->
         </div>
 
     </section>
@@ -484,7 +541,7 @@
                             <option value="0">No</option>
                             
                     </select>
-
+            <!--
             <label class="sectionQuestion" for="attemptedDefense">Attempted Defense?</label>
                     <select type="select" class="sectionQuestion" name="attemptedDefense" id="attemptedDefense" required>
             
@@ -493,12 +550,13 @@
                             <option value="0">No</option>
                             
                     </select>
-            
+            -->
+            <!--
             <label for="numberFouls">Number of fouls:</label>   
                     <button type="button" class="restButton" id="restButton1" >-</button>
                         <input type="number" id="numberFouls" name="numberFouls" min="0" value="0">
                     <button type="button" class="sumButton">+</button>
-            
+            -->
 
         </div> <!-- ENDGAME SECTION ENDS -->
 
@@ -543,7 +601,8 @@
                         <option value="0">No</option>
                             
                 </select>
-
+            
+            <!--
             <label class="sectionQuestion" for="tiltedOver">Tilted Over?</label>
                 <select type="select" class="sectionQuestion" name="tiltedOver" id="tiltedOver" required>
             
@@ -552,7 +611,7 @@
                             <option value="0">No</option>
                             
                 </select>
-
+            -->
             <label class="sectionQuestion" for="cardRecived">Received a card?</label>
                 <select type="select" class="sectionQuestion" name="cardRecived" id="cardRecived" required>
 
@@ -578,10 +637,12 @@
                     
                     <div class="container-field">
                         
+                        <h3 style="margin-top: 3rem;">Alliance Final Score</h3>
+                        <!--
                         <div class="final-score" > 
                             <label for="finalScores" class="final-score">Final Score</label>  
                         </div>
-                        
+                        -->
                         <label for="finalAutoScore">Auto:</label>   
                             <button type="button" class="restButton" id="restButton1" >-</button>
                                 <input type="number" id="finalAutoScore" name="finalAutoScore" min="0" value="0">
@@ -611,24 +672,34 @@
                     </div>
                     
                 </div>
-
-            <label for="finalComments">Comments:</label>
+            
+                <h3> AUTO </h3>
+                <label for="finalComments">Comments:</label>
                 <textarea id="finalComments" name="finalComments" rows="4" cols="50"></textarea>
+
+                <h3> TELEOP </h3>
+                <label for="finalComments">Comments:</label>
+                    <textarea id="finalComments" name="finalComments" rows="4" cols="50"></textarea>
+
+                
 
         </div> <!-- POST-MATCH SECTION ENDS --> 
 
     
     </section>
-   
 
 
-     
+    
    <div class="section section__height">
+    <input type="submit" class="submitButton">
+    <!--
     <button id="back-button" type="button">Back</button>
     <button id="next-button" type="button">Next</button> 
-    <input type="submit" class="submitButton">
+    -->
     
    </div> 
+   
+   
     
 </form>
     
