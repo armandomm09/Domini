@@ -125,13 +125,13 @@ img {
     color: var(--title-col);
     text-align: center;
     margin-bottom: 1.5rem;
-    margin-top: 8rem;
+    margin-top: 10rem;
 
 }
 
 
 .section__height:not(#teleop){
-    min-height: 70vh; /** nomás pq se vea así*/
+    min-height: 100vh; /** nomás pq se vea así*/
     align-content: center;
     border:solid #ee2737;
 }

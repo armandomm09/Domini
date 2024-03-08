@@ -118,6 +118,10 @@ input[type="text"]::after {
     
 }
 
+.section__title {
+    margin-top: 5rem;
+}
+
 #teamNameInput {
    /*visibility: hidden;*/
    display: none;
