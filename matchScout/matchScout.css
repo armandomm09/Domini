@@ -93,20 +93,26 @@ input[type="file"] {
     display: inline;
     font-family: 'Inter', sans-serif;
 }
-
-input[type="text"] {
-    background-color:  #870c0c69;
-    border: 1px solid #a91717;
-    color: #ff0000;
-    width: 400px;
-    font-family: 'Inter', sans-serif;
-   
-}
-
+/*
+input[type="text"],
 input[type="number"] {
     background-color:  #870c0c69;
     border: 1px solid #a91717;
     color: #ff0000;
+    width: 10rem;
+    font-family: 'Inter', sans-serif;
+   
+}
+*/
+
+input[type="number"],
+input[type="text"] {
+    /*background-color:  #870c0c69;*/
+    /*border: 1px solid #a91717;*/
+    border: 2px solid #dd1212;
+    border-radius: 10px;
+    font-weight: 600;
+    /*color: #ff0000;*/
     width: 10rem;
     font-family: 'Inter', sans-serif;
    
@@ -118,8 +124,8 @@ input[type="text"]::after {
     
 }
 
-.section__title {
-    margin-top: 5rem;
+.section__header {
+    margin-bottom: 3rem;
 }
 
 #teamNameInput {
@@ -127,8 +133,13 @@ input[type="text"]::after {
    display: none;
 }
 
+#teamNameP {
+    /*text-shadow: 4px 3px 0px #fff, 9px 8px 0px rgba(0,0,0,0.15);*/
+    text-shadow: 0 0 3px #FF0000;
+}
+
 #next-button, #back-button {
-    background-color: #ff5733;
+    background-color: grey;
     color: #fff;
     padding: 15px 20px;
     border: none;
@@ -158,16 +169,18 @@ input[type="text"]::after {
     display: flex;
     flex-direction: row;
 }
+
 select {
     display: inline-block;
-    background-color: rgb(117, 13, 13);
-    color: #fff;
+    /*background-color: transparent;*/
+    /*rgb(117, 13, 13)*/
+    /*color: #fff;*/
     border: 2px solid #dd1212;
     border-radius: 10px;
     width: 15rem;
     height: 3rem;
     font-size: 1.5rem;
-    box-shadow:0 0 30px 4px rgba(0, 0, 0, 0.652);
+    /*box-shadow:0 0 30px 4px rgba(0, 0, 0, 0.652);*/
     margin: 10px;
 
 }
@@ -177,11 +190,10 @@ select:hover {
     height: 3.2rem;
     font-size: 1.7rem;
     display: inline-block;
-    background-color: rgb(117, 13, 13);
-    color: #fff;
+    /*background-color: rgb(117, 13, 13);*/
     border: 2px solid #dd1212;
     border-radius: 10px;
-    box-shadow:0 0 30px 4px rgba(0, 0, 0, 0.652);
+    /*box-shadow:0 0 30px 4px rgba(0, 0, 0, 0.652);*/
     margin: 10px;
 }
 

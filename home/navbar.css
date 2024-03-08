@@ -60,6 +60,10 @@ img {
 
 }
 
+span.Indomini {
+    text-shadow: 3px 0 5px #FF0000;
+}
+
 .nav__menu {
     margin: auto;
 }
