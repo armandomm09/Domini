@@ -25,15 +25,19 @@ ul {
 a {
     text-decoration: none;
 }
+
+p {
+    color:black;
+    font-size: 1.5rem;
+    margin: 0.5rem 0.5rem;
+}
+
 /* responsive */
 img {
     max-width: 100%;
     height: auto;
 }
 
-p {
-    color:black;
-}
 
 .header{
     position: fixed;
@@ -111,7 +115,7 @@ p {
 /* ==================== CONTAINERS ====================== */
 
 .section {
-    padding: 4.5rem 0 2rem;
+    padding: 2.5rem 0 1rem;
 }
 
 .section__title {
@@ -126,9 +130,13 @@ p {
 }
 
 
-.section__height {
-    height: 100vh; /** nomás pq se vea así*/
+.section__height:not(#teleop){
+    min-height: 70vh; /** nomás pq se vea así*/
+    align-content: center;
+    border:solid #ee2737;
 }
+
+
 
 
 /* ========= LAYOUT ========== */
@@ -167,3 +175,88 @@ p {
     --z-tooltip: ;
     --z-fixed: ;
 }
+
+/* ====================================================================== */
+
+
+
+/* ====================== ACTIVE LINK  ===================== */
+
+.nav__menu .active-link{
+    position: relative;
+    color: red;
+    transition: 0.3s;
+}
+
+@media screen and (max-width: 767px) { /* iPad size */
+    .nav__menu{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        background-color: var(--container-col);
+        box-shadow: 0 -1px 12px hsla(var(--hue), var(--sat), 15%, 0.15); /* cambiar */
+        width: 100%;
+        height: 5.5rem;
+        padding: 0 1rem;
+        display: grid;
+        align-content: center;
+        border-radius: 1.25rem 1.25rem 0 0;
+        transition: 0.4s ease;
+    }
+}
+
+/* ======================= CHANGE BG HEADER JS ================== */
+.scroll-header {
+    box-shadow: 0 1px 12px white; /* change if necessary */
+}
+
+/* ================= NON-MINIMALIST MEDIA-QUERY ADDITION =======*/
+
+/* small devices */
+@media screen and (max-width: 462px){
+    .nav__name {
+        display: none;
+    }
+
+    
+}
+
+/* large phones */
+@media screen and (min-width: 576px){
+    .nav__list {
+        justify-content: center;
+        column-gap: 3rem;
+    }
+
+}
+
+/* ipads */
+@media screen and (min-width: 762px){
+    body{
+        margin: 0; /* optimizes space top the top */
+    }
+
+    .section{
+        padding: 7rem 0 2rem;
+
+    }
+
+    .nav{
+        height: calc(var(--header-height) + 1.5rem); /* approx 4.5 rem*/
+    }
+
+    .nav__img {
+        margin-top: 2rem;
+    }
+
+    .counters {
+        justify-content: center;
+    }
+
+    #teleopSpeaker {
+        justify-content: center;
+    }
+    
+}
+
+/* ============= PIT PART ++++++++++++++++++ */

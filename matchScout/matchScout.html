@@ -52,16 +52,23 @@
                         </li>
 
                         <li class="nav__item">
-                            <a href="#pit" class="nav__link">
+                            <a href="#auto" class="nav__link">
                                 <i class='bx bx-bot nav__icon' ></i>
-                                <span class="nav__name">Pit</span>
+                                <span class="nav__name">Auto</span>
                             </a>
                         </li>
 
                         <li class="nav__item">
-                            <a href="#match" class="nav__link">
+                            <a href="#teleop" class="nav__link">
                                 <i class='bx bx-game nav__icon' ></i>
-                                <span class="nav__name ">Match</span>
+                                <span class="nav__name ">Teleop</span>
+                            </a>
+                        </li>
+
+                        <li class="nav__item">
+                            <a href="#endgame" class="nav__link">
+                                <i class='bx bxs-ghost nav__icon' ></i>
+                                <span class="nav__name">EG</span>
                             </a>
                         </li>
 
@@ -87,16 +94,16 @@
 
     <!-- HOME PAGE SECTION --> 
 
-    <section class="container section section__height" id="pre">
+    <section class="container section section__height" id="home">
 
    
 
-        <div  class="section-container" id="homePageSection" style="display: none;"> 
+        <div  class="section-container" id="homePageSection"> 
 
 
 
             <header>
-                <h1>Match Scouting</h1>
+                <h1>Home</h1>
                 <h2 id="teamNameP"></h2>
                 <p>Por favor, proporciona la siguiente información sobre el equipo de FRC en el pit.</p>
         
@@ -136,8 +143,19 @@
                     <input type="number" id="numero_equipo" name="numero_equipo" >
                 <br>
                 </section> <!-- HOME PAGE SECTION ENDS -->
+    </section>
 
-        <div id="prematchSection" style="display: none;">
+    <section class="container section section__height" id="pre"> 
+
+        <div id="prematchSection" class="section-container">
+
+            <header>
+                <h1>Pre-Match</h1>
+                <h2 id="teamNameP"></h2>
+                <p>Por favor, proporciona la siguiente información sobre el equipo de FRC en el pit.</p>
+        
+                <h3>Scout name</h3>
+            </header>
 
             <label class="sectionQuestion" for="hpPositionSelect">Position of their HP:</label>
                 <select type="select" class="sectionQuestion" name="hpPositionSelect" id="hpPositionSelect" required>
@@ -179,11 +197,8 @@
                         <option value="Subwoofer Center">Subwoofer Center</option>
                         <option value="Deadzone Right">Deadzone Right</option>
                         <option value="Deadzone Left">Deadzone Left</option>
-
-
-
                     
-                    </select>
+                </select>
                     <br>
                     <br>
                 <img id="initialPositionReference" src="/matchScout/matchResources/initialPositionReference.png">
@@ -199,9 +214,12 @@
 
     <section class="container section section__height" id="auto">
 
-        <div class="section-container=" id="autoSection" >
+        <div class="section-container" id="autoSection" >
 
-            <h3>AUTO</h3>
+            <header>
+                <h1>Auto</h1> 
+                <p>Por favor, proporciona la siguiente información sobre el equipo de FRC en el pit.</p>
+            </header>
 
             <label class="sectionQuestion" for="leavesSelect">Do they leave starting zone?</label>
                 <select type="select" class="sectionQuestion" name="leavesSelect" id="leavesSelect" required>
@@ -243,11 +261,7 @@
                         <button type="button" class="sumButton">+</button>
                     </div> 
                     
-                </div>
-
-
-
-            
+                </div>  
 
                 <label class="sectionQuestion" for="autoIntakesFromSelect">Where do they intake from:</label>
                     <select type="select" class="sectionQuestion" name="autoIntakesFromSelect" id="autoIntakesFromSelect" required>
@@ -285,11 +299,13 @@
     </section>
 
 
-    <section class="container section section__height" id="pre">
+    <section class="container section section__height" id="teleop">
+        <div id="teleopSection" class="section-container">
 
-        <div id="teleopSection" class="section-container="">
-
-            <h3>Teleoperated</h3>
+            <header>
+                <h1>Teleop</h1> 
+                <p>Por favor, proporciona la siguiente información sobre el equipo de FRC en el pit.</p>
+            </header>
 
             <label style="margin-top: 3rem" class="sectionQuestion" for="coopertitionBonusSelect">Did they make the coopertition bonus?</label>
                 <select type="select" class="sectionQuestion" name="coopertitionBonusSelect" id="coopertitionBonusSelect" required>
@@ -411,12 +427,15 @@
 
     </section>
 
-    <section class="container section section__height" id="pre">
+    <section class="container section section__height" id="endgame">
 
            <!-- ENDGAME SECTION --> 
-        <div class="section-container=" id="endgameSection" style="display: none;">
+        <div class="section-container" id="endgameSection" style="display: none;">
 
-            <h2>Endgame</h2>
+            <header>
+                <h1>Endgame</h1> 
+                <p>Por favor, proporciona la siguiente información sobre el equipo de FRC en el pit.</p>
+            </header>
 
             <label class="sectionQuestion" for="offenseQuality">Offense quality?</label>
                 <select type="select" class="sectionQuestion" name="offenseQuality" id="offenseQuality" required>
@@ -489,10 +508,15 @@
 
     </section>
 
-    <section>
+    <section class="container section section__height" id="post">
 
     <!-- POST-MATCH SECTION --> 
-        <div class="section-container=" id="postMatchSection" ">
+        <div class="section-container" id="postMatchSection" ">
+
+            <header>
+                <h1>Post-match</h1> 
+                <p>Por favor, proporciona la siguiente información sobre el equipo de FRC en el pit.</p>
+            </header>
 
             <label class="sectionQuestion" for="agility">Agility?</label>
                 <select type="select" class="sectionQuestion" name="agility" id="agility" required>
@@ -603,12 +627,13 @@
 
 
      
-   <div class="next-back">
+   <div class="section section__height">
     <button id="back-button" type="button">Back</button>
-    <button id="next-button" type="button">Next</button>     
-   </div> 
+    <button id="next-button" type="button">Next</button> 
     <input type="submit" class="submitButton">
-
+    
+   </div> 
+    
 </form>
     
 
@@ -626,6 +651,6 @@
 <script src=https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js integrity=”sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q” crossorigin=”anonymous”></script>
 
 <script src=”https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js” integrity=”sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl” crossorigin=”anonymous”></script>
-
+<script src="/matchScout/js/main.js"></script>
 </body>
 </html>
