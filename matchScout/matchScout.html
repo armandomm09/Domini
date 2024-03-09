@@ -145,7 +145,7 @@
 
         <div id="prematchSection" class="section-container">
 
-            <header>
+            <header style="margin-bottom: 5rem;">
                 <h1 class="section__title">Pre-Match</h1>
                 <h2 id="teamNameP"></h2>
                 <p>Por favor, proporciona la siguiente información sobre la configuración inicial del juego.</p>
@@ -187,7 +187,7 @@
 
             
 
-                <select type="select" class="sectionQuestion" name="initialPosition" id="initialPosition" required>
+                <select type="select" class="sectionQuestion" name="initialPosition" id="initialPosition" required style="margin-bottom: 5rem;">
 
                         <option >Select option</option>
                         <option value="Subwoofer Left">Subwoofer Left</option>
@@ -483,7 +483,7 @@
     <section class="container section section__height" id="endgame">
 
            <!-- ENDGAME SECTION --> 
-        <div class="section-container" id="endgameSection" style="display: none;">
+        <div class="section-container" id="endgameSection" >
 
             <header>
                 <h1 class="section__title">Endgame</h1> 
@@ -644,31 +644,36 @@
                         </div>
                         -->
                         <label for="finalAutoScore">Auto:</label>   
-                            <button type="button" class="restButton" id="restButton1" >-</button>
+                            
                                 <input type="number" id="finalAutoScore" name="finalAutoScore" min="0" value="0">
-                            <button type="button" class="sumButton">+</button>
+                            
         
                     </div>
                     
                     <div class="container-field">
                         <label for="finalTeleopScore">Teleop:</label>   
-                            <button type="button" class="restButton" id="restButton1" >-</button>
+                            
                                 <input type="number" id="finalTeleopScore" name="finalTeleopScore" min="0" value="0">
-                            <button type="button" class="sumButton">+</button>
+                            
                     </div>
                     
                     <div class="container-field">
-                        <label for="finalScore">Final:</label>   
-                            <button type="button" class="restButton" id="restButton1" >-</button>
-                                <input type="number" id="finalScore" name="finalScore" min="0" value="0">
-                            <button type="button" class="sumButton">+</button>
+                        <label for="finalScore">Final:</label>  
+                            <!----> 
+                            
+                            <input type="number" id="finalScore" name="finalScore" min="0" value="0">
+                            
                     </div>
                     
                     <div class="container-field">
-                        <label for="foulPoint">Fouls:</label>   
+                        <label for="foulPoint">Fouls:</label> 
+                            <!--
                             <button type="button" class="restButton" id="restButton1" >-</button>
                                 <input type="number" id="foulPoint" name="foulPoint" min="0" value="0">
                             <button type="button" class="sumButton">+</button>
+                            -->  
+                            <input type="number" id="restButton1" name="foulPoint"  min="0" value="0">
+                            
                     </div>
                     
                 </div>
