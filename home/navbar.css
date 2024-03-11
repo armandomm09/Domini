@@ -137,7 +137,7 @@ span.Indomini {
 .section__height:not(#teleop){
     min-height: 100vh; /** nomás pq se vea así*/
     align-content: center;
-    border:solid #ee2737;
+    
 }
 
 
