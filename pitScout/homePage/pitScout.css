@@ -4,7 +4,9 @@
     font-family: Industry;
     src: url(/matchScout/resources/Industry-BoldItalic.ttf);
 }
-
+p {
+    font-size: 1.7rem;
+}
 body {
     font-family: Arial, sans-serif;
     color: #fff;
@@ -17,8 +19,9 @@ body {
 h1 {
     color: #ff3333;
     text-transform: uppercase;
-    margin-bottom: 10px;
+    margin-bottom: 1rem;
     font-family: 'Industry';
+    font-size: 5rem;
 }
 
 form {
@@ -34,6 +37,7 @@ form {
 
 h2 {
     color: #930606;
+    font-size: 3rem;
     margin-bottom: 10px;
     font-weight: bold;
     font-family: 'Industry';
@@ -46,6 +50,11 @@ h3 {
     font-weight: bold;
     font-family: 'Industry';
     text-transform: uppercase;
+    font-size: 2.5rem;
+}
+
+h4 {
+    font-size: 2rem;
 }
 
 label {
@@ -53,7 +62,7 @@ label {
     margin-bottom: 10px;
     font-weight:400;
     color: #fff; /* Ajustar el color de las etiquetas */
-    font-size: 20px;
+    font-size: 2rem;
    font-family: 'Inter', sans-serif;
 
 }
@@ -64,9 +73,10 @@ textarea,
 input[type="file"] {
    
     padding: 12px;
+    width: 10rem;
     margin-bottom: 15px;
     border-radius: 5px;
-    font-size: 16px;
+    font-size:  1.2rem;
     box-sizing: border-box;
     align-self: center;
     justify-content: center;
@@ -75,16 +85,9 @@ input[type="file"] {
 
 }
 
-input[type="submit"]:active{
-    width: 140px;
-    background-color: #4a0606;
-}
-
-
-
-
 input[type="file"]{
-    margin-left: 10%;
+    margin-top: 3rem;
+    
 }
 
 input[type="text"] {
@@ -151,6 +154,19 @@ input[type="submit"]{
     background-color: #4a0606;
 }
 
+#showImage {
+    max-width: 20rem; 
+
+}
+
+.image-send {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 20rem; 
+    justify-content: center;
+    margin: auto;
+    align-items: center;
+}
 .homePageSection {
     justify-content: center;
     margin:auto;
@@ -188,11 +204,11 @@ input[type="submit"]{
 }
 
 .logo {
-    width: 10%;
+    width: 8rem;
     display: block;
     align-content: start;
-    margin-left: 40px;
-    margin-top: 20px;
+    margin-left: 3rem;
+    margin-top: 3rem;
     margin-bottom: 0px;
 }
 
@@ -208,12 +224,12 @@ select {
     color: #fff;
     border: 2px solid #dd1212;
     border-radius: 10px;
-    width: 200px;
-    height: 35px;
-    font-size: 16px;
+    width: 15rem;
+    height: 3rem;
+    font-size: 1.5rem;
     box-shadow:0 0 30px 4px rgba(0, 0, 0, 0.652);
     margin: 10px;
-    font-family: 'Inter', sans-serif;;
+    font-family: 'Inter', sans-serif;
 
 }
 
@@ -221,10 +237,11 @@ select:hover {
     background-color: rgb(212, 47, 47);
     color: #0c0909;
     border-radius: 10px;
-    width: 200px;
-    height: 40px;
-    font-size: 16px;
+    width: 15.5rem;
+    height: 3.5rem;
+    font-size: 1.8rem;
     margin-bottom: 10px;
+    font-family: 'Inter', sans-serif;
 }
 
 #java {
@@ -321,6 +338,10 @@ input[type="submit"]{
     transition: background-color 300ms ease-out, transform 300ms ease-out;
 }
 
+input[type="submit"]:active{
+    background-color: rgb(72, 5, 5);
+    height: 20rem;
+}
 
 body {
     background-image: url("/home/resources/2.png");

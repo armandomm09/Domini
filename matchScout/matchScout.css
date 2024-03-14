@@ -8,6 +8,9 @@
 * {
     text-align: center;
     justify-content: center;
+    box-sizing: border-box; /* remove if needed */
+    margin: 0;
+    padding: 0;
 }
 img#initialPositionReference {
     max-width: 500px;
@@ -15,27 +18,30 @@ img#initialPositionReference {
 
 body {
     font-family: Arial, sans-serif;
-    color: #fff;
-    background-color: #000000;
+    color: black;
+    background-color: white;
     text-align: center;
-    margin: 0;
-    padding: 0;
+    margin:var(--header-height) 0 0 0;
+    
 }
-
+    
 h1 {
     color: #ff3333;
     text-transform: uppercase;
     margin-bottom: 10px;
     font-family: 'Industry';
+    font-size: 5rem;
 }
 
 form {
    /* background-color: #000000;*/
+   background-color: white;
     width: 100%;
     padding: 30px;
     border-radius: 10px;
     margin: 20px auto;
     max-height: 700px;
+    border-color: white;
    /* border-color: #000000;*/
 }
 
@@ -45,24 +51,30 @@ h2 {
     font-weight: 400;
     font-family: 'Industry';
     text-transform: uppercase;
+    font-size: 3rem;
 }
 
 h3 {
     color: #930606;
     margin-bottom: 10px;
-    font-weight: bold;
+    font-weight: 400;
     font-family: 'Industry';
     text-transform: uppercase;
+    font-size: 2.5rem;
 
+}
+
+#teamNameP {
+    font-size: 2rem;
 }
 
 label {
     display: block;
     text-wrap: wrap;
-    width: 300px;
+    width: 20rem;
     font-weight: 400;
-    color: #fff; /* Ajustar el color de las etiquetas */
-    font-size: 20px;
+    color: black; /* Ajustar el color de las etiquetas */
+    font-size: 1.5rem;
     font-family: 'Inter', sans-serif;
     margin: auto;
 
@@ -82,21 +94,27 @@ input[type="file"] {
     display: inline;
     font-family: 'Inter', sans-serif;
 }
-
-input[type="text"] {
-    background-color:  #870c0c69;
-    border: 1px solid #a91717;
-    color: #ff0000;
-    width: 400px;
-    font-family: 'Inter', sans-serif;
-   
-}
-
+/*
+input[type="text"],
 input[type="number"] {
     background-color:  #870c0c69;
     border: 1px solid #a91717;
     color: #ff0000;
-    width: 200px;
+    width: 10rem;
+    font-family: 'Inter', sans-serif;
+   
+}
+*/
+
+input[type="number"],
+input[type="text"] {
+    /*background-color:  #870c0c69;*/
+    /*border: 1px solid #a91717;*/
+    border: 2px solid #dd1212;
+    border-radius: 10px;
+    font-weight: 600;
+    /*color: #ff0000;*/
+    width: 10rem;
     font-family: 'Inter', sans-serif;
    
 }
@@ -107,13 +125,22 @@ input[type="text"]::after {
     
 }
 
+.section__header {
+    margin-bottom: 3rem;
+}
+
 #teamNameInput {
    /*visibility: hidden;*/
    display: none;
 }
 
+#teamNameP {
+    /*text-shadow: 4px 3px 0px #fff, 9px 8px 0px rgba(0,0,0,0.15);*/
+    text-shadow: 0 0 3px #FF0000;
+}
+
 #next-button, #back-button {
-    background-color: #ff5733;
+    background-color: grey;
     color: #fff;
     padding: 15px 20px;
     border: none;
@@ -138,43 +165,46 @@ input[type="text"]::after {
     background-color: #4a0606;
 }
 
-.next-back{
-    
-    padding-top: 10rem;
+.next-back {
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
 }
 
 select {
     display: inline-block;
-    background-color: rgb(117, 13, 13);
-    color: #fff;
+    /*background-color: transparent;*/
+    /*rgb(117, 13, 13)*/
+    /*color: #fff;*/
     border: 2px solid #dd1212;
     border-radius: 10px;
-    width: 200px;
-    height: 35px;
-    font-size: 16px;
-    box-shadow:0 0 30px 4px rgba(0, 0, 0, 0.652);
+    width: 15rem;
+    height: 3rem;
+    font-size: 1.5rem;
+    /*box-shadow:0 0 30px 4px rgba(0, 0, 0, 0.652);*/
     margin: 10px;
 
 }
 
 select:hover {
-    background-color: rgb(212, 47, 47);
-    color: #0c0909;
+    width: 15.2rem;
+    height: 3.2rem;
+    font-size: 1.7rem;
+    display: inline-block;
+    /*background-color: rgb(117, 13, 13);*/
+    border: 2px solid #dd1212;
     border-radius: 10px;
-    width: 200px;
-    height: 40px;
-    font-size: 16px;
-    margin-bottom: 10px;
+    /*box-shadow:0 0 30px 4px rgba(0, 0, 0, 0.652);*/
+    margin: 10px;
 }
 
 .logo {
-    width: 10%;
+    width: 8rem;
     display: block;
     align-content: start;
-    margin-left: 40px;
-    margin-top: 20px;
+    margin-left: 3rem;
+    margin-top: 3rem;
     margin-bottom: 0px;
-    position: relative;
 }
 
 /* Otros estilos */
@@ -188,7 +218,7 @@ select:hover {
     padding: 5px 20px;
     border: none;
     border-radius: 5px;
-    font-size: 30px;
+    font-size: 2rem;
     cursor: pointer;
     text-transform: uppercase;
     transition: background-color 300ms ease-out, transform 300ms ease-out;
@@ -197,7 +227,6 @@ select:hover {
 
 input[type="submit"]{
     background-color: black;
-    width: 150px;
     /*box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset, white 0px 0px 0px 1px;*/
     box-shadow: white 0px 2px 4px 0px, whitesmoke 0px 2px 16px 0px;
     margin-top: 3rem;
@@ -205,24 +234,18 @@ input[type="submit"]{
     padding: 5px 20px;
     border: white;
     border-radius: 5px;
-    font-size: 30px;
+    font-size: 3rem;
     font-family: 'Industry';
     cursor: pointer;
     text-transform: uppercase;
     transition: background-color 300ms ease-out, transform 300ms ease-out;
 }
-
-input[type="submit"]:active{
-    width: 130px;
-    background-color: #4a0606;
-}
-
 .counters {
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    max-width: 750px;
+    max-width: 45rem;
     text-align: center;
     margin: auto;
 }
@@ -242,7 +265,7 @@ form .counters .container-field {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 750px;
+    max-width: 45rem;
     flex-wrap: wrap;
     width: auto;
     height: auto;
@@ -265,6 +288,17 @@ form .counters .container-field {
     margin-top: 3rem;
 }
 
+div#teleopOnAmp {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 750px;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+}
 .note-container {
     display: flex;
     align-items: center;
@@ -299,11 +333,12 @@ form .note-container .container-field {
         justify-content: space-around;
     }
 
-}
+    #teleopOnSpeaker {
+        justify-content: center;
+    }
 
-body {
-    background-image: url("/home/resources/2.png");
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
+    .counters {
+        justify-content: center;
+    }
+
 }
