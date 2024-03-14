@@ -240,6 +240,15 @@ input[type="submit"]{
     text-transform: uppercase;
     transition: background-color 300ms ease-out, transform 300ms ease-out;
 }
+
+input[type="submit"]:active{
+    background-color: rgb(148, 4, 4);
+    color: #000000;
+    font-size: 2rem;
+    height: 4rem;
+
+}
+
 .counters {
     display: flex;
     align-items: center;
