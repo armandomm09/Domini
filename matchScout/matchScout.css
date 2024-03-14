@@ -197,6 +197,7 @@ select:hover {
 
 input[type="submit"]{
     background-color: black;
+    width: 150px;
     /*box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset, white 0px 0px 0px 1px;*/
     box-shadow: white 0px 2px 4px 0px, whitesmoke 0px 2px 16px 0px;
     margin-top: 3rem;
@@ -210,6 +211,12 @@ input[type="submit"]{
     text-transform: uppercase;
     transition: background-color 300ms ease-out, transform 300ms ease-out;
 }
+
+input[type="submit"]:active{
+    width: 130px;
+    background-color: #4a0606;
+}
+
 .counters {
     display: flex;
     align-items: center;

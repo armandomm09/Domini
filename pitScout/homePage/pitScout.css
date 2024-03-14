@@ -75,6 +75,14 @@ input[type="file"] {
 
 }
 
+input[type="submit"]:active{
+    width: 140px;
+    background-color: #4a0606;
+}
+
+
+
+
 input[type="file"]{
     margin-left: 10%;
 }

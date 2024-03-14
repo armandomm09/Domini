@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const enableSection = (index) => {
         sections.forEach((section, i) => {
-            section.style.display = i === index ? "inline" : "none";
+            section.style.display = i === index ? "inline" : "inline";
         });
     };
 
