@@ -86,12 +86,17 @@ input[type="file"] {
     width: 50%;
     padding: 12px;
     margin-bottom: 15px;
-    border-radius: 5px;
     font-size: 16px;
     box-sizing: border-box;
     align-self: center;
     display: inline;
     font-family: 'Inter', sans-serif;
+    background-color: white;
+    border-bottom: 1px solid black;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    
 }
 /*
 input[type="text"],
@@ -109,12 +114,13 @@ input[type="number"],
 input[type="text"] {
     /*background-color:  #870c0c69;*/
     /*border: 1px solid #a91717;*/
-    border: 2px solid #dd1212;
+    /*border: 2px solid #dd1212;
     border-radius: 10px;
     font-weight: 600;
     /*color: #ff0000;*/
     width: 10rem;
     font-family: 'Inter', sans-serif;
+    font-size: 1.4rem;
    
 }
 
@@ -218,6 +224,7 @@ select:hover {
     border: none;
     border-radius: 5px;
     font-size: 2rem;
+    margin-right: 0;
     cursor: pointer;
     text-transform: uppercase;
     transition: background-color 300ms ease-out, transform 300ms ease-out;
@@ -256,6 +263,7 @@ input[type="submit"]{
 }
 form .counters .container-field {
     display: block;
+    margin: auto;
 
 }
 
@@ -310,11 +318,12 @@ div#teleopOnAmp {
 
 }
 
-form .note-container .container-field {
+form .note-container .container-field,
+form .auto-container .container-field {
     text-wrap: wrap !important;
     justify-content: center;
     text-align: center;
-    margin:auto;
+    margin: auto;
    
 }
 
