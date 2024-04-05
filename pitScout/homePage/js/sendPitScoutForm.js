@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
       formDataObject[key] = value;
       });
 
-    const response = await fetch("https://script.google.com/macros/s/AKfycbyFqUgv03_zmcm0YUGnjpJf-yMhXkyCxNEqtQ28C_-JBBVgg4Gcr8lfUQlO0R7o1ommcA/exec", {
+    const response = await fetch("https://script.google.com/macros/s/AKfycbzmU0MhUQlOBhUVO_hrUA75WwjuTc_cCJi2siQZog_fLM2nJJk5mDn4ESVl-o70ArPT/exec", {
         method: "POST",
         body: JSON.stringify(formDataObject)
       })
@@ -28,17 +28,3 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-/*
-  {"teamNameInput":"The Green Machine",
-  "numero_equipo":"352",
-  "tipoDeChasis":"Swerve",
-  "motorsChassisSelect":"Neo 550",
-  "booleanTest":"true",
-  "robotWeightSelect":"X",
-  "tipoDeLlanta":"omni",
-  "robotMeasureSelect":"X",
-  "hasVisionSelect":"Select option",
-  "visionProcessSelect":"Select option",
-  "numberOfCamerasInput":"","
-  poseEstimationSelect":"Select option"}
-*/

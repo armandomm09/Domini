@@ -1,46 +1,82 @@
-body {
-    font-family: Arial, sans-serif;
-    color: #fff;
-    background-color: #000000;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap');
+
+@font-face {
+    font-family: Industry;
+    src: url(/matchScout/resources/Industry-BoldItalic.ttf);
+}
+
+* {
     text-align: center;
+    justify-content: center;
+    box-sizing: border-box; /* remove if needed */
     margin: 0;
     padding: 0;
 }
+img#initialPositionReference {
+    max-width: 500px;
+}
 
+body {
+    font-family: Arial, sans-serif;
+    color: black;
+    background-color: white;
+    text-align: center;
+    margin:var(--header-height) 0 0 0;
+    
+}
+    
 h1 {
     color: #ff3333;
     text-transform: uppercase;
     margin-bottom: 10px;
+    font-family: 'Industry';
+    font-size: 5rem;
 }
 
 form {
-    background-color: #000000;
+   /* background-color: #000000;*/
+   background-color: white;
     width: 100%;
     padding: 30px;
     border-radius: 10px;
     margin: 20px auto;
     max-height: 700px;
-    border-color: #000000;
+    border-color: white;
+   /* border-color: #000000;*/
 }
 
 h2 {
     color: #930606;
     margin-bottom: 10px;
-    font-weight: bold;
+    font-weight: 400;
+    font-family: 'Industry';
+    text-transform: uppercase;
+    font-size: 3rem;
 }
 
 h3 {
     color: #930606;
     margin-bottom: 10px;
-    font-weight: bold;
+    font-weight: 400;
+    font-family: 'Industry';
+    text-transform: uppercase;
+    font-size: 2.5rem;
+
+}
+
+#teamNameP {
+    font-size: 2rem;
 }
 
 label {
     display: block;
-    margin-bottom: 10px;
-    font-weight: bold;
-    color: #fff; /* Ajustar el color de las etiquetas */
-    font-size: 20px;
+    text-wrap: wrap;
+    width: 20rem;
+    font-weight: 400;
+    color: black; /* Ajustar el color de las etiquetas */
+    font-size: 1.5rem;
+    font-family: 'Inter', sans-serif;
+    margin: auto;
 
 }
 
@@ -56,27 +92,41 @@ input[type="file"] {
     box-sizing: border-box;
     align-self: center;
     display: inline;
+    font-family: 'Inter', sans-serif;
 }
-
-input[type="text"] {
-    background-color:  #870c0c69;
-    border: 1px solid #a91717;
-    color: #ff0000;
-    width: 400px;
-   
-}
-
+/*
+input[type="text"],
 input[type="number"] {
     background-color:  #870c0c69;
     border: 1px solid #a91717;
     color: #ff0000;
-    width: 200px;
+    width: 10rem;
+    font-family: 'Inter', sans-serif;
+   
+}
+*/
+
+input[type="number"],
+input[type="text"] {
+    /*background-color:  #870c0c69;*/
+    /*border: 1px solid #a91717;*/
+    border: 2px solid #dd1212;
+    border-radius: 10px;
+    font-weight: 600;
+    /*color: #ff0000;*/
+    width: 10rem;
+    font-family: 'Inter', sans-serif;
    
 }
 
 input[type="text"]::after {
     border: 1px solid #39a917 !important;
+    font-family: 'Inter', sans-serif;
     
+}
+
+.section__header {
+    margin-bottom: 3rem;
 }
 
 #teamNameInput {
@@ -84,8 +134,13 @@ input[type="text"]::after {
    display: none;
 }
 
+#teamNameP {
+    /*text-shadow: 4px 3px 0px #fff, 9px 8px 0px rgba(0,0,0,0.15);*/
+    text-shadow: 0 0 3px #FF0000;
+}
+
 #next-button, #back-button {
-    background-color: #ff5733;
+    background-color: grey;
     color: #fff;
     padding: 15px 20px;
     border: none;
@@ -95,6 +150,10 @@ input[type="text"]::after {
     text-transform: uppercase;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     transition: background-color 300ms ease-out, transform 300ms ease-out;
+    margin-top: 3rem;
+    font-family: 'Industry';
+    margin: 15px;
+    width: 10rem;
 }
 
 #next-button:hover, #back-button:hover {
@@ -106,36 +165,45 @@ input[type="text"]::after {
     background-color: #4a0606;
 }
 
+.next-back {
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+}
+
 select {
     display: inline-block;
-    background-color: rgb(117, 13, 13);
-    color: #fff;
+    /*background-color: transparent;*/
+    /*rgb(117, 13, 13)*/
+    /*color: #fff;*/
     border: 2px solid #dd1212;
     border-radius: 10px;
-    width: 200px;
-    height: 35px;
-    font-size: 16px;
-    box-shadow:0 0 30px 4px rgba(0, 0, 0, 0.652);
+    width: 15rem;
+    height: 3rem;
+    font-size: 1.5rem;
+    /*box-shadow:0 0 30px 4px rgba(0, 0, 0, 0.652);*/
     margin: 10px;
 
 }
 
 select:hover {
-    background-color: rgb(212, 47, 47);
-    color: #0c0909;
+    width: 15.2rem;
+    height: 3.2rem;
+    font-size: 1.7rem;
+    display: inline-block;
+    /*background-color: rgb(117, 13, 13);*/
+    border: 2px solid #dd1212;
     border-radius: 10px;
-    width: 200px;
-    height: 40px;
-    font-size: 16px;
-    margin-bottom: 10px;
+    /*box-shadow:0 0 30px 4px rgba(0, 0, 0, 0.652);*/
+    margin: 10px;
 }
 
 .logo {
-    width: 250px;
+    width: 8rem;
     display: block;
     align-content: start;
-    margin-left: 40px;
-    margin-top: 20px;
+    margin-left: 3rem;
+    margin-top: 3rem;
     margin-bottom: 0px;
 }
 
@@ -145,15 +213,141 @@ select:hover {
 .restButton, .sumButton {
     
     background-color: #ff5733;
+    font-family: 'Industry';
     color: #fff;
     padding: 5px 20px;
     border: none;
     border-radius: 5px;
-    font-size: 30px;
+    font-size: 2rem;
     cursor: pointer;
     text-transform: uppercase;
     transition: background-color 300ms ease-out, transform 300ms ease-out;
 
 }
 
+input[type="submit"]{
+    background-color: black;
+    /*box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset, white 0px 0px 0px 1px;*/
+    box-shadow: white 0px 2px 4px 0px, whitesmoke 0px 2px 16px 0px;
+    margin-top: 3rem;
+    color: #fff;
+    padding: 5px 20px;
+    border: white;
+    border-radius: 5px;
+    font-size: 3rem;
+    font-family: 'Industry';
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 300ms ease-out, transform 300ms ease-out;
+}
 
+input[type="submit"]:active{
+    background-color: rgb(148, 4, 4);
+    color: #000000;
+    font-size: 2rem;
+    height: 4rem;
+
+}
+
+.counters {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 45rem;
+    text-align: center;
+    margin: auto;
+}
+
+.final-score {
+    margin: auto;
+    justify-content: center;
+
+}
+form .counters .container-field {
+    display: block;
+
+}
+
+/* AUTO */
+.auto-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 45rem;
+    flex-wrap: wrap;
+    width: auto;
+    height: auto;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+}
+
+/* TELEOP */
+#teleopOnSpeaker {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 750px;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+}
+
+div#teleopOnAmp {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 750px;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+}
+.note-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 750px;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 3rem;
+
+}
+
+form .note-container .container-field {
+    text-wrap: wrap !important;
+    justify-content: center;
+    text-align: center;
+    margin:auto;
+   
+}
+
+.text-wrap {
+    text-wrap: nowrap;
+}
+
+@media screen and (max-width: 950px) and (min-width: 600px){
+    input[type="number"]:not(#numero_equipo, #matchNumberInput){
+        width:100px;
+    }
+
+    .note-container,
+    .auto-container {
+        justify-content: space-around;
+    }
+
+    #teleopOnSpeaker {
+        justify-content: center;
+    }
+
+    .counters {
+        justify-content: center;
+    }
+
+}

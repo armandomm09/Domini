@@ -1,3 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap');
+
+@font-face {
+    font-family: Industry;
+    src: url(/matchScout/resources/Industry-BoldItalic.ttf);
+}
+p {
+    font-size: 1.7rem;
+}
 body {
     font-family: Arial, sans-serif;
     color: #fff;
@@ -10,37 +19,51 @@ body {
 h1 {
     color: #ff3333;
     text-transform: uppercase;
-    margin-bottom: 10px;
+    margin-bottom: 1rem;
+    font-family: 'Industry';
+    font-size: 5rem;
 }
 
 form {
-    background-color: #000000;
+    /*background-color: #00000000;*/
+    height: 100%;
     width: 100%;
     padding: 30px;
     border-radius: 10px;
     margin: 20px auto;
     max-height: 700px;
-    border-color: #000000;
+    /*border-color: #000000;*/
 }
 
 h2 {
     color: #930606;
+    font-size: 3rem;
     margin-bottom: 10px;
     font-weight: bold;
+    font-family: 'Industry';
+    text-transform: uppercase;
 }
 
 h3 {
     color: #930606;
     margin-bottom: 10px;
     font-weight: bold;
+    font-family: 'Industry';
+    text-transform: uppercase;
+    font-size: 2.5rem;
+}
+
+h4 {
+    font-size: 2rem;
 }
 
 label {
     display: block;
     margin-bottom: 10px;
-    font-weight: bold;
+    font-weight:400;
     color: #fff; /* Ajustar el color de las etiquetas */
-    font-size: 20px;
+    font-size: 2rem;
+   font-family: 'Inter', sans-serif;
 
 }
 
@@ -48,14 +71,23 @@ input[type="text"],
 input[type="number"],
 textarea,
 input[type="file"] {
-    width: 50%;
+   
     padding: 12px;
+    width: 10rem;
     margin-bottom: 15px;
     border-radius: 5px;
-    font-size: 16px;
+    font-size:  1.2rem;
     box-sizing: border-box;
     align-self: center;
+    justify-content: center;
     display: inline;
+    font-family: 'Inter', sans-serif;
+
+}
+
+input[type="file"]{
+    margin-top: 3rem;
+    
 }
 
 input[type="text"] {
@@ -63,6 +95,7 @@ input[type="text"] {
     border: 1px solid #a91717;
     color: #ff0000;
     width: 400px;
+    font-family: 'Inter', sans-serif;;
    
 }
 
@@ -71,12 +104,18 @@ input[type="number"] {
     border: 1px solid #a91717;
     color: #ff0000;
     width: 200px;
+    font-family: 'Inter', sans-serif;;
    
 }
 
 input[type="text"]::after {
     border: 1px solid #39a917 !important;
     
+}
+
+input[type="submit"]{
+    width: 10rem;
+    margin: auto;
 }
 
 #teamNameInput {
@@ -95,6 +134,15 @@ input[type="text"]::after {
     text-transform: uppercase;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     transition: background-color 300ms ease-out, transform 300ms ease-out;
+    width: 10rem;
+    margin-top: 5rem;
+
+    z-index: auto;
+    position: relative;
+
+    margin: 15px;
+
+    font-family: 'Industry';
 }
 
 #next-button:hover, #back-button:hover {
@@ -106,6 +154,36 @@ input[type="text"]::after {
     background-color: #4a0606;
 }
 
+#showImage {
+    max-width: 20rem; 
+
+}
+
+.image-send {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 20rem; 
+    justify-content: center;
+    margin: auto;
+    align-items: center;
+}
+.homePageSection {
+    justify-content: center;
+    margin:auto;
+}
+
+.next-back{
+    padding-top: 5rem;
+}
+
+.submit-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    margin: auto !important;
+    margin-left: 5rem;
+}
 /* Otros estilos */
 
 .radio-group label,
@@ -126,11 +204,11 @@ input[type="text"]::after {
 }
 
 .logo {
-    width: 250px;
+    width: 8rem;
     display: block;
     align-content: start;
-    margin-left: 40px;
-    margin-top: 20px;
+    margin-left: 3rem;
+    margin-top: 3rem;
     margin-bottom: 0px;
 }
 
@@ -146,11 +224,12 @@ select {
     color: #fff;
     border: 2px solid #dd1212;
     border-radius: 10px;
-    width: 200px;
-    height: 35px;
-    font-size: 16px;
+    width: 15rem;
+    height: 3rem;
+    font-size: 1.5rem;
     box-shadow:0 0 30px 4px rgba(0, 0, 0, 0.652);
     margin: 10px;
+    font-family: 'Inter', sans-serif;
 
 }
 
@@ -158,10 +237,11 @@ select:hover {
     background-color: rgb(212, 47, 47);
     color: #0c0909;
     border-radius: 10px;
-    width: 200px;
-    height: 40px;
-    font-size: 16px;
+    width: 15.5rem;
+    height: 3.5rem;
+    font-size: 1.8rem;
     margin-bottom: 10px;
+    font-family: 'Inter', sans-serif;
 }
 
 #java {
@@ -241,6 +321,64 @@ label.radio-group {
 
 /*AUTO SECTION*/
 
-.autoQuestions {
-    display: inline-flex;
+
+input[type="submit"]{
+    background-color: black;
+    /*box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset, white 0px 0px 0px 1px;*/
+    box-shadow: white 0px 2px 4px 0px, whitesmoke 0px 2px 16px 0px;
+    margin-top: 3rem;
+    color: #fff;
+    padding: 5px 20px;
+    border: white;
+    border-radius: 5px;
+    font-size: 30px;
+    font-family: 'Industry';
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 300ms ease-out, transform 300ms ease-out;
+}
+
+input[type="submit"]:active{
+    background-color: rgb(72, 5, 5);
+    height: 20rem;
+}
+
+body {
+    background-image: url("/home/resources/2.png");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat:  no-repeat;
+}
+
+@media only screen and (max-width: 500px) {
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 14px; /* Adjust font size */
+    color: #fff;
+    background-color: #000000;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Heading styles */
+h1, h2, h3 {
+    font-size: 30px; /* Adjust heading font size */
+}
+
+/* Form styles */
+form {
+    padding: 10px; /* Adjust padding */
+}
+
+/* Input styles */
+input[type="text"],
+input[type="number"],
+textarea,
+input[type="file"] {
+    width: 100%; /* Make inputs full width */
+}
+
+
 }
