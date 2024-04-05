@@ -334,7 +334,8 @@ div#teleopOnAmp {
 
 form .note-container .container-field,
 form .auto-container .container-field,
-form .teleopSection #teleopOnSpeaker #container-field {
+form #teleopOnSpeaker .container-field,
+form .counters .container-field {
     text-wrap: wrap !important;
     justify-content: center;
     text-align: center;
