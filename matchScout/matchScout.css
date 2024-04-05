@@ -82,17 +82,23 @@ label {
 
 input[type="text"],
 input[type="number"],
-textarea,
+/*textarea,*/
 input[type="file"] {
     width: 50%;
     padding: 12px;
     margin-bottom: 15px;
-    border-radius: 5px;
+    /*border-radius: 5px;*/
     font-size: 16px;
     box-sizing: border-box;
     align-self: center;
     display: inline;
     font-family: 'Inter', sans-serif;
+    background-color: white;
+    border-bottom: 1px solid black;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    
 }
 /*
 input[type="text"],
@@ -110,12 +116,17 @@ input[type="number"],
 input[type="text"] {
     /*background-color:  #870c0c69;*/
     /*border: 1px solid #a91717;*/
+    /*
     border: 2px solid #dd1212;
     border-radius: 10px;
     font-weight: 600;
     /*color: #ff0000;*/
     width: 10rem;
     font-family: 'Inter', sans-serif;
+
+    width: 10rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.4rem;
    
 }
 
@@ -266,6 +277,7 @@ input[type="submit"]:active{
 }
 form .counters .container-field {
     display: block;
+    margin: auto;
 
 }
 
@@ -297,6 +309,14 @@ form .counters .container-field {
     margin-top: 3rem;
 }
 
+
+#teleopOnSpeaker .container-field > h3{
+    
+    text-align: center;
+    margin: auto;
+    justify-content: center;
+   
+}
 div#teleopOnAmp {
     display: flex;
     align-items: center;
@@ -320,7 +340,10 @@ div#teleopOnAmp {
 
 }
 
-form .note-container .container-field {
+form .note-container .container-field,
+form .auto-container .container-field,
+form #teleopOnSpeaker .container-field,
+form .counters .container-field {
     text-wrap: wrap !important;
     justify-content: center;
     text-align: center;
@@ -332,7 +355,13 @@ form .note-container .container-field {
     text-wrap: nowrap;
 }
 
-@media screen and (max-width: 950px) and (min-width: 600px){
+textarea {
+    width: 70%;
+    height: auto;
+    border-radius: 20px;
+}
+
+@media screen and (max-width: 840px) and (min-width: 390px){
     input[type="number"]:not(#numero_equipo, #matchNumberInput){
         width:100px;
     }
