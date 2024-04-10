@@ -425,4 +425,8 @@ input[type="submit"]:active{
 
 }
 
+.alert-success {
+    margin-top: 1rem;
+}
+
 }
