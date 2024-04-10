@@ -413,7 +413,10 @@ label{
 
 }
 p {
-    margin: 0 4rem;
+    margin: 2rem auto;
+    max-width: 20rem;
+    font-size: 1.5rem;
+    font-size: italic;
 }
 
 input[type="submit"]:active{
