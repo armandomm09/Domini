@@ -416,13 +416,10 @@ p {
     margin: 0 4rem;
 }
 
+input[type="submit"]:active{
+    background-color: rgb(72, 5, 5);
+    height: auto;
 
-
-
-
-
-
-
-
+}
 
 }
