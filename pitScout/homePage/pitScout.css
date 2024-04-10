@@ -204,7 +204,7 @@ input[type="submit"]{
 }
 
 .logo {
-    width: 8rem;
+    max-width: 8rem;
     display: block;
     align-content: start;
     margin-left: 3rem;
@@ -350,7 +350,7 @@ body {
     background-repeat:  no-repeat;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 840px) and (min-width: 390px) {
 
 body {
     font-family: Arial, sans-serif;
@@ -367,6 +367,8 @@ h1, h2, h3 {
     font-size: 30px; /* Adjust heading font size */
 }
 
+
+
 /* Form styles */
 form {
     padding: 10px; /* Adjust padding */
@@ -377,8 +379,50 @@ input[type="text"],
 input[type="number"],
 textarea,
 input[type="file"] {
-    width: 100%; /* Make inputs full width */
+    width: 10rem; /* Make inputs full width */
 }
+
+.logo {
+    width: 4rem;
+}
+
+
+label{
+    font-size: 1.5rem;
+    display: block;
+    text-align: center;
+    text-wrap: wrap;
+    max-width: 20rem;
+    margin: 1rem auto;
+}
+
+.radio-group {
+    display: block;
+    margin: auto;
+}
+
+.radio-language-options {
+    width: auto;
+    height: auto;
+}
+
+.radio-language-options:hover {
+    box-shadow:0 0 30px 4px rgba(0, 0, 0, 0.59);
+    width: auto;
+    height: auto;
+
+}
+p {
+    margin: 0 4rem;
+}
+
+
+
+
+
+
+
+
 
 
 }
